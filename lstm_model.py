@@ -12,8 +12,6 @@ import random
 import pdb
 import numpy as np
 
-# need non empty commit
-
 class LSTM_Mod(nn.Module):
 
     def __init__(self, hidden_dim, vocab_size):
@@ -30,7 +28,7 @@ class LSTM_Mod(nn.Module):
 
         # The linear layer that maps from hidden state space to tag space
         # tag space is number of characters in data
-        self.linear = nn.Linear(hidden_dim, 1)
+        self.linear = nn.Linear(hidden_dim, vocab_size)
         self.hidden = self.init_hidden()
         self.cell = self.init_hidden()
 
@@ -47,9 +45,9 @@ class LSTM_Mod(nn.Module):
         # lstm_out, (self.hidden, self.cell) = self.lstm(sentence.float().view(1,1,-1),(self.hidden, self.cell))
         # outputs = self.linear(self.hidden)
         for character in sentence:
-            pdb.set_trace()
-            lstm_out, (self.hidden, self.cell) = self.lstm(character.float().view(1,1,-1),(self.hidden, self.cell))
-            output = self.linear(self.hidden)
+            # pdb.set_trace()
+            lstm_out, self.hidden = self.lstm(character.float().view(1,1,-1),self.hidden)
+            output = self.linear(self.hidden[0])
             outputs += [output]
         return outputs
 
@@ -111,9 +109,10 @@ for epoch in range(2):
         # Step 3. Run our forward pass.
         tar_scores = model(rand_idx)
 
+        tar_scores = torch.cat(tar_scores)
         # Step 4. Compute the loss, gradients, and update the parameters by
         #  calling optimizer.step()
-        loss = loss_function(tar_scores, target_idx)
+        pdb.set_trace()
+        loss = loss_function(tar_scores.squeeze(1), target_idx)
         loss.backward()
         optimizer.step()
-        pdb.set_trace()
