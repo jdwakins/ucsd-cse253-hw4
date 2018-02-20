@@ -63,18 +63,28 @@ def get_idx(char_data):
             word_to_ix[word] = len(word_to_ix)
     return word_to_ix
 
+def get_accuracy(outputs, labels, correct, total):
+    _, predicted = torch.max(outputs.data, 1)
+    correct += (predicted == labels.data).sum()
+    total += labels.size(0)
+    running_acc = ((correct/float(total)) *100.0)
+    return correct, total, running_acc
+
 # get 30 character random slices of dataset
 # slice data into trianing and testing
 slice_ind = int(round(len(data)*.8))
+vocab_idx = get_idx(data)
+vocab_size = len(vocab_idx)
+
 training_data = data[:slice_ind]
 val_data = data[slice_ind:]
 
-training_idx = get_idx(training_data)
-val_idx = get_idx(val_data)
+training_nums = [vocab_idx[char] for char in training_data]
+val_nums = [vocab_idx[char] for char in val_data]
 
 np.random.seed(0)
 
-model = LSTM_Mod(100, len(training_data))
+model = LSTM_Mod(100, vocab_size)
 loss_function = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.00001)
 
@@ -84,18 +94,19 @@ for epoch in range(2):
 
     # after going through all of a , will have gone through all possible 30
     # character slices
+    total = 0
+    correct = 0
+    iterate = 0
     while len(a) >0:
         idx = random.choice(a)
         a.remove(idx)
 
         # turn data and targets into input and target indices for model
-        rand_slice = training_data[idx : idx + 30]
-        rand_idx = [training_idx[char] for char in rand_slice]
-        rand_idx = Variable(torch.LongTensor(rand_idx))
+        rand_slice = training_nums[idx : idx + 30]
+        rand_slice = Variable(torch.LongTensor(rand_slice))
 
-        targets = training_data[idx + 1:idx+31]
-        target_idx = [training_idx[char] for char in targets]
-        target_idx = Variable(torch.LongTensor(target_idx))
+        targets = training_nums[idx + 1:idx+31]
+        targets = Variable(torch.LongTensor(targets))
 
         # Step 1. Remember that Pytorch accumulates gradients.
         # We need to clear them out before each instance
@@ -104,15 +115,21 @@ for epoch in range(2):
         # Also, we need to clear out the hidden state of the LSTM,
         # detaching it from its history on the last instance.
         # I (jen) commented this out because idk why the tutorial does it..??
-        # model.hidden = model.init_hidden()
+        model.hidden = model.init_hidden()
 
         # Step 3. Run our forward pass.
-        tar_scores = model(rand_idx)
+        outputs = model(rand_slice)
 
-        tar_scores = torch.cat(tar_scores)
+        outputs = torch.cat(outputs)
         # Step 4. Compute the loss, gradients, and update the parameters by
         #  calling optimizer.step()
-        pdb.set_trace()
-        loss = loss_function(tar_scores.squeeze(1), target_idx)
+        loss = loss_function(outputs.squeeze(1), targets)
         loss.backward()
         optimizer.step()
+
+        correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
+        if iterate % 2000 == 1999:
+            print('Accuracy: ' + str(running_accuracy))
+            print('Loss' + str(loss.data))
+        iterate += 1
+    print('Completed Epoch ' + str(epoch))
