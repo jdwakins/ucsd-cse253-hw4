@@ -12,6 +12,7 @@ import random
 import pdb
 import numpy as np
 
+use_gpu = torch.cuda.is_available()
 class LSTM_Mod(nn.Module):
 
     def __init__(self, hidden_dim, vocab_size):
@@ -37,8 +38,14 @@ class LSTM_Mod(nn.Module):
         # Refer to the Pytorch documentation to see exactly
         # why they have this dimensionality.
         # The axes semantics are (num_layers, minibatch_size, hidden_dim)
-        return (Variable(torch.zeros(1, 1, self.hidden_dim)),
-                Variable(torch.zeros(1, 1, self.hidden_dim)))
+
+        # must wrap these in cuda as well for GPU version
+        if use_gpu:
+            return (Variable(torch.zeros(1, 1, self.hidden_dim).cuda()),
+                    Variable(torch.zeros(1, 1, self.hidden_dim).cuda()))
+        else:
+            return (Variable(torch.zeros(1, 1, self.hidden_dim)),
+                    Variable(torch.zeros(1, 1, self.hidden_dim)))
 
     def forward(self, sentence):
         outputs = []
@@ -70,6 +77,12 @@ def get_accuracy(outputs, labels, correct, total):
     running_acc = ((correct/float(total)) *100.0)
     return correct, total, running_acc
 
+def prepare_data(data_nums, is_gpu):
+    if is_gpu:
+        return Variable(torch.LongTensor(data_nums).cuda())
+    else:
+        return Variable(torch.LongTensor(data_nums))
+
 # get 30 character random slices of dataset
 # slice data into trianing and testing
 slice_ind = int(round(len(data)*.8))
@@ -81,10 +94,14 @@ val_data = data[slice_ind:]
 
 training_nums = [vocab_idx[char] for char in training_data]
 val_nums = [vocab_idx[char] for char in val_data]
+val_inputs = prepare_data(val_nums[:-1], use_gpu)
+val_targets = prepare_data(val_nums[1:], use_gpu)
 
 np.random.seed(0)
 
 model = LSTM_Mod(100, vocab_size)
+if use_gpu:
+    model.cuda()
 loss_function = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.00001)
 
@@ -102,11 +119,12 @@ for epoch in range(2):
         a.remove(idx)
 
         # turn data and targets into input and target indices for model
+        # wrap rand_slice and targets in cuda for GPU version
         rand_slice = training_nums[idx : idx + 30]
-        rand_slice = Variable(torch.LongTensor(rand_slice))
+        rand_slice = prepare_data(rand_slice, use_gpu)
 
         targets = training_nums[idx + 1:idx+31]
-        targets = Variable(torch.LongTensor(targets))
+        targets = prepare_data(targets, use_gpu)
 
         # Step 1. Remember that Pytorch accumulates gradients.
         # We need to clear them out before each instance
@@ -114,7 +132,9 @@ for epoch in range(2):
 
         # Also, we need to clear out the hidden state of the LSTM,
         # detaching it from its history on the last instance.
-        # I (jen) commented this out because idk why the tutorial does it..??
+
+        # I don't understand why the tutorial does this but it doesn't work if
+        # the hidden layer isn't re-initailized
         model.hidden = model.init_hidden()
 
         # Step 3. Run our forward pass.
@@ -130,6 +150,10 @@ for epoch in range(2):
         correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
         if iterate % 2000 == 1999:
             print('Accuracy: ' + str(running_accuracy))
-            print('Loss' + str(loss.data))
+            print('Loss' + str(loss.data[0]))
+            outputs_val = model(val_inputs)
+            outputs_val = torch.cat(outputs_val)
+            _, _, val_accuracy = get_accuracy(outputs_val.squeeze(1), val_targets, 0, 0)
+            print('Validataion Accuracy' + str(val_accuracy))
         iterate += 1
     print('Completed Epoch ' + str(epoch))
