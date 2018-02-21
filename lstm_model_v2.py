@@ -33,9 +33,11 @@ class LSTM_Mod2(nn.Module):
         # The linear layer that maps from hidden state space to tag space
         # tag space is number of characters in data
         self.linear = nn.Linear(hidden_dim, vocab_size)
+
+        self.bs = bs
         self.hidden = self.init_hidden()
         self.cell = self.init_hidden()
-        self.bs = bs
+
 
     def init_hidden(self):
         # Before we've done anything, we dont have any hidden state.
@@ -62,8 +64,8 @@ class LSTM_Mod2(nn.Module):
         return outputs
 
 # input data
-file = open('input.txt', 'r')
-data = file.read()
+with open('input.txt', 'r') as f:
+    data = f.read()
 
 # function maps each word to an index
 def get_idx(char_data):

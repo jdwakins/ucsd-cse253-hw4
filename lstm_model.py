@@ -59,8 +59,11 @@ class LSTM_Mod(nn.Module):
         return outputs
 
 # input data
-file = open('input.txt', 'r')
-data = file.read()
+with open('input.txt', 'r') as f:
+    data = f.read()
+
+# file = open('input.txt', 'r')
+# data = file.read()
 
 # function maps each word to an index
 def get_idx(char_data):
@@ -114,7 +117,7 @@ for epoch in range(2):
     total = 0
     correct = 0
     iterate = 0
-    while len(a) >0:
+    while len(a) > 0:
         idx = random.choice(a)
         a.remove(idx)
 
