@@ -1,5 +1,7 @@
 import numpy as np
 import random
+from torch.autograd import Variable
+import torch
 
 # function maps each word to an index
 def get_idx(char_data):
@@ -19,8 +21,8 @@ def prepare_data(data_nums, is_gpu):
 # returns prediction based on probabilites
 def flip_coin(probabilities):
     stacked_probs = np.cumsum(probabilities)
-    stacked_probs = stacked_probs - min(stacked_probs)
-    stacked_probs = stacked_probs/max(stacked_probs)
+    # stacked_probs = stacked_probs - min(stacked_probs)
+    # stacked_probs = stacked_probs/max(stacked_probs)
     rand_int = random.random()
     dist = abs(stacked_probs - rand_int)
     return np.argmin(dist)
