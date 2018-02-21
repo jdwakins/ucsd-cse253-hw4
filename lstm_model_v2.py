@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import random
 import pdb
 import numpy as np
+# for feature evaluation - pick one neuron
 
 # use_gpu = torch.cuda.is_available()
 class LSTM_Mod2(nn.Module):
@@ -22,6 +23,7 @@ class LSTM_Mod2(nn.Module):
         # The linear layer maps from hidden state space to target space
         # target space = vocab size, or number of unique characters in daa
         self.linear = nn.Linear(hidden_dim, vocab_size)
+        self.softmax = nn.Softmax()
         self.bs = bs
         self.seq_len = seq_len
         self.is_gpu = is_gpu

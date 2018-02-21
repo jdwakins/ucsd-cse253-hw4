@@ -73,12 +73,6 @@ def get_idx(char_data):
             word_to_ix[word] = len(word_to_ix)
     return word_to_ix
 
-def get_accuracy(outputs, labels, correct, total):
-    _, predicted = torch.max(outputs.data, 1)
-    correct += (predicted == labels.data).sum()
-    total += labels.size(0)
-    running_acc = ((correct/float(total)) *100.0)
-    return correct, total, running_acc
 
 def prepare_data(data_nums, is_gpu):
     if is_gpu:
