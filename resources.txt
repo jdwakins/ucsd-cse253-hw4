@@ -1,3 +1,9 @@
 Resources
 https://github.com/pytorch/examples/blob/master/time_sequence_prediction/train.py
+
 http://pytorch.org/tutorials/beginner/nlp/sequence_models_tutorial.html
+
+
+https://github.com/spro/char-rnn.pytorch/blob/master/model.py
+https://github.com/spro/practical-pytorch/blob/master/char-rnn-generation/char-rnn-generation.ipynb
+ ^ helpful for music generation
