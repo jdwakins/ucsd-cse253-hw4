@@ -54,13 +54,14 @@ class LSTM_Mod2(nn.Module):
                     Variable(torch.zeros(1, self.bs, self.hidden_dim)))
 
     def forward(self, sentence):
-        outputs=[]
+        outputs = []
         # lstm_out, (self.hidden, self.cell) = self.lstm(sentence.float().view(1,1,-1),(self.hidden, self.cell))
         # outputs = self.linear(self.hidden)
-        for character in sentence:
-            output, self.hidden = self.lstm(character.float().view(1,self.bs,-1), self.hidden)
-            output = self.linear(output)
-            outputs += [output]
+        # for character in sentence:
+        output, self.hidden = self.lstm(sentence.float().view(len(sentence), self.bs, -1), self.hidden)
+        output = self.linear(output)
+        print(output.shape)
+        outputs += [output]
         return outputs
 
 # input data
