@@ -34,6 +34,6 @@ primer = '<start>'
 temperature = 1
 
 model = LSTM_Mod2(100, len(vocab), batch_size, seq_len, is_gpu=use_gpu)
-train_loss, val_loss = train_model(model, data, vocab, seq_len, batch_size, num_epochs, use_gpu)
+# train_loss, val_loss = train_model(model, data, vocab, seq_len, batch_size, num_epochs, use_gpu)
 words = generate(model, vocab, primer, predict_length, temperature, use_gpu)
 print(words)

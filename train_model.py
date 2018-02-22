@@ -86,9 +86,16 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
             optimizer.step()
 
             # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
-            if iterate == 2000 % 1999 :
+            if iterate == 200 % 199:
                 print('Loss ' + str(loss.data[0]))
                 train_loss_vec.append(loss.data[0])
+
+                # Uncomment following to get validation loss
+                # Not sure how to do validation--going through the whole validation sequence
+                # takes forever, so not sure if we should do a subset of the data
+                # or batches (but batches won't carry the hidden layer--it'll be
+                # like sets of sequences instead of one big sequence)
+                
                 # model.bs = 1
                 # model.init_hidden()
             # if iterate == 4000 % 3999 :
@@ -101,5 +108,5 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
             #     print('Validataion Loss ' + str(val_loss))
             iterate += 1
         print('Completed Epoch ' + str(epoch))
-        print(generate(model, vocab, primer, predict_length, temperature, use_gpu))
+        print(generate(model, vocab_idx, '<start>', 100, 1, use_gpu))
     return train_loss_vec, val_loss_vec

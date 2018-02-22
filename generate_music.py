@@ -33,7 +33,7 @@ def generate(model, vocab, primer, predict_len, T, use_gpu):
     for p in range(predict_len):
         output = model(inp)
         soft_out = custom_softmax(output.data.squeeze(), T)
-        predicted.append(flip_coin(soft_out))
+        predicted.append(flip_coin(soft_out, use_gpu))
         inp = prepare_data([predicted[-1]], use_gpu)
     strlist = [vocab.keys()[vocab.values().index(pred)] for pred in predicted]
     return ''.join(strlist)
