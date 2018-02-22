@@ -1,8 +1,22 @@
-from lstm_model_v2 import *
+from __future__ import print_function
+import torch.autograd as autograd
+from torch.autograd import Variable
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import torchvision
+import torchvision.transforms as transforms
+import matplotlib.pyplot as plt
+import random
+import pdb
+import numpy as np
+
+from generate_music import *
+from LSTM import *
 from helper import *
 
-def train_model(data, seq_len, batch_size, epochs):
-    vocab_idx = get_idx(data)
+def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
     vocab_size = len(vocab_idx)
 
     # slice data into trianing and testing (could do this much better)
@@ -19,8 +33,6 @@ def train_model(data, seq_len, batch_size, epochs):
 
     np.random.seed(0)
 
-    # call model
-    model = LSTM_Mod2(100, vocab_size, batch_size, seq_len, is_gpu=use_gpu)
     if use_gpu:
         model.cuda()
 
@@ -28,6 +40,8 @@ def train_model(data, seq_len, batch_size, epochs):
     optimizer = optim.SGD(model.parameters(), lr=0.01)
 
     # train model
+    train_loss_vec = []
+    val_loss_vec=[]
     for epoch in range(epochs):
         #get random slice
         a = range(len(training_data) - (seq_len+1))
@@ -36,7 +50,8 @@ def train_model(data, seq_len, batch_size, epochs):
         total = 0
         correct = 0
         iterate = 0
-        while len(a) >0:
+        while len(a) >30:
+            model.bs = batch_size
             idxs = random.sample(a,batch_size)
             # get random slice, and the targets that correspond to that slice
             rand_slice = [training_nums[idx : idx + seq_len] for idx in idxs]
@@ -71,10 +86,20 @@ def train_model(data, seq_len, batch_size, epochs):
             optimizer.step()
 
             # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
-            if iterate % 2000 == 1999:
+            if iterate == 2000 % 1999 :
                 print('Loss ' + str(loss.data[0]))
-                outputs_val = model(val_inputs)
-                val_loss = loss_function(outputs_val, val_targets)
-                print('Validataion Loss ' + str(val_loss))
+                train_loss_vec.append(loss.data[0])
+                # model.bs = 1
+                # model.init_hidden()
+            # if iterate == 4000 % 3999 :
+            #     # model.seq_len = len(val_inputs)
+            #     pdb.set_trace()
+            #     outputs_val = model(val_inputs)
+            #     val_loss = loss_function(outputs_val[:,1,:], val_targets[:,1,:].squeeze(1))
+            #     val_loss_vec.append(val_loss)
+            #     model.bs = batch_size
+            #     print('Validataion Loss ' + str(val_loss))
             iterate += 1
         print('Completed Epoch ' + str(epoch))
+        print(generate(model, vocab, primer, predict_length, temperature, use_gpu))
+    return train_loss_vec, val_loss_vec
