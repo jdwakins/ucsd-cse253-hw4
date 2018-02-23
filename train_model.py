@@ -28,9 +28,6 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
     training_nums = [vocab_idx[char] for char in training_data]
     val_nums = [vocab_idx[char] for char in val_data]
 
-    val_inputs = prepare_data(val_nums[:-1], use_gpu)
-    val_targets = prepare_data(val_nums[1:], use_gpu)
-
     np.random.seed(0)
 
     if use_gpu:

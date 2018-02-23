@@ -19,7 +19,7 @@ def generate(model, vocab, primer, predict_len, T, use_gpu):
 
     model.bs = 1
 
-    hidden = model.init_hidden()
+    model.init_hidden()
     primer_input = [vocab[char] for char in primer]
 
     model.seq_len = len(primer_input)
