@@ -49,37 +49,36 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
         iterate = 0
         while len(a) >30:
             model.bs = batch_size
-            idxs = random.sample(a,batch_size)
-            # get random slice, and the targets that correspond to that slice
-            rand_slice = [training_nums[idx : idx + seq_len] for idx in idxs]
-            rand_slice = np.array(rand_slice).T
-            targets = [training_nums[idx + 1:idx+(seq_len+1)] for idx in idxs]
-            targets = np.array(targets).T
-
-            for idx in idxs:
-                a.remove(idx)
-
-            # prepare data and targets for model
-            rand_slice = prepare_data(rand_slice, use_gpu)
-            targets = prepare_data(targets, use_gpu)
-            # Pytorch accumulates gradients. We need to clear them out before each instance
+            seq_batch = random.randint(1, 4)
             model.zero_grad()
-
-            # Also, we need to clear out the hidden state of the LSTM,
-            # detaching it from its history on the last instance.
             model.init_hidden()
-            # From TA:
-            # another option is to feed sequences sequentially and let hidden state continue
-            # could feed whole sequence, and then would kill hidden state
+            for i in xrange(seq_batch):
+                idxs = random.sample(a,batch_size)
+                # get random slice, and the targets that correspond to that slice
+                rand_slice = [training_nums[idx : idx + seq_len] for idx in idxs]
+                rand_slice = np.array(rand_slice).T
+                targets = [training_nums[idx + 1:idx+(seq_len+1)] for idx in idxs]
+                targets = np.array(targets).T
 
-            # Run our forward pass.
-            outputs = model(rand_slice)
+                for idx in idxs:
+                    a.remove(idx)
+
+                # prepare data and targets for model
+                rand_slice = prepare_data(rand_slice, use_gpu)
+                targets = prepare_data(targets, use_gpu)
+
+                # From TA:
+                # another option is to feed sequences sequentially and let hidden state continue
+                # could feed whole sequence, and then would kill hidden state
+
+                # Run our forward pass.
+                outputs = model(rand_slice)
             # Step 4. Compute the loss, gradients, and update the parameters by
             #  calling optimizer.step()
             loss=0
             for bat in range(batch_size):
                 loss += loss_function(outputs[:,bat,:], targets[:,bat,:].squeeze(1))
-            loss.backward()
+            loss.backward(retain_graph=True)
             optimizer.step()
 
             # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
@@ -87,7 +86,7 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
                 print('Loss ' + str(loss.data[0]/batch_size))
                 train_loss_vec.append(loss.data[0]/batch_size)
 
-                idxs_val = random.sample(range(len(val_nums)),batch_size)
+                idxs_val = random.sample(range(len(val_nums)-(seq_len+1)),batch_size)
 
                 val_inputs = [val_nums[idx_v:idx_v + seq_len] for idx_v in idxs_val]
                 val_inputs = np.array(val_inputs).T
