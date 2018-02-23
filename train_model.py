@@ -83,15 +83,15 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
             optimizer.step()
 
             # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
-            if iterate % 20:
+            if iterate % 200:
                 print('Loss ' + str(loss.data[0]/batch_size))
                 train_loss_vec.append(loss.data[0]/batch_size)
 
-                idxs_val = random.sample(range(len(val_nums)),batch_size)
+                idxs_val = random.sample(range(len(val_nums)-seq_len),batch_size)
 
                 val_inputs = [val_nums[idx_v:idx_v + seq_len] for idx_v in idxs_val]
                 val_inputs = np.array(val_inputs).T
-                val_targets = [val_nums[idx_v+1:idx_v + seq_len+1] for idx_v in idxs_val]
+                val_targets = [val_nums[idx_v+1: idx_v + seq_len+1] for idx_v in idxs_val]
                 val_targets = np.array(val_targets).T
 
                 val_inputs = prepare_data(val_inputs, use_gpu)
