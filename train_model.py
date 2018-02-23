@@ -70,7 +70,7 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
 
             # Also, we need to clear out the hidden state of the LSTM,
             # detaching it from its history on the last instance.
-            model.hidden = model.init_hidden()
+            model.init_hidden()
             # From TA:
             # another option is to feed sequences sequentially and let hidden state continue
             # could feed whole sequence, and then would kill hidden state
@@ -86,26 +86,27 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
             optimizer.step()
 
             # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
-            if iterate == 200 % 199:
-                print('Loss ' + str(loss.data[0]))
-                train_loss_vec.append(loss.data[0])
+            if iterate % 20:
+                print('Loss ' + str(loss.data[0]/batch_size))
+                train_loss_vec.append(loss.data[0]/batch_size)
 
-                # Uncomment following to get validation loss
-                # Not sure how to do validation--going through the whole validation sequence
-                # takes forever, so not sure if we should do a subset of the data
-                # or batches (but batches won't carry the hidden layer--it'll be
-                # like sets of sequences instead of one big sequence)
-                
-                # model.bs = 1
-                # model.init_hidden()
-            # if iterate == 4000 % 3999 :
-            #     # model.seq_len = len(val_inputs)
-            #     pdb.set_trace()
-            #     outputs_val = model(val_inputs)
-            #     val_loss = loss_function(outputs_val[:,1,:], val_targets[:,1,:].squeeze(1))
-            #     val_loss_vec.append(val_loss)
-            #     model.bs = batch_size
-            #     print('Validataion Loss ' + str(val_loss))
+                idxs_val = random.sample(range(len(val_nums)),batch_size)
+
+                val_inputs = [val_nums[idx_v:idx_v + seq_len] for idx_v in idxs_val]
+                val_inputs = np.array(val_inputs).T
+                val_targets = [val_nums[idx_v+1:idx_v + seq_len+1] for idx_v in idxs_val]
+                val_targets = np.array(val_targets).T
+
+                val_inputs = prepare_data(val_inputs, use_gpu)
+                val_targets = prepare_data(val_targets, use_gpu)
+                model.init_hidden()
+                outputs_val = model(val_inputs)
+                val_loss=0
+                for bat in range(batch_size):
+                    val_loss += loss_function(outputs_val[:,1,:], val_targets[:,1,:].squeeze(1))
+                val_loss_vec.append(val_loss.data[0]/batch_size)
+
+                print('Validataion Loss ' + str(val_loss.data[0]/batch_size))
             iterate += 1
         print('Completed Epoch ' + str(epoch))
         print(generate(model, vocab_idx, '<start>', 100, 1, use_gpu))
