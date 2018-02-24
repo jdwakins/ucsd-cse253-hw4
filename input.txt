@@ -58,7 +58,7 @@ K:Bb
 V:1 name=G
 d2 (cB) | d2 (cB) f2 ed | f4 g2 g2 | feed eddc | d2B2 d2cB | d2cB f2ed |
 f4 g2g2 | fedc d2!+!c2 | B4 :: FBcB | B2AB cd ec | d2 B2 df dB |
-cf cA Bd cB | B2 A2 f2 f2 | (ABcd) e2 d2 | e2 dc dcde | fefg fefg | 
+cf cA Bd cB | B2 A2 f2 f2 | (ABcd) e2 d2 | e2 dc dcde | fefg fefg |
 Te4 d2cB | d2cB f2ed | f4 g2g2 | feed eddc | d2B2 d2cB | d2cB f2ed |
 f4 g2g2 | fedc d2!+!c2 | B4   !fine!   :: [K:Bbm] c2de | d2ef B2cd |
 c2F2 dc Bc | !+!=A2 B2 c2 d2 | d2 c2 d2ef | g2g2 c2de | f2f2 B=ABc | F2Bc d2c2 |
@@ -66,8 +66,8 @@ B4:| fefg | f2e=d e2f2 | {f2}g4 edef | e2dc d2e2 | {e2}f4 Bc=Ac |
 B2F2 dece | d2c2 dcde | f6 ed |c4 !D.C.! |]
 V:2 name=V
 z4 | z4  d2cB | d2cB e4 | B4 f2f2 | b2B2 z4 | z4 d2cB | d2cB e4 | d2B2 f2F2 | B4 ::
-z4 | f4f2f2 | B2b2 b2b2 | a2f2 g2=e2 | f2F2 z4 | f2f2 A2B2 | c2f2 B2B2 | B2b2 b2b2 | 
-a4 b2B2 | z4 d2cB | d2cB e4 | B4 f2f2 | b2B2 z4 | z4 d2cB | d2cB e4 | d2B2 f2F2 | B4 :: 
+z4 | f4f2f2 | B2b2 b2b2 | a2f2 g2=e2 | f2F2 z4 | f2f2 A2B2 | c2f2 B2B2 | B2b2 b2b2 |
+a4 b2B2 | z4 d2cB | d2cB e4 | B4 f2f2 | b2B2 z4 | z4 d2cB | d2cB e4 | d2B2 f2F2 | B4 ::
 [K:Bbm] b2b2 | b4 g2e2 | f2F2 B2B2 | e2d2 c2B2 | f4 b2b2 | e2fg a2a2 | d4 g2g2 | fede f2F2 | B4 :|
 b2b2 | b3a g2f2 | e4 a2a2 | a3g f2e2 | d4 z4 | z4 (bc')(=ac') | b2f2 B2Bc | dcde d2e2 | f4 |]
 <end>
@@ -100,25 +100,25 @@ M:3/4
 L:1/8
 Q:"Un peu gracieusement"
 K:Cm
-c2c3c | !+!=B2B2B2 | c2!+!c3c | {c}ud2d2d2 | e2e3f |{e}!+!d4 de | {d}!+!c=B {B}uc3d | !+!=B4B2 | 
+c2c3c | !+!=B2B2B2 | c2!+!c3c | {c}ud2d2d2 | e2e3f |{e}!+!d4 de | {d}!+!c=B {B}uc3d | !+!=B4B2 |
 c2c3d | !+!=B2B2B2 | c2!+!c3c | {c}d2d2d2 | e2e3f |!+!d4de | {d}c2!+!c3=B |{=B}uc6 ||
 P:Var 1
 (c=B)(cd)(cd) | (!+!=B=A)(Bc)(!+!B{A}G) | c2 {dc=Bc}!+!c3c | {c}ud2d2d2 | (ed)(ef)(ef) | (!+!dc)(de)(de) | !+!c=B {B}uc3d | !+!=B2 G=ABG |
 (c=B)(cd)(cd) | (!+!=B=A)(Bc)(!+!B{A}G) | c2 {dc=Bc}!+!c3c | {c}ud2d2d2 | (ed)(ef)(ef) |  (!+!dc)(de)(de) | c2 {dc=Bc}!+!c3=B | uc6 ||
 P:Var 2
 Q:"Un peu l?g?rement"
-c/=B/c/d/ .c.c.c.c | !+!=B/=A/B/c/ .B.B.B.B | c/=B/c/d/ .c.c.c.c | 
+c/=B/c/d/ .c.c.c.c | !+!=B/=A/B/c/ .B.B.B.B | c/=B/c/d/ .c.c.c.c |
 d/c/d/e/ .d.d.d.d | e/d/e/f/ e/d/e/f/ e/d/e/f/ | !+!d2 d/c/d/e/ d/c/d/e/ | !+!c=B {B}uc3d | =B/=A/G/A/ Bc !+!Bd |
-c/=B/c/d/ .c.c.c.c | !+!=B/=A/B/c/ .B.B.B.B | c/=B/c/d/ .c.c.c.c | d/c/d/e/ .d.d.d.d | 
+c/=B/c/d/ .c.c.c.c | !+!=B/=A/B/c/ .B.B.B.B | c/=B/c/d/ .c.c.c.c | d/c/d/e/ .d.d.d.d |
 e/d/e/f/ e/d/e/f/ e/d/e/f/  | !+!d2 d/c/d/e/ d/c/d/e/ | c2!+!c3=B | {=B}uc6 ||
 P:Var 3
 eGcege | dG=Bdgd | eGcege | fBdfbf | gBegbg | fBdfgd |
 eGcedc | !+!=B=AGABG | cGcege | dG=Bdgd | eGcege |
 fBdfbf | gBegbg | fBdagf | e=BcdG!+!B | c6 ||
 P:Var 4
-.c/.G/.c/.G/  .c/.G/.c/.G/  .c/.G/.c/.G/  | .=B/.G/.B/.G/   .=B/.G/.B/.G/   .=B/.G/.B/.G/   | .c/.G/.c/.G/   .c/.G/.c/.G/   .c/.G/.c/.G/   | .d/.G/.d/.G/   .d/.G/.d/.G/   .d/.G/.d/.G/   |  
-(e/d/e/)g/   (e/d/e/)g/   (e/d/e/)g/   |  (d/c/d/)g/   (d/c/d/)g/   (d/c/d/)g/   | (c/=B/c/)g/   (c/=B/c/)g/   (c/=B/c/)g/   | !+!=B2 G/=A/B/A/ G/A/B/G/ | 
-.c/.G/.c/.G/  .c/.G/.c/.G/  .c/.G/.c/.G/  | .=B/.G/.B/.G/   .=B/.G/.B/.G/   .=B/.G/.B/.G/   | .c/.G/.c/.G/   .c/.G/.c/.G/   .c/.G/.c/.G/  | .d/.G/.d/.G/   .d/.G/.d/.G/   .d/.G/.d/.G/   |  
+.c/.G/.c/.G/  .c/.G/.c/.G/  .c/.G/.c/.G/  | .=B/.G/.B/.G/   .=B/.G/.B/.G/   .=B/.G/.B/.G/   | .c/.G/.c/.G/   .c/.G/.c/.G/   .c/.G/.c/.G/   | .d/.G/.d/.G/   .d/.G/.d/.G/   .d/.G/.d/.G/   |
+(e/d/e/)g/   (e/d/e/)g/   (e/d/e/)g/   |  (d/c/d/)g/   (d/c/d/)g/   (d/c/d/)g/   | (c/=B/c/)g/   (c/=B/c/)g/   (c/=B/c/)g/   | !+!=B2 G/=A/B/A/ G/A/B/G/ |
+.c/.G/.c/.G/  .c/.G/.c/.G/  .c/.G/.c/.G/  | .=B/.G/.B/.G/   .=B/.G/.B/.G/   .=B/.G/.B/.G/   | .c/.G/.c/.G/   .c/.G/.c/.G/   .c/.G/.c/.G/  | .d/.G/.d/.G/   .d/.G/.d/.G/   .d/.G/.d/.G/   |
 (e/d/e/)g/   (e/d/e/)g/   (e/d/e/)g/   |  (d/c/d/)g/   (d/c/d/)g/   (d/c/d/)g/   | (c/=B/c/)g/   (c/=B/c/)g/   (c/=B/c/)g/   | =Bc !+!c3B | c6 ||
 P:Var 5
 c2 .c.d.e.c | !+!=B2 .G.=A.B.G | uc2.c.d.e.c | {c}ud2 .d.e.f.d | {d}ue2 .e.f.e.f | ud2 .d.e.d.e |
@@ -126,7 +126,7 @@ c2 .c.d.e.c | !+!=B2 .G.=A.B.G | uc2.c.d.e.c | {c}ud2 .d.e.f.d | {d}ue2 .e.f.e.f
 {d}ue2 efef | !+!d2 dede | c2 {dc=Bc} !+!c3 =B//c//d//B// | {=B}uc6 ||
 P:Var 6
 c/=B/c/d/ c/=B/c/d/ c/=B/c/d/ | !+!=B/=A/B/B/c/ !+!=B/=A/B/B/c/ B/A/B/G/ | c/=B/c/d/ e/d/e/f/ e/d/e/f/ | d/c/d/e/ f/e/f/g/ f/e/f/g/ |
-e/d/e/f/ e/d/e/f/ e/d/e/f/ | d/c/d/e/ d/c/d/e/ d/c/d/e/ | c/=B/c/d/ c/=B/c/d/ c/=B/c/d/ | !+!=B2 G/ =A/4B/4c/4d/4e/4f/4 g2 | 
+e/d/e/f/ e/d/e/f/ e/d/e/f/ | d/c/d/e/ d/c/d/e/ d/c/d/e/ | c/=B/c/d/ c/=B/c/d/ c/=B/c/d/ | !+!=B2 G/ =A/4B/4c/4d/4e/4f/4 g2 |
 c/=B/c/d/ c/=B/c/d/ c/=B/c/d/ | =B/=A/G/A/ =B/=A/G/A/ =B/=A/B/G/ | c/=B/c/d/ e/d/e/f/ e/d/e/f/ | d/c/d/e/ f/e/f/g/ f/e/f/g/  |
 e/d/e/f/ e/d/e/f/ e/d/e/f/  | d/c/d/e/ d/c/d/e/ d/c/d/e/ | c2!+!c3=B | {=B}uc6 ||
 P:Var 7
@@ -137,10 +137,10 @@ z2(c/d/).e (c/d/).e | !+!=B2 B(=A/G/) B(A/G/) | c2 (c/d/).e (c/d/).e | !+!d2 (d/
 c/=B/c/d/ c/=B/c/d/ c/=B/c/d/ | !+!=B(B/=A/) G(B/A/)!breath!G2 | c2 (c/d/).e (c/d/).e | !+!=B(B/=A/) G(B/A/) G2 |
 c2 (c/d/).e (c/d/).e | !+!d2 (d/e/).f (d/e/).f  | e2 (e/f/).g (e/f/).g | !+! (d/e/).f (d/e/).f | c2 !+!c3 =B | c6 ||
 P:Var 9
-(c/e/)(g/e/) (c/e/)(g/e/) (c/e/)(g/c/)  | =B/d/g/d/ B/d/g/d/ B/d/g/B/ | c/e/g/e/ c/e/g/e/ c/e/g/e/ | 
+(c/e/)(g/e/) (c/e/)(g/e/) (c/e/)(g/c/)  | =B/d/g/d/ B/d/g/d/ B/d/g/B/ | c/e/g/e/ c/e/g/e/ c/e/g/e/ |
 f/B/d/f/ b/a/g/a/ b/a/g/f/ | g/B/c/d/ e/f/g/a/ g/f/e/f/ | d/e/f/d/ d/e/f/d/ d/c/=B/G/ | c/=B/c/d/ c/=B/c/d/ e/f/g/e/ |
 =B/=A/G/A/ B/A/G/A/ B/c/d/B/ | c/e/g/e/ c/e/g/e/ c/e/g/c/ | =B/d/g/d/ B/d/g/d/ B/d/g/B/ | c/e/g/e/ c/e/g/e/ c/e/g/e/ |
-d/f/a/f/ d/f/a/f/ d/f/a/f/ | e/g/b/g/ e/g/b/g/ e/g/b/g/ | d/f/a/f/ d/f/a/g/ f/e/d/e/ | ce !+!c3=B | Mc6 || 
+d/f/a/f/ d/f/a/f/ d/f/a/f/ | e/g/b/g/ e/g/b/g/ e/g/b/g/ | d/f/a/f/ d/f/a/g/ f/e/d/e/ | ce !+!c3=B | Mc6 ||
 P:Var 10
 c/d/e/f/ gggg | =Bd/e/f/ gggg | c/d/e/f/ gggg | B/c/d/e/ ffff | G/c/=B/c/ d/c/B/c/ e/c/B/c/ |
 ffff g/f/e/d/ | e/(c/=B/c/) e/(c/=B/c/) d/e/d/c/ | =B/=A/G/A/ =B/=A/G/A/ B/A/G/B/ | c/d/e/f/ gggg |
@@ -148,12 +148,12 @@ ffff g/f/e/d/ | e/(c/=B/c/) e/(c/=B/c/) d/e/d/c/ | =B/=A/G/A/ =B/=A/G/A/ B/A/G/B
 f/(c/=B/c/) a/(c/B/c/) g/f/e/d/ | e/d/e/f/ e/d/e/f/ e/d/c/=B/ | c2!+!c3=B | c6 ||
 P:Var 11
 ce ee !+!ed/c/ | !+!=B=A/G/ !+!BA/G/ !+!BA/G/ | ce ee !+!ed/c/ | ff ff !+!fe/d/ | gg gg gf/e/ |
-ff ff !+!fe/d/ | e/c/e/c/ e/c/e/c/ e/c/e/c/ | =B/G/B/d/ =B/G/B/d/ =B/G/B/d/ !breath! | ce ee !+!ed/c/ | !+!=B=A/G/ BA/G/ BA/G/  | 
+ff ff !+!fe/d/ | e/c/e/c/ e/c/e/c/ e/c/e/c/ | =B/G/B/d/ =B/G/B/d/ =B/G/B/d/ !breath! | ce ee !+!ed/c/ | !+!=B=A/G/ BA/G/ BA/G/  |
 ce ee ed/c/ | g/(c/=B/c/) g/(c/B/c/) g/(c/B/c/) | g/(c/=B/c/) d/c/b/a/ g/f/e/d/ | c/(e/d/e/) c/(e/d/e/)  c!+!=B | uc6 ||
 P:Var 12
-c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | =B/(g/f/g/) =B/(g/f/g/) =B/(g/f/g/) | c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | d/(g/f/g/) d/(g/f/g/) d/(g/f/g/) | 
+c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | =B/(g/f/g/) =B/(g/f/g/) =B/(g/f/g/) | c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | d/(g/f/g/) d/(g/f/g/) d/(g/f/g/) |
 e/(g/f/g/) e/(g/f/g/) e/(g/f/g/) | d/g/d/g/ d/g/d/g/ d/g/d/g/           | c/g/c/g/ c/g/c/g/ c/g/c/g/    | !+!=B=A/B/ G/B/A/c/ G/B/A/c/ |
-c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | =B/(g/f/g/) =B/(g/f/g/) =B/(g/f/g/) | c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | d/(g/f/g/) d/(g/f/g/) d/(g/f/g/) | 
+c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | =B/(g/f/g/) =B/(g/f/g/) =B/(g/f/g/) | c/(g/f/g/) c/(g/f/g/) c/(g/f/g/) | d/(g/f/g/) d/(g/f/g/) d/(g/f/g/) |
 e/(g/f/g/) e/(g/f/g/) e/(g/f/g/) | a/(g/f/g/) a/(g/f/g/) a/g/f/4e/4d/4c/4 | f2 !+!d4 | c6 |]
 <end>
 <start>
@@ -171,19 +171,19 @@ c2c3c | !+!=B2B2B2 | c2!+!c3c | {c}ud2d2d2 | e2!+!e3f | {e}!+!d4 de | {e}!+!c=B 
 !+!=B2B2B2 | c2!+!c3c | {c}ud2d2d2 | e2!+!e3f | !+!d4de | {d}c2!+!c3=B | {=B}uc6 ||
 T:Variations de Ch?teauminois
 Q:"Andante"
-c2c3d | (c=B)G=ABG | c2c3c | d2_BcdB | e2e3f | d2dfed | (c=B)cedc | (c=B)G=ABG | 
+c2c3d | (c=B)G=ABG | c2c3c | d2_BcdB | e2e3f | d2dfed | (c=B)cedc | (c=B)G=ABG |
 c2c3d |  (c=B)G=ABG | c2c3c | d2_BcdB | e2e3f | d2dfed | cdecd=B | uc2c2z2 ||
 T:Variation I
-e2cece | d2=BdBd | e2cece | f2dfdf | g2egeg | f2dfdf | e2cece | d2=BdBd | 
+e2cece | d2=BdBd | e2cece | f2dfdf | g2egeg | f2dfdf | e2cece | d2=BdBd |
 e2cece | d2=BdBd | e2cece | f2dfdf | g2egeg | f3g ag | fe!+!d3c |c6 ||
 T:Variation II
-edcdec | dc=BcdB | edcdec | fedefd | gfefge | fedefd | edcdec | dc=BcdB !breath!| 
+edcdec | dc=BcdB | edcdec | fedefd | gfefge | fedefd | edcdec | dc=BcdB !breath!|
 edcdec | dc=BcdB | edcdec | fedefd | gfefge | fgagfe | dfecd=B | uc2c2z2 ||
 T:Variation III
-cegece | =BdfdBd | cegece | dfafdf | egbgeg | dfafdf | cegece | =BdfdBd !breath! | 
+cegece | =BdfdBd | cegece | dfafdf | egbgeg | dfafdf | cegece | =BdfdBd !breath! |
 cegece | =BdfdBd | cegece | dfafdf | egbgeg | f3g ag | fe dc (e/d/c/=B/) | uc2c2z2 ||
 T:Variation IV
-ccGcGc | =BBGBGB | ccGcGc | ddBdBd | eeBeBe | dd=BdBd | ccGcGc | =BBGBGB | 
+ccGcGc | =BBGBGB | ccGcGc | ddBdBd | eeBeBe | dd=BdBd | ccGcGc | =BBGBGB |
 ccGcGc | =BBGBGB | ccGcGc | ddBdBd | eeBeBe | ddBdBd | cdecd=B | cegec2 ||
 T:Variation V
 (c/e/)c/e/ .c.G.e.c |  (=B/d/)B/d/ .B.G.d.B | (c/e/)c/e/ .c.G.e.c |  (d/f/)d/f/ .d.B.f.d | (e/g/)e/g/ .e.c.g.e |
@@ -191,7 +191,7 @@ T:Variation V
 (d/f/)d/f/ .d.B.f.d | (e/g/)e/g/ .e.B.g.e | (d/f/)d/f/ .d.=B.f.d | cc/d/ ee/d/ c/d/e/f/ | gagfed | cc/d/ ed/c/ =B/c/d/B/ | cc/e/ cc/e/ cz ||
 T:Variation VI
 (3cGG (3cGG (3cGG | (3=BGG (3BGG (3BGG | (3cGG (3cGG (3cGG | (3dFF (3BFF (3dFF |
-(3eGG (3eGG (3eGG | (3dFF (3BFF (3dFF | (3cGG (3cGG (3cGG | (3=BGG (3BGG (3BGG !breath! | 
+(3eGG (3eGG (3eGG | (3dFF (3BFF (3dFF | (3cGG (3cGG (3cGG | (3=BGG (3BGG (3BGG !breath! |
 (3cGG (3cGG (3cGG | (3=BGG (3BGG (3BGG | (3cGG (3cGG (3cGG | (3dFF (3BFF (3dFF |
 (3eGG (3eGG (3eGG |  defgag | fedcd=B | c2c2z2 ||
 T:Variation VII
@@ -232,7 +232,7 @@ L:1/8
 K:Bb
 [dD] | G^FGA | BABc | d4- | d2ff | d4- | d2gf |
 d4- | dd cB | G4- | G2B2 | G4- | G2z :: d | g2-g>^f | g>^f g>f |
-g4- | g2 bg | =f4- | f2 gf |1 d4- | d2z :|2 d4 | ddcB | G4- | G2B2 | G4- | G2 z2 || 
+g4- | g2 bg | =f4- | f2 gf |1 d4- | d2z :|2 d4 | ddcB | G4- | G2B2 | G4- | G2 z2 ||
 [K: clef=perc]  [Q:"vif"]  ^c^c/^c/- ^c^c | ^c^c/^c/- ^c^c | ^c^c/^c/- ^c^c | ^c^c ^c2 |:
 K: clef=treble
 d/g/d/g/ dc | B4 | cA/c/ f>g | d4 | d/g/d/g/ dc | B4 | G/A/B/c/ d/c/B/A/ | G4 ::
@@ -401,7 +401,7 @@ K:F
 V:Galoubet
 A4 (GFGA) | (G4F4) | B4 (AGAB) | (A4G4) | c4 (defd) | (dc=Bc) defe | (dc) (dc) (dB) (BA) | (A4G4) | B4 (AGAB) | (A4G4) |
 c4 (defd) | (dc=Bc) defd | (cA) (dB) (Ac) (EG) | (G4F4) !fine! || c4- cGce | (e4d4) | d4 =BGdf | (f4e4) | a4 (fdfa) | g4 (eceg) | (gf)ag (gf)fe | e4d2z2 |
-c4-cGce | (e4d4) d4 (=BG)Bd | (f4e4) | a4(fd)fa | g4 eceg | fefg afd=B | (c=Bcd) c_BAG | c4 (BABc) | (B4A4) | G4 (FEFG) | (F4E4) | 
+c4-cGce | (e4d4) d4 (=BG)Bd | (f4e4) | a4(fd)fa | g4 eceg | fefg afd=B | (c=Bcd) c_BAG | c4 (BABc) | (B4A4) | G4 (FEFG) | (F4E4) |
 A4 (BcdB) | (AF)(AF) (BcdB) | (BA)(BA) (AG)(GF) | (F4E4) | c4 (BABc) | (B4A4) | G4 (FEFG) | (F4E4) | A4 (BcdB) | (AF)(AF) (BcdB) | (BF)(BF) (FA)(GB) | (B4A4) !D.C.! |]
 <end>
 <start>
@@ -425,14 +425,14 @@ Z:Transcrit et/ou corrig? par Michel BELLON - 2005-07-23
 Z:Pour toute observation mailto:galouvielle@free.fr
 M:C|
 K:Bb
-d2dc | B2BA Bcde | f2c2 d2dc |1 BABd cBAG | F4 :|2 BABc dcde | f4 || 
+d2dc | B2BA Bcde | f2c2 d2dc |1 BABd cBAG | F4 :|2 BABc dcde | f4 ||
 fede | f2f_a gfed | e2c2 edcd | e2eg fedc | d2B2F2FF | B3F B>df>d | c3F c>eg>e | d2Bf fedc | B4 |]
 T:N?3 (probablement mal ?crite)
 Z:Transcrit et/ou corrig? par Michel BELLON - 2005-07-23
 Z:Pour toute observation mailto:galouvielle@free.fr
 M:2/4
 K:F
-f>g f>e | fc/d/ c/B/A/G/ | cF f/>g/f/>e/ | d2c/d/ fe/d/ | c3z | 
+f>g f>e | fc/d/ c/B/A/G/ | cF f/>g/f/>e/ | d2c/d/ fe/d/ | c3z |
 c>B A>B | cc/c/ d/c/B/A/ | dG B/G/B/A/ | BB/B/ c/B/A/G/ | AF f/g/f/e/ | dd g/a/g/f/ | e>c d/e/f/g/ | a>g b>g | fe fz |]
 T:N?4
 Z:Transcrit et/ou corrig? par Michel BELLON - 2005-07-23
@@ -450,7 +450,7 @@ b>gf>d | e>cd>B | b>gf>d | e>cB2 :| F>GA>B | c>de>c | f>ed>B | edc2 | F>GA>B | c
 f(3g/f/e/ dB | c>AB>c | BAG2 | G>GG>A | Bc F2 | F>FF>F | B2d2 | fedc | B2ff | B2z2 |]
 T:N?6
 K:F
-cc/B/ Af | c2A2 | dd/c/ BA | A2z=A | cc/B/ Ab | ^f2g2 | cB/A/ Gc | F2z2 :| 
+cc/B/ Af | c2A2 | dd/c/ BA | A2z=A | cc/B/ Ab | ^f2g2 | cB/A/ Gc | F2z2 :|
 c>BA>B | d>B gz | F>AG>A | B>cd2 | f>ed>c | =B>G fz | e>dc>B | G>c Fz |]
 T:N?7
 Z:Transcrit et/ou corrig? par Michel BELLON - 2005-07-23
@@ -473,7 +473,7 @@ Z:Pour toute observation mailto:galouvielle@free.fr
 M:6/8
 L:1/8
 K:Bb
-z BA|G2G dcd| c3 zBA| G2G dcB| A3 zAB| c2c BAG| d4 c/B/A/B/| G2G dcd| c3 zAB| 
+z BA|G2G dcd| c3 zBA| G2G dcB| A3 zAB| c2c BAG| d4 c/B/A/B/| G2G dcd| c3 zAB|
 c2c BAG| d4 c/B/A/B/| G2G dcd| HG6||[M:2/4] G/A/B/c/ d/c/B/A/|BG3|  G/A/B/c/ d/c/B/A/| HG4!D.C.!||
 T:2. L'Aubado
 G2G|d3 B2c| d3 A2B| cdc B2A| B3 G2G| d3 B2c| d3 A2B| cdc B2A| HG3-G2 || B|
@@ -486,13 +486,13 @@ GGG|AGF|FGB | A2A|G/G/GG|AGF|FGB/>B/|A3!D.C.!||
 T:4. Li gav?u
 T:Se jougo la veio en fas?nt lou tour de vilo per acampa de jouine per lou fue
 [M:2/4]
-S B2 cd | d2cz | B2cd | c2z2 | f2ed | c2B2 | f2ed |1 c2z2 :|2 c2z |: 
-d | BB ce | d3c | BB cc | (d2B)d | BB ce | d3c | BB cd | [B4c3] !fine! :| 
-z | f2 ed | c2B2 | f2ed |c3z | f2ed | c2B2 | f2ed | c2zd | 
+S B2 cd | d2cz | B2cd | c2z2 | f2ed | c2B2 | f2ed |1 c2z2 :|2 c2z |:
+d | BB ce | d3c | BB cc | (d2B)d | BB ce | d3c | BB cd | [B4c3] !fine! :|
+z | f2 ed | c2B2 | f2ed |c3z | f2ed | c2B2 | f2ed | c2zd |
 BB ce | d3c | BB cc | (d2 B)d | BB ce | d3c | BB cd | c3z S ||
 T:5. Aire dou fue - Belugo
 [M:C]
-f>e | dz ez cz dz | Bz cz dz ez | cz dz Bz cz | dz ez cz dz | 
+f>e | dz ez cz dz | Bz cz dz ez | cz dz Bz cz | dz ez cz dz |
 B2 zc d2B2 | z2 zc f2c2 | z2 FG ABcd | f2c2z2 :|
 T:6. Lou retour dou fue
 [M:2/4]
@@ -506,18 +506,18 @@ T:8. Aire d?u dejeuna sus l'erbo ? la capello d?u sant
 [M:2/4]
 Bf fe | dd/e/ dc | BB/A/ BF | Ff fe | dd/e/ dc | Bz Bz |
 cc/B/ AA/G/ | Fe d2 | cc/B/ AA/G/ | Fe de | dc BA | Bz Bz !fine! ||
-F>F FF | G>G GG | A>A AA | BB B2 | F>F FF | G>G GG | A>A AA | BB B2 | 
+F>F FF | G>G GG | A>A AA | BB B2 | F>F FF | G>G GG | A>A AA | BB B2 |
 Bd df | fe d2 | Bd df | fe d2 | f2 dB | f2 dB | f/g/f/e/ d/e/d/c/ | Bz Bz !D.C.! ||
 T:9. Apr?s la messo - Sus la pla?o, davans la capello
 [M:6/8]
 G2G | d2d dBc | d3 A2B | cdc cBA | BAB G2G | d2d dBc | d3 A2B | cdc B2A | G3 !fine! ||
 G2A | BAB GAB | c3 cAB | G2B A2G | ^F2D G2A | BAB GAB | c3 cde | dcB Ac^F | G3 !D.C.!  ||
 T:10. Lou retour de Sant Maime
-G | c2c cdc | B3 z2G | c2c dcd | e3 z2e | f2f fed |e2e edc | d2d B2d | c3 :| 
+G | c2c cdc | B3 z2G | c2c dcd | e3 z2e | f2f fed |e2e edc | d2d B2d | c3 :|
 c | c2c g2g | g2 z2e | g3 gfe | d2 z2d | f2f dfd | e2e dec | d2d B2d | c2z z2 !D.C.! ||
 T:11. Defilado - Au retour de chasque ceremouni? chascun rintro ? soun oustau
 [M:2/4]
-Gd | d2 Gd | d2 Gd | dd dc/B/ | A2FG | A2Ac | G2 cc/B/ | 
+Gd | d2 Gd | d2 Gd | dd dc/B/ | A2FG | A2Ac | G2 cc/B/ |
 AB/A/ GG | AF FG | A2 Ac | G2 cc/B/ | AB/A/ GG | F2 |]
 T:12. Marcho d?u fort - Lou fifre et lou tambour la jougon tout lou t?ms de la bravado
 B/c/ || B2F2 | BB/A/ Bc | B2F2 | B2 zB/c/ | B2F2 | BB/A/ Bc | B2 F2 | B2zc ||
@@ -616,7 +616,7 @@ c2ABcd | e2fedc | d2Bcde | f2ffff | g2bgeg | f2bfdf | g2fedc |1B2BBBB :|2 c4B2 !
 f2dfff | f2dff^f | g2eggg | g2egbg | f2dfff | f2dfed | cdedfd | d4c2 ::
 FAcf dc |dBdfdB | FAcfdc | dBdfdB | f2dff^f | g2egab | a/g/f/e/d2c2 | c4B2 ::
 [M:2/4]\
-d3c | BB cc | dd ee | d2c2 | e3d | cc dd | ee ff | e2d2 | 
+d3c | BB cc | dd ee | d2c2 | e3d | cc dd | ee ff | e2d2 |
 dd de | f2bz | dd de | f2bz | dd de | ff ee | dd cc |1 B/b/a/g/ f/e/d/c/ :|2 B4 !D.C.! |]
 V:Galoubet2
 d3ed2 | d2B2c2 | d2efge | e4d2 | d4Bd | c4Ac |1 BFBcdB | B4A2 :|2 BFGFGA | B6 |:
@@ -648,8 +648,8 @@ S (d/e/ | f)d ec B3 (g/a/ | b)gec f3 (f/e/ | d)G AB c3 (e/d/ | G)c GA B4 !fine! 
 B4 F2z2 | d4e2c2 | f4 g2B2 | d4 c2F2 | B6z2 | c4e2A2 | c4B2A2 | G4 =e2d2 |
 (c4A2)z2 | A4 c2e2 | e4 A2(df) | f4 =ed cB | A4 G2z2 | (Ad f=e d^c dB) | (GA df =eA d_e) | (dc Bf ) Ge dc | B6z2 S  :|
 V:2 clef=perc stafflines=0 staffscale=0.7
-x | B2z2B2z2 |B2z2B2z2 |B2z2B2z2 | B2B2B4 |: B2B2B2BB | B2B2B2BB | B2B2B2BB | 
-BBBB B2z2 | B2B2B2BB | B2B2B2BB | B2B2B2BB | BBBB B2z2 | B2B2B2BB | B2B2B2BB | B2B2B2BB | 
+x | B2z2B2z2 |B2z2B2z2 |B2z2B2z2 | B2B2B4 |: B2B2B2BB | B2B2B2BB | B2B2B2BB |
+BBBB B2z2 | B2B2B2BB | B2B2B2BB | B2B2B2BB | BBBB B2z2 | B2B2B2BB | B2B2B2BB | B2B2B2BB |
 BBBB B2z2 | B2B2B2BB | B2B2B2BB | B2B2B2BB | BBBBB2z2 | BB BB BB BB | BB BB BB BB | BB BB BB BB | BBBB B2z2 :|
 V:3
 x | d2A2d2G2 | (BceA Bc)d2 | d2A2c2G2 | (cF dc B4) |: (Bd)G2 (Ac) e2 | d4 cA BG | e2 (cA) G2 (Ac) |
@@ -677,10 +677,10 @@ d2cdec | !breath!d2cBAG | !breath!B2AGBc | d6 | f2edce | !breath!d2cBAc | !breat
 d)(gdcAe | dcdB)G2 | (edcd)(ga) | (g^f)(ecA)d | [Q:"for?o lento"]BGB!breath!A cd | G6 !fine! |: [Q:"andt moderato"]d4c2 | e4G2 !breath!| A4B2 | B4F2 !breath!| d4c2 | f4c2 !breath!|
 a4g2 | f6 !breath! | f2f2f2 | _d6 !breath!| G2_A2B2 | c6 !breath! | c2c2c2 | f6 !breath! | F2d2c2 | B6 !breath! | A2B2c2 | B6 !breath! | d2c2A2 | B6 !D.C.!:|
 V:2 clef=perc stafflines=0 staffscale=0.7
-B2z2z2 | B2z2z2 | B2z2z2 | B2B2B2 | B2z2z2 | B2z2z2 | B2z2z2 | B2B2B2 | 
+B2z2z2 | B2z2z2 | B2z2z2 | B2B2B2 | B2z2z2 | B2z2z2 | B2z2z2 | B2B2B2 |
 B2B2BB | B2B2BB | B2B2BB | B2B2BB | B2B2BB | B2B2BB | B2B2B2 |:
-z2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | 
-B2B2B2 | B2B2B2 :| 
+z2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2z2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |
+B2B2B2 | B2B2B2 :|
 V:3
 G2[A2c2]c2 | B2A2cB | G2ABG2 | A2d2f2 | d2cBAc | B2AG^FA | G2^FAGF | G2B2d2 | A2d2Bc |
 d2BA^Fc | B2^F2G2 | cdedB^F | GAc3d | e2B2A2 | G6 |: B4A2 | c4G2 | F4G2 | G4F2 | B4a2 | d4A2 |
@@ -724,7 +724,7 @@ M:2/4
 L:1/8
 K:F
 V:Galoubet1 name=Gal._1
-Hf2 {fcABcAFG}HA (c | B2) A2 | (A4 | G2) z2 | Hf2{fedcBAGF} dB | A2G2 | F2z2 | (A2c2 | d2c2) | BAGF | 
+Hf2 {fcABcAFG}HA (c | B2) A2 | (A4 | G2) z2 | Hf2{fedcBAGF} dB | A2G2 | F2z2 | (A2c2 | d2c2) | BAGF |
 (A2G2) | B2c2 | d2cB | AG^FG | A3z | f2e2 | edcB | A2G2 | F3z | Az3 | Fz3 |: [M:3/4] ff/f/ fedc | AA/A/ AcBA |
 GG/G/ GABd | cc/c/ c^cde | ff/f/ fedc | dd/d/ defg | afcABG | Fzfz z2:: [K:C] GG/G/ GABc | ee/e/ edcB |
 AA/A/ ABcd | dd/d/ dcBA | GG/G/ GABc | gg/g/ gfed | AA/A/ AcBd |1 cc/c/ cz z2 :|2 cc/c/ cz c2 || [K:F] ff/f/ fedc |
@@ -732,8 +732,8 @@ AA/A/ AcBA | GG/G/ GABd | cc/c/ c^cde | ff/f/ fedc | dd/d/ defg | afcABG || Fzfz
 A2c2f2 | g4f2 | F2G2A2 | B3dc=B | [Ac]fcABG | Ff/f/ ffff | F2G2A2 | B3dcB | A2c2f2 | g4f2 | F2G2A2 |
 B2c2d2 | f2_e2c2 | BB/B/ Bz c2 ||  FF/F/ FFFF | AA/A/ AAAA | cc/c/ cccc | fz z2z2 | fz z2z2 | fz z2z2 |]
 V:Galoubet2 name=Gal._2
-AHz (HF2 | G2)F2 | E4- | E2 z2 | AHz z2 | F2E2 | F2z2 | F2A2 | B2A2 | GFEF | 
-(F2E2) | G2A2 | B2EG | FE^FG | F3z | A2c2 | GBAG | F2G2 | F3z | Azz2 | Fzz2 |:  [M:3/4] 
+AHz (HF2 | G2)F2 | E4- | E2 z2 | AHz z2 | F2E2 | F2z2 | F2A2 | B2A2 | GFEF |
+(F2E2) | G2A2 | B2EG | FE^FG | F3z | A2c2 | GBAG | F2G2 | F3z | Azz2 | Fzz2 |:  [M:3/4]
 AA/A/ AcBA | FF/F/ FAGF | EE/E/ EFGB | AA/A/ ABAG | AA/A/ AcBA | BB/B/ BGdG | cAAFGE | FzAzz2 :: [K:C] EE/E/ EEGE | GG/G/ GGEG |
 FF/F/ FdAF | FF/F/ FAGF | EE/E/ EEGE | ee/e/ edcG | FF/F/ FAGF |1 EE/E/ Ezz2 :|2 EE/E/ Ez A2 || [K:F] AA/A/ AcBA |
 FF/F/ FAGF | EE/E/ EFGB | AA/A/ ABAG | AA/A/ AcBA | BB/B/ BGdB | cAAFGE || FzAz z2 |  F2G2A2 |B3dcB |
@@ -772,7 +772,7 @@ L:1/8
 K:Bb
 V:Galoubet
 Q: Moderato
-Bd | ff gg | ff Bd | ff gg | f2 df | ee ce | dd Bd | c^c d=e | Hf2 [Q:Allegretto] f>e | dd cd | 
+Bd | ff gg | ff Bd | ff gg | f2 df | ee ce | dd Bd | c^c d=e | Hf2 [Q:Allegretto] f>e | dd cd |
 BF Bc | d2d2 | Hc2 f>e | dd cd | BF Bc | !tenuto!d2 !tenuto!c2 | B2 |]
 <end>
 <start>
@@ -896,8 +896,8 @@ d2c | edc | B3 | f2e | gfe | d3 | Bed | GGc |
 A2 B | cd2 | c2z | e3 | d3 | c3 | B2c | d2G | c2B | !breath!A3 | B3 |
 c2e | d3 | cBA | BA2 | !breath!G3 | dcB | cBA | HG3 - || G3 |]
 V:2 name=Tamb. clef=perc stafflines=1 staffscale=0.6
-B2B | B2B | BBB | B2B | B2B | BBB | B2B | B2B | 
-B2B | zB2 | B2z | B2B | B2B | B2B | B2B | B2B | B2B | B3 | B2B | 
+B2B | B2B | BBB | B2B | B2B | BBB | B2B | B2B |
+B2B | zB2 | B2z | B2B | B2B | B2B | B2B | B2B | B2B | B3 | B2B |
 B2B | BBB | B2B | zB2 | BBB | B2B | B2B | BBB || B3 |]
 <end>
 <start>
@@ -914,7 +914,7 @@ M:2/4
 L:1/8
 K:Bb
 zFGA | B2B2 | (B>d f)d | B2c2 | (cA F)A | c2c2 | (c>d e)f | d2c2 | B2z2!fine! |:
-(B2 cd | e3c | d2 BF | B2d2 | c4 |B2) (cd | e3c | d2 B)d | f3d | c>e dc | BFGA | B2B2 | (B>d f)d | 
+(B2 cd | e3c | d2 BF | B2d2 | c4 |B2) (cd | e3c | d2 B)d | f3d | c>e dc | BFGA | B2B2 | (B>d f)d |
 B2c2 | (c>A F)A | c2c2 | (c>d e)f | d2c2 |1 B4 :|2 HB4 |]
 
 <end>
@@ -940,8 +940,8 @@ F2^cd | B4- | B2A_A | G2G2 | fdf2| e4- | ezz2 | c2d2 | cddc | c2d2 | cddc | c2d2
 V:2 clef=perc stafflines=0 staffscale=0.7
 K:C transpose=-24
 B2B2 | B2B2 | B2B2 | B2B2 | B2B2 | B2B2 | BBBB | BBBB | B2B2 | B2B2 | B2B2 | B2B2 | B2B2 | B2B2 | BBBB | BBBB |:
-B2B2 | BBBB | B2B2 | BBBB | B2B2 | BBBB | BBBB | BBBB | B2B2 | BBBB | B2B2 | BBBB | B2B2 | BBBB | BBBB | 
-BBBB | BBBB | BBBB | BBBB | BBBB | B2B2 | BBB2 | BBBB | BBBB | B2B2 | BBBB | B2B2 | BBBB | B2B2 | BBBB | 
+B2B2 | BBBB | B2B2 | BBBB | B2B2 | BBBB | BBBB | BBBB | B2B2 | BBBB | B2B2 | BBBB | B2B2 | BBBB | BBBB |
+BBBB | BBBB | BBBB | BBBB | BBBB | B2B2 | BBB2 | BBBB | BBBB | B2B2 | BBBB | B2B2 | BBBB | B2B2 | BBBB |
 BBBB | BBBB :|
 <end>
 <start>
@@ -960,7 +960,7 @@ K:Cm
 P:A
 c/=B/ | ce ce/d/ | eg eg/e/ | a/g/f/e/ df | e2 {fe}d c/=B/ | ce ce/d/ |
 eg eg/e/ | a/g/f/e/ dg | c3!fine! :: [P:B]ed | eg e{a}g/f/ | gb gg/e/ |
-a/g/f/e/ de | (f/e/)dc Be/d/ | eg e{a}g/f/ | gb gg/e/ | a/g/f/e/ dd | 
+a/g/f/e/ de | (f/e/)dc Be/d/ | eg e{a}g/f/ | gb gg/e/ | a/g/f/e/ dd |
 (f2e) :| [K:C] [P:Trio] G | ee dd | (c2G) G | gg ff |
 (e2c/)e/f/g/ | a>a g>g  | ^f>f =f>f | eg fe | (e2d) G | ee dd |
 (c2G) G | gg ff | (e2c/)e/f/g/ | a>a g>g | ^f>f =f>f | =e/G/c/e/ g/f/d/B/ | (d2c) |]
@@ -989,7 +989,7 @@ c3 fed | .c.c.c dcB | .A.A.A fed | cdc cBA | G3 (fe)f | F2F FGA |
 B3 GAB | cdc cBA | G2F (fe)f | F2F FGA | B3 GAB | cba gfe | f3 :|
 V:2  name=G
 A2A | F2F =e2e | d3 EFG | E2E edc | B2A AcA | AGA FEF |
-d3 BAB | edc BAG | A3 :: E2G | (GF)E E2E | EFG F2A | A2A (AG)F | 
+d3 BAB | edc BAG | A3 :: E2G | (GF)E E2E | EFG F2A | A2A (AG)F |
 F2E E2G | (GF)E E2E | EGF ABc |BBA GFE | GFE c=Bc | E2E EGc |
 A3 FGA | =BcB BdG | G2G c=Bc | E2E EGc |A3 FGA | =BAG FEG |
 E3 dc_B | .A.A.A BAG | .F.F.F dcB | ABA AGF |E3 A2A | F2F _e2e |
@@ -1105,7 +1105,7 @@ c>d ec|AF FF|(B/A/).B/.c/ (d/A/).B/.G/|F4 :|\
 P:C
 FA cA|ec AF|B2 d>c|B4|]
 V:2 clef=perc stafflines=1 staffscale=0.7
-[K:C]B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | BBB2 | 
+[K:C]B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | BBB2 |
 B2 B2 | BBB2 | B2 B2 | BBB2 | B2 B2 | B3z |
 <end>
 <start>
@@ -1199,7 +1199,7 @@ Z:Pour toute observation mailto:galouvielle@free.fr
 M:2/4
 L:1/16
 K:F
-z>fA>d|:c2A2 F>fe>d| c2B2 G>fe>d| c2B2 G>gg>f| e2d2 c>dc>B| 
+z>fA>d|:c2A2 F>fe>d| c2B2 G>fe>d| c2B2 G>gg>f| e2d2 c>dc>B|
 A2G2 A2B>c| d>cB>A G>AB>c| e>dc>B A>Bc>e| g>fe>d c>BA>G|[1 A2d2 c>!breath!fA>d :|[2 F2c2 f2_e>d||
 [K:Bb] c>de>d c>de>c| d2B2 B2A>B| c>BA>B c>ed>c| d2B2 F2A>c|
 e>dc>B A>Bc>e| d>cB>A G>AB>c| d>fB>d c>ed>c|[1 B2F2 !breath!B2_e>d:|[2 B2F2 !breath! B>fA>d||
@@ -1249,7 +1249,7 @@ M:2/4
 L:1/8
 K:Bb
 d>c Bf | fe d2 |  d>c de | c2Bz | d>c Bf | fed2 | d>cde | c2Bz | \
-w:Sian de joui-ne cour-de-lie, Fa-s?n de cour-del-lo. E dins nos-te b?u mes-ti?, Ser-ven foue-?o bel-lo 
+w:Sian de joui-ne cour-de-lie, Fa-s?n de cour-del-lo. E dins nos-te b?u mes-ti?, Ser-ven foue-?o bel-lo
 bb aa | ggf2 | fg gf | fe dd/e/ | ff f/e/d/e/ | ff fd | d>e ff | g2f2 | B>c de | c2Bz |]
 w:Dins nos-to bou-ti-go v?n De tou-to sor-to de g?nt, Mai lei pu pou-li-do soun lei mi?s ser-vi-do, Mai lei pu pou-li-do soun lei mi?s ser-vi-do.
 <end>
@@ -1349,7 +1349,7 @@ Z:Pour toute observation mailto:galouvielle@free.fr
 M:2/4
 L:1/8
 K:Bb
-GABc | d2gz | dedc | B2Gz | GABc | dc de | dc BA | G2gz | 
+GABc | d2gz | dedc | B2Gz | GABc | dc de | dc BA | G2gz |
 BABd | c2B2 | BABd | c2fz | GABc | dcde | dcBA | G2gz |]
 G/A/B/A/ G/A/B/c/ | d2d2 | G/A/B/A/ G/A/B/c/ | d2d2 | d/e/d/c/ BA | c2A2 | d/e/d/c/ BA | A2z2 :: \
 <end>
@@ -1367,7 +1367,7 @@ M:2/4
 L:1/8
 K:Bb
 V:Galoubet
-d/ | d>c d>e | f2z>f | f>g d>c | B2 z>B | c>B c>d | e2 z>B | A>A d>d | G2 z>d | d>c d>e | f2 z>f | 
+d/ | d>c d>e | f2z>f | f>g d>c | B2 z>B | c>B c>d | e2 z>B | A>A d>d | G2 z>d | d>c d>e | f2 z>f |
 f>g d>c | B2z>B | c>B c>d | e>d c>B | A>A d>d G2 !fine! || z>G | G>^F G>A | B2 z>B | c>B A>G | d>c d>e |
 f>e d>c | d2z>G | G>^F G>A | B2 z>B | c>B A>G  | d>c d>e | f>e d>c | d2 z>d !D.C.! |]
 <end>
@@ -1390,7 +1390,7 @@ BBcd | e2e2 | ffcd | e2z2 | BBcd | e2e2 | ffcd | e2z>e | f>f fg | a>g fe | decf 
 <start>
 X: 64
 T:Au renouviau
-R:Danse 
+R:Danse
 <end>
 <start>
 XIIIe
@@ -1446,8 +1446,8 @@ L:1/8
 Q:3/8=126
 K:Fmaj
 G2G dGd | d2c BAB | GFG AGA | F3 G2A | BAG A2E | A3 z2z | G2G dGd | d2c BAB |
-GFG AGA | F3 G2A | c2d c2B | AGA FG2 +fine+ || (c/2B/2A)B c2d | (c/2B/2A)B GFG | (B/2A/2G)A B2c | (c/2B/2A)B GFG | 
-(c/2B/2A)B c2d | (c/2B/2A)B GFG | g2f e3 | (g/2f/2e)f d2G | dGd d3 | G2G dGd | d2c BAB | GFG AGA | 
+GFG AGA | F3 G2A | c2d c2B | AGA FG2 +fine+ || (c/2B/2A)B c2d | (c/2B/2A)B GFG | (B/2A/2G)A B2c | (c/2B/2A)B GFG |
+(c/2B/2A)B c2d | (c/2B/2A)B GFG | g2f e3 | (g/2f/2e)f d2G | dGd d3 | G2G dGd | d2c BAB | GFG AGA |
 F3 G2A | BAG A2E | A3z2z | G2G dGd | d2c BAB | GFG AGA | F3G2A | c2d c2B | AGA FG2 |
 (g2f/2e/2 d2e/2f/2 | g2f/2e/2 d3) | g2f e3 | (g/2f/2e)f d2G | dGd d3 +D.C.+ |]
 <end>
@@ -1664,7 +1664,7 @@ FAc|FAc fed|(c2c) dBd|cBA GcB|A2F FAc|FAc fed|(c2c) fef|(g2g) fed|
 c3 cdc|cBA GcB|A2F A2A|A2c cBA|G3 cdc|cBA GcB|A2F fed|dcA cBG|
 F3 ||[K:Bb]fgf|f2d fgf|f2d ddd|dcB cBA|c2B fgf|f2d fgf|f2d ddd|dcB cBA|B3|]
 V:2
-A2A| A2G A2B| (A2A) B3| G2F e2d| c2!breath!A A2A| A2G A2B| (A2!breath!A) A3| B3 dcB| 
+A2A| A2G A2B| (A2A) B3| G2F e2d| c2!breath!A A2A| A2G A2B| (A2!breath!A) A3| B3 dcB|
 A2z .e2.e|.e2.c .e2.g|.f2!breath!.f .c2.c| .c2.A .G2.F| !breath!E3 .e2.e|.e2.c .e2.g|(f2!breath!f) d2g| .f2.f .e2.e|
 f2z ||[K:Bb] d2d|Ld2 ((3B/d/f/) d2d| (Ld2B) f2f| (f2d) e2f| (e2d) d2d| Ld2 ((3B/d/f/) d2d| (Ld2B) f2f| (f2d) e2f|d3|]
 <end>
@@ -1681,9 +1681,9 @@ M:6/8
 Q:3/8=90
 K:Fmajor
 F2A | c2 c c d c | A2F F2G | A2A A G F | G2z F2A | c2c c d c |
-w:L'a de fi-ho que man-jon gai-re per car-ga de blue-jean' es-tr? E soun ta-fa-n?-ri pe- 
+w:L'a de fi-ho que man-jon gai-re per car-ga de blue-jean' es-tr? E soun ta-fa-n?-ri pe-
 A2F f f f | e2c d2=B | c2z A2B [P:REFRIN] || c2c c d e | f3 A A A | B2B G G G |
-w:cai-re~! re-ti-po douei v?-no d'a-iet. E pa-mens l'a ren de tant be? cou-me la grais-so, cou-me la 
+w:cai-re~! re-ti-po douei v?-no d'a-iet. E pa-mens l'a ren de tant be? cou-me la grais-so, cou-me la
 A2!breath!F F2A | c2c c d e | f3 A A A | B2B G G G | F2z ||
 w:grais-so, E pa-mens l'a ren de tant be? cou-me la grais-so sou-to la pe?~!
 W:Coublet :
@@ -1862,9 +1862,9 @@ d4- | d2d^c | d3^c | dfed | c4- | c2Ac | GFAc | de2c | f4 | f2z2 S || !Coda! dd/
 V:2 clef=perc stafflines=0 staffscale=0.7
 BB/B/ BB | BB/B/ BB | BB/B/ BB | BB/B/ B2 || BB/B/ BB | BB/B/ BB | BB/B/ BB | B2BB || BBBB |
 BBBB | BB/B/BB | BB/B/BB | BBBB | BBBB | BB/B/BB | BB/B/BB | B2BB | B2BB | BB/B/BB | BB/B/BB | B2BB |
-B2BB | BB/B/BB | BB/B/BB | BBBB | BBBB | BB/B/BB | BB/B/BB | B2BB | B2BB | BB/B/BB | BB/B/BB | 
-BBBB | BBBB | BB/B/BB | BB/B/BB | B2BB | B2BB | BBBB | BBBB || B2B2 | B2B2 | 
-BB/B/BB | BB/B/BB | BB/B/BB | B2B2 | BB/B/BB | BB/B/BB | BB/B/BB | BB/B/BB | BB/B/BB | BB/B/BB |  BB/B/BB | BB/B/BB | 
+B2BB | BB/B/BB | BB/B/BB | BBBB | BBBB | BB/B/BB | BB/B/BB | B2BB | B2BB | BB/B/BB | BB/B/BB |
+BBBB | BBBB | BB/B/BB | BB/B/BB | B2BB | B2BB | BBBB | BBBB || B2B2 | B2B2 |
+BB/B/BB | BB/B/BB | BB/B/BB | B2B2 | BB/B/BB | BB/B/BB | BB/B/BB | BB/B/BB | BB/B/BB | BB/B/BB |  BB/B/BB | BB/B/BB |
 BB/B/BB | BB/B/BB | BB/B/BB | B2B2 | BB/B/BB | BB/B/BB | B2B2 | BB/B/BB | BB/B/BB | BB/B/BB || BB/B/BB | BB/B/BB | BB/B/BB | BB/B/Bz |
 <end>
 <start>
@@ -1883,10 +1883,10 @@ Q:1/4=120
 K:Db transpose=24
 V:1
 (B2 cd cB | d)z (cd cB | dz cd cB | c)z (=A4 | =A2 Bc BA | c)z (Bc B=A | c)z (Bc B=A | B)z (F4 | B2 cd cB | d)z (cd cB | d)z (cd cB |
-c)z (=A4 | Bc ed cB | A6 | G6 | F6) |  Bc ed cB | A6 | B6 | c4z2 |: [K:Bb] d2c2B2 | d2c2B2 | 
+c)z (=A4 | Bc ed cB | A6 | G6 | F6) |  Bc ed cB | A6 | B6 | c4z2 |: [K:Bb] d2c2B2 | d2c2B2 |
 e2ed ed | c6 | e2d2c2 | e2d2c2 | f2 f=e f_e | d6 | F2G2B2 | A2AG FG | A2 AG FG | A6 | G2A2c2 |
 B2 BA GA | B2 BA GA | B6 | d2c2B2 | d2c2B2 | e2 ed ed | c6 | e2d2c2 | e2d2c2 |  f2 f=e f_e | d6 |
-(F2G2B2 | A2) AG FG | A2 AG FG | A6 | c2d2e2 | d2 dc Bd | c2 cB Ac | B2 z2z2 S :| 
+(F2G2B2 | A2) AG FG | A2 AG FG | A6 | c2d2e2 | d2 dc Bd | c2 cB Ac | B2 z2z2 S :|
 V:2 clef=perc stafflines=0 staffscale=0.7
 K:C transpose=-24
 .B2B2B2 | .B2B2B2 | .B2B2B2 | .B2B2B2 | .B2B2B2 | .B2B2B2 |
@@ -1974,7 +1974,7 @@ V:Galoubet
 d3 ede | f3b3 | B2B c2c | ded c3 | d3 ede | f3 b3 | B2B cdc | B3-B2!fine!f |
 fed cde | f2d B2f | fed cde | f2d B2f | g2f B2f | g2f b2f | fgf fed | c3 ^c3!D.C.! |]
 V:Tambourin clef=perc stafflines=1  staffscale=0.6
-B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | 
+B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | B3B3 | B3B3 |
 B3B3 | B2BB3 | B3B3 | B2BB3 | B3B3 |  B3B3 |  B3B3 |  B3z3 |
 <end>
 <start>
@@ -2016,7 +2016,7 @@ L:1/8
 K:Gm
 V:Galoubet
 d2 d>d | e2>d2 | ABcd | c2B2 | A2A>A | d2>G2 | ABcd | G4 |d2e>f | d2>c2 | BABc | d2d2 | g2g>g | ^f3B | cedd |
-G3d | cBcd | B3d | fedc | e2d2 | G2G>G | B4 | G2G>G | d2>>e2 | fedc | d2>e2 | dcBA | G4 | F2>G2 | FGFB | 
+G3d | cBcd | B3d | fedc | e2d2 | G2G>G | B4 | G2G>G | d2>>e2 | fedc | d2>e2 | dcBA | G4 | F2>G2 | FGFB |
 d4- | d f ed | c2>=B2 | cd ef | g4 | f4 | d2>f2 | edcB | A>G A>B | A2 d>c | B2 e>d | c2 c>B | A2 B>A | G4 |]
 <end>
 <start>
@@ -2044,7 +2044,7 @@ d2^c2 dB z2 | e2d2 ec z2 | AB zB/A/ Bc zB/d/ | f/e/d/c/ zf/e/ dc z2 |
 P:Coda
 f2f2F2 z2 |]
 V:2 clef=perc stafflines=1
-z2z2z2B2 | z2z2z2B2 | 
+z2z2z2B2 | z2z2z2B2 |
 z2z2z2B2 | z2z2z2B2 | z2 Bz z2 Bz | z2 Bz z2 B2 |
 z2z2z2B2 | z2z2z2B2 | z2 Bz z2 Bz | z2 Bz z2 B2 |
 z2z2z2B2 | z2z2z2B2 | z2 Bz z2 Bz | z2 Bz z2 B2 |
@@ -2066,7 +2066,7 @@ K:Bb
 V:Galoubet
 d4 | f2e2 | c3A | F4 | e4 | g2e2 | c3B | d4 | f2ff | e2dc | g2gg | g4 | G2AB | c2de | d2c2 | B4!fine! ::
 d2dd | d2dd | f2cc | d2B2 | d2dd | c2cc | d2=ec |1 f4 :|2 f3f |:
-cccc | d2Bf | cB AG | F3f | cccc | d2Bf | ccd=e | f2F/F/F/F/ | BB cc | 
+cccc | d2Bf | cB AG | F3f | cccc | d2Bf | ccd=e | f2F/F/F/F/ | BB cc |
 d3d/f/ | ec cg | f2 F/F/F/F/ | BB cc | d3d/f/ |1 e>c d>c | B3f :|2 e>c d>[fc] | [b4B4]!D.C.! |]
 <end>
 <start>
@@ -2087,7 +2087,7 @@ F2 | B2Bc d2ef | e2cc !breath!c2e2 | dfed cecA | B2FF !breath!F2f2 |
 d2Bd !breath!c2f2 | d2Bd !breath!c2f2 | =edcB A2G2 | F2F>F F2z2 || Lff/e/ df Bdfd |
 Lee/d/ ce Acec | Ldd/c/ Bd FBdf | c(c/B/) A(A/G/) !breath!F c de | Lff/e/ df Bdfd | Lee/d/ ce Acec |
 MB>B Mc>c Md>d M=e>e | MfMf/Mf/ MfMf Mf2 z2 || g2 g>f e2 f2 | f>g f>e d2 f2 | e>f e>d c2 B2 |
-(d4c) z/F/ B>c | d>B B>B !breath!B> d B>d | f>d d>d !breath!d2 f>d | B2 f>d .B.B .c.d | (e2>f2 !breath!g2) e>d | 
+(d4c) z/F/ B>c | d>B B>B !breath!B> d B>d | f>d d>d !breath!d2 f>d | B2 f>d .B.B .c.d | (e2>f2 !breath!g2) e>d |
 c2 c>c .c.c.d.e | !breath!f2>(.f2 .g.f.e.c) | B2 (c/B/A/G/) F2 A2 | B2 (c/B/A/G/) F2 A2 | MB2 MB>MB MB2 |]
 V:2 clef=perc stafflines=1 staffscale=0.5
 K:C
@@ -2102,7 +2102,7 @@ F2 | d2 de f2 cd | c2 FF !breath! F2 c2 | BdcB AcAF | d2 df !breath!d2 d2 |
 B2 GB !breath!A2 d2 | B2 GB !breath!A2 d2 | cBAG F2 c2 | A2 A>c A2 z2 | Ldd/c/ BF dBFB |
 Lcc/B/ AF cAFA | LBB/A/ GB AdBA | A(A/G/) c(c/B/) !breath!A A Bc | Ldd/c/ BF dBFB | Lcc/B/ AF cAFA |
 MG>G MA>A MB>B MG>G | MAMA/MA/ MAMA MA2 z2 || e2 e>d c>G c>e | d>e d>c B>F B>d | c>d c>B A>F G>G |
-(FB) (FB) Az/F/ G>A | B>d d>d !breath!d> B F>B | d>B B>B !breath!B2 d>B | d2 d>B .d.d .A.B | (c2>d2 !breath!e2) c>B | 
+(FB) (FB) Az/F/ G>A | B>d d>d !breath!d> B F>B | d>B B>B !breath!B2 d>B | d2 d>B .d.d .A.B | (c2>d2 !breath!e2) c>B |
 A2 A>A .A.A.B.c |!breath!d2> (.A2 .B.A.c.e) | d2 (e/d/c/B/) c2 c2 | d2 (e/d/c/B/) c2 F2 | MB2 Md>Md Md2 |]
 <end>
 <start>
@@ -2202,13 +2202,13 @@ M:2/4
 L:1/8
 K:Bb
 V:Galoubet1
-B4 | A2G2 | F2>B2 | d4 | f2e>d | c>d e>d | g2f>e | d4 | b2a>g | f2 c>d | e2 B>c | d4 | e2 Gc | B2 AB | 
+B4 | A2G2 | F2>B2 | d4 | f2e>d | c>d e>d | g2f>e | d4 | b2a>g | f2 c>d | e2 B>c | d4 | e2 Gc | B2 AB |
 d2>c2 | B4!fine! :: \
 K:F
 A4 | d2^c2 | f2>e2 | d4- | defg | a2b2 | a2g>f | e4- | e^def | g2ba | g2gf | e4 | eA ^ce | g2 a>b | a2 fe | d4 ::
 f4 | A2c2 | e2>d2 | c4 | F2A2 | c2f2 | e4 | d4 | g4- | gfed | a2>f2 | c4 | zA Bc | d4- | dedc | f4 :|
 V:Galoubet2
-B4 | A2G2 | F2>B2 | BFBd | f2 c>c | c>c c>c |B2 d>c | BFBd | g2 f>e | d2 A>B | c2 B>c | BFBd | e2 Gc | B2 AB | 
+B4 | A2G2 | F2>B2 | BFBd | f2 c>c | c>c c>c |B2 d>c | BFBd | g2 f>e | d2 A>B | c2 B>c | BFBd | e2 Gc | B2 AB |
 A2>A2  | B4 ::
 K:F
 A4 | B2A2 | d2>^c2 | dAFA | d^cde | f2g2 | f2 e>d | ^cAce | a2 gf | e2gf | e2ed | ^cAFA | ^cA Ac | e2^c2 | A2 ^c2 | d4 ::
@@ -2293,7 +2293,7 @@ B3 (c/B/) A2A2|G3(A/G/) !breath!F2 f2|.e2.f2.b2.a2|g>fe>d c>BA>G|
 f2)f>ff2(g/f/e/d/)|c2 c>c c2 (c/B/A/G/)|.F2 .A2 .G2 .c2|(B2>A2) G4|
 B3 (c/B/) A2A2|G3(A/G/) !breath!F2 f2|(ed)bg f2e2|f2 f>f f4"FIN"||
 cfcf cfcf|dfdf c2A2|cfcf cfcf|.B2.A2 (A2G2)|
-cfcf cfcf|dfdf c2A2|cfcf cfcf|B2A2 G4|| 
+cfcf cfcf|dfdf c2A2|cfcf cfcf|B2A2 G4||
 V:2
 A2 A>A A2 (e/d/c/B/)|A2 A>A A2 (A/G/F/E/)|.F2.F2.E2.G2|(G2>F2) E4|
 G3 (A/G/) F2F2|E3 (F/E/) F2A2|.G2 .A2 .d2 .c2|B>dc>B A>GF>E|
@@ -2316,8 +2316,8 @@ M:2/4
 L:1/8
 K:Bb
 V:Galoubet
-d2A2 | d2>>e2 | f>e f>d |a2>>f2 | g2a2 | b>a g>f | e2a2 | g>f e>f | d2A2 | d2>>e2 | 
-f>e f>d | a>>f | g2a2 | b>a g>f | f2e2 | d2ze | e2e2 | e2>>d2 | e2f2 | g2>>f2 | g2a2 | d2ef | 
+d2A2 | d2>>e2 | f>e f>d |a2>>f2 | g2a2 | b>a g>f | e2a2 | g>f e>f | d2A2 | d2>>e2 |
+f>e f>d | a>>f | g2a2 | b>a g>f | f2e2 | d2ze | e2e2 | e2>>d2 | e2f2 | g2>>f2 | g2a2 | d2ef |
 gf ed | d2^cz/e/ | e2e2 | e2>>d2 | e2f2 | g2>>f2 | g2a2 | ba gf | f2e2 | d2z2 |]
 <end>
 <start>
@@ -2337,7 +2337,7 @@ b4 f4 | d2B>B !breath!B2c>d | e4 c4 | A2F>F !breath!F2f>e | d2d>d d2e2 | f2>f2 g
 c2c>c c2d2 | e2>e2 fe dc | B2>A2 BA Bc | d2>c2 dc de | f2f>f gf ed | c2c>c c2z2 ::
 c2A2c2A2 | (e2>d2) c2z2 | d2B2d2B2 | (f2>e2) d2z2 | g2>e2 b2>g2 | f2>d2 b2>f2 | g>b g>e d2c2 | B2B>B B2z2 :|
 V:2 clef=perc stafflines=1 staffscale=0.7
-[K:none]"Suivre" x8 | x8 | x8 | x8 | x8 | x8 | 
+[K:none]"Suivre" x8 | x8 | x8 | x8 | x8 | x8 |
 x8 | x8 | x8 | x8 | x8 | x8 ::
 B2B2B2B2 | BB/B/ BB B2B2 | B2B2B2B2 | BB/B/ BB B2B2 | B2>B2 B2>B2 | B2>B2 B2>B2 | B>B B>B B2B2 | B2B>BB2z2 :|
 V:3
@@ -2402,7 +2402,7 @@ M:C
 L:1/8
 K:Bb
 V:Galoubet
-F2 | B2B>c B>AG>A | B4 z2d>e | f2g>f e2f>e | d>c d>e c2F2 | B2B>c B>AG>F | B6 d>e | f2g>f e2f>e | d6 d>e | 
+F2 | B2B>c B>AG>A | B4 z2d>e | f2g>f e2f>e | d>c d>e c2F2 | B2B>c B>AG>F | B6 d>e | f2g>f e2f>e | d6 d>e |
 f2f>f f2g>f | e2e>e e2f>e | d2d>dd2e>d | c>B c>d c2d>e | f2f>f f2g>f | e2e>e e2f>e | d>c d>e d2c2 | B6 |]
 <end>
 <start>
@@ -2420,7 +2420,7 @@ M:C
 L:1/8
 K:Bb
 V:Galoubet
-d4 d>e f>g | f3 (e/d/) c2z2 | e4 e>f g>a | b3 a/g/ f2f2 | g2f2e2d2 |1 d4c2z2 :|2 d4c2F2 | A2c2f2a2 | bgf=e f2F2 | 
+d4 d>e f>g | f3 (e/d/) c2z2 | e4 e>f g>a | b3 a/g/ f2f2 | g2f2e2d2 |1 d4c2z2 :|2 d4c2F2 | A2c2f2a2 | bgf=e f2F2 |
 A2c2f2a2 | bgf=e f2f2 | (d2e2) (c2f2) | d2e2 c>f g>e | d4 c4 |1 B2B>BB2F2 :|2 B2 b>b b2z2 !fine! |]
 <end>
 <start>
@@ -2474,7 +2474,7 @@ K:Bb
 V:Galoubet
 d>dd2 | d>dd2 | eccg | (f2d2) | feec | eddB | dBBA | B2 G/A/B/c/ |
 d>dd2 | d>dd2 | fccg | (f2d2) | feec | eddB | dccA | BzBz !fine! || [K:F]
-f4 | f>ef>d | c4 | c>AB>G | F2>>G2 | F>GA>B | d2-d/c/B/A/ | G2z2 | 
+f4 | f>ef>d | c4 | c>AB>G | F2>>G2 | F>GA>B | d2-d/c/B/A/ | G2z2 |
 g2>f2 | e>dc>B | A>c f2 | G>Bd2 | F>Ac2 | B>cA>G | FF Ac | f2z2!D.C.! |]
 <end>
 <start>
@@ -2532,7 +2532,7 @@ P:B
 c3/2A/2F3/2A/2 c3/2A/2c3/2f/2|d3/2B/2G3/2B/2 d3/2B/2d3/2g/2| =e3/2d/2c3/2d/2 e3/2f/2g3/2_a/2|=a3/2g/2f3/2d/2 c2 z2|
 c3/2A/2F3/2A/2 c3/2A/2c3/2f/2|d3/2B/2G3/2B/2 d3/2B/2d3/2g/2| =e3/2d/2c3/2d/2 e3/2g/2b3/2g/2|f2f2 f2 z2::
 P:C
-B3/2F/2d3/2F/2 B3/2F/2B3/2d/2|c2f2 f2 z2| B3/2F/2d3/2F/2 B3/2F/2B3/2d/2|c3/2B/2A3/2G/2 F2 z2| B3/2F/2d3/2F/2 B3/2F/2B3/2d/2 | 
+B3/2F/2d3/2F/2 B3/2F/2B3/2d/2|c2f2 f2 z2| B3/2F/2d3/2F/2 B3/2F/2B3/2d/2|c3/2B/2A3/2G/2 F2 z2| B3/2F/2d3/2F/2 B3/2F/2B3/2d/2 |
 c2f2 f2 z2 |[1f3/2=e/2f3/2g/2 a3/2g/2f3/2e/2|f2f2 f2 z2:| [2f3/2=e/2f3/2g/2 f3/2_e/2d3/2c/2|B2f2 b3/2F/2G3/2A/2|]
 <end>
 <start>
@@ -2562,11 +2562,11 @@ R:Matelote
 M:2/4
 L:1/16
 K:Bb
-"Refrin"F/G>A| B>AB>c d>cd>e| f2b2 f>df>g| e2a2 e>cd>e| d2b2 f>FG>A| 
+"Refrin"F/G>A| B>AB>c d>cd>e| f2b2 f>df>g| e2a2 e>cd>e| d2b2 f>FG>A|
 B>AB>c d>cd>e| f2b2 f>=ef>g| a>gf>e d>cB>A| B2f2 b2z2||
-[K:Eb]B>GE>G B>GB>e| c>AF>A c>Ac>f| d>cB>c d>ef>^f| g>de>c B2z2| 
+[K:Eb]B>GE>G B>GB>e| c>AF>A c>Ac>f| d>cB>c d>ef>^f| g>de>c B2z2|
 B>GE>G B>GB>e| c>AF>A c>Ac>f| d>cB>c d>ag>f| e2e2 e> FG>=A"Au refrin"||:
-[K:F]B>Fd>F B>FB>d| c2f2 f2z2| B>Fd>F B>FB>d| c>BA>G F2z2| B>Fd>F B>FB>d| c2f2 f2z2| 
+[K:F]B>Fd>F B>FB>d| c2f2 f2z2| B>Fd>F B>FB>d| c>BA>G F2z2| B>Fd>F B>FB>d| c2f2 f2z2|
 [1 =e>dc>B e>fg>a| f2f2 f2z2 :|[2 a>gf>e d>cB>A| B2B2 B> FG>A"Au refrin"||
 W:2 fois pour finir
 <end>
@@ -2604,7 +2604,7 @@ P:Introducioun poco lento
 d | (edcBAG) | d3z (fe | dcBABc) | (A3A ce | e3) (G AB | d4) z(e | dcBA G2) | G4 z(G | BdgfBc | d3)z z(B |
 AedGBA) | c4 z(c | cdeBcd) | d4 (GA | B2) A3G | G4 Hz2 |: [P:Mazurka] g>(d e>)(B c)>d | G4 z>G | (A>B) (c>d (e>)d) | d6 |
 (d>c) (c>B) (B>A) | A4z>e | (d>c) (B>A) (d>^F) | G4z>G | g2(f>ed2) | d4z>G | g2(f>ed2) | d4z>G | (B>A) (G>A) (B>G) | d6 | d2(d>e)d2 |
-c6 | c2(c>d)c2 | B6 | B2(B>c)B2 | A6 |1 A2(B>A)G2 | G6 :|2 A2d>^fg2 | g6 |: [K:F] (defedc | BA)c2c2 | 
+c6 | c2(c>d)c2 | B6 | B2(B>c)B2 | A6 |1 A2(B>A)G2 | G6 :|2 A2d>^fg2 | g6 |: [K:F] (defedc | BA)c2c2 |
 (GABcde | de)c4 | (agfedc | ed) A2A2 | (ABcdef | ag) f2f2 :| [K:Bb] g>d e>B c>d | G4 z>G | A>B c>d e>c |
 d6 | d>c c>B B>A | A4 z>e | d>c B>A d>^F | G4 z>G | g2f>ed2 | d4 z>G | g2f>ed2 | d4z>G | B>A G>A B>G | d6 |
 d2d>ed2 | c6 | c2c>dc2 | B6 | B2B>cB2 | A6 | A2B>AG2 | G6 |: (de)(dg)(de) | (cd)e2d2 | (gf)(ed)(cd) | (ec)d4 |
@@ -2612,22 +2612,22 @@ d2d>ed2 | c6 | c2c>dc2 | B6 | B2B>cB2 | A6 | A2B>AG2 | G6 |: (de)(dg)(de) | (cd)
 A4z>e | d>c B>A d>^F | G6 |: [P:b?n canta] [K:F] f2e2d2 | c6 | A2d2A2 | B2B4 | B2c2d2 | e6 | d2e2d2 | c2d4 | c2a2g2 | f6 |
 e2d2^c2 | d2d4 | G2A2B2 | e6 |1 c2d2e2 | f6 :|2 b2a2g2 | f6 || [K:Bb] g>d e>B c>d | G4 z>G | A>B c>d e>c | d6 |
 d>c c>B B>A | A4 z>e | d>c B>A d>^F | G4 z>G | g2f>ed2 | d4 z>G | g2f>e d2 | d4 z>G | B>A G>A B>G | d6 |
-d2d>ed2 | c6 | c2c>dc2 | B6 | B2B>c B2 | A6 | A2d>^f g2 | g6 || [P:Coda] (GBecd2) | g6 | (GBecd2) | a6 | 
+d2d>ed2 | c6 | c2c>dc2 | B6 | B2B>c B2 | A6 | A2d>^f g2 | g6 || [P:Coda] (GBecd2) | g6 | (GBecd2) | a6 |
 (gfedc2) | e6 | (dcBAG2) | G6 | (ABcde^f) | g6 | "presto" d2c2e2 | d4d2 | [G6g6] |]
 V:2 clef=perc stafflines=0 staffscale=0.6
-B | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | 
-B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2B2B2 |: B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | 
-B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | 
-B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 :| B2B2B2 |  B2B2B2 |: B6 | B2B2B2 |  
-B6 | B2B2B2 | B6 | B2B2B2 | B6 | B2B2B2 :| B2B2B2 | B2B2B2 | B2B2B2 | 
-B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | 
-B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |: 
-B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB :| 
+B | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB |
+B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2B2B2 |: B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |
+B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |
+B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 :| B2B2B2 |  B2B2B2 |: B6 | B2B2B2 |
+B6 | B2B2B2 | B6 | B2B2B2 | B6 | B2B2B2 :| B2B2B2 | B2B2B2 | B2B2B2 |
+B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |
+B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |:
+B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB | B2BBBB :|
 B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |
 B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB | B2z2zB ||
-B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | 
+B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 |
 B2B2B2 | B2B2B2 | B2B2B2 | B2B2B2 ||
-BBBBBB | B2B2B2 | BBBBBB | B2B2B2 | BBBBBB | B2B2B2 | BBBBBB | B2B2B2 | BBBBBB | B2B2B2 |  
+BBBBBB | B2B2B2 | BBBBBB | B2B2B2 | BBBBBB | B2B2B2 | BBBBBB | B2B2B2 | BBBBBB | B2B2B2 |
 B2B2B2 | B4B2 | B6 |]
 <end>
 <start>
@@ -2645,10 +2645,10 @@ L:1/8
 K:Bb
 F2 | B2d2g2 | f2f2F2 | B2d2f2 | c4g2 | f2A2B2 | c2c2f2 | B2c2^c2 | d4F2 |
 B2d2g2 | f2f2F2 | B2d2f2 | c4g2 | f2A2B2 | c2c2G2 | F2A2c2 | B4 || F2 | B>A B>c d>e |
-f2d2 g>f | e2c2B>c | d2B2F2 | B>A B>c d>e | f2d2e>d | c2B2A>B | c4F2 | 
+f2d2 g>f | e2c2B>c | d2B2F2 | B>A B>c d>e | f2d2e>d | c2B2A>B | c4F2 |
 f2d2g>f | e2c2B>c | d2B2F2 | B>A B>c d>e | f2d2e>d | c2F2 A>c | B4 ||
 P:Trio
-G>B | e2e2B>g | gf=ef ad | f2e2G2 | B4 G>B | e2e2B>g | gf=ef ad | 
+G>B | e2e2B>g | gf=ef ad | f2e2G2 | B4 G>B | e2e2B>g | gf=ef ad |
 e4G2 | B4G>B | e2e2 B>g | gf=ef ad | f2e2G2 | B4 G>B | e2e2 B>g | gf=ef ad | e4 ||
 <end>
 <start>
@@ -2682,10 +2682,10 @@ L:1/8
 Z:Transcrit et/ou corrig? par Michel BELLON - 2005-06-04
 Z:Pour toute observation mailto:galouvielle@free.fr
 M:3/4
-d2d>e d>c | B2 B>c d>e | f2 f>g f>e | d6 | e2e2d2 | c2c4 | f2d2c2 | d2B4 | d2d>e d>c | B2 B>c d>e | f2 f>g f>e | d6 | 
-=e2e2d2 | d2c4 | c>d c>B A>B | c6 | e>d c2c2 | e>d c2c2 | f>e d2d2 | f>e d2d2 | c>d e>d c>d | e6 | A>B c>B A>c | f6 || 
-[L:1/4] de=e | fff | fed | ff2 | fed | fed | dc2- | c3 | ef^f | ggg | gfe | g3 | 
-Ace | gfe | d3- | d3 | de=e | fff | fed | ff2 | fed | fed | dc2 | c3 | 
+d2d>e d>c | B2 B>c d>e | f2 f>g f>e | d6 | e2e2d2 | c2c4 | f2d2c2 | d2B4 | d2d>e d>c | B2 B>c d>e | f2 f>g f>e | d6 |
+=e2e2d2 | d2c4 | c>d c>B A>B | c6 | e>d c2c2 | e>d c2c2 | f>e d2d2 | f>e d2d2 | c>d e>d c>d | e6 | A>B c>B A>c | f6 ||
+[L:1/4] de=e | fff | fed | ff2 | fed | fed | dc2- | c3 | ef^f | ggg | gfe | g3 |
+Ace | gfe | d3- | d3 | de=e | fff | fed | ff2 | fed | fed | dc2 | c3 |
 cef | ggg | gfe | d3 | dfe | dfd | cfc | B3
 
 <end>
@@ -2729,7 +2729,7 @@ L:1/8
 Q:1/4=100
 K:Bbmaj
 (G2 A^F | G2 zB | AB cA | B2 +breath+A) |
-(G2 A^F | G2 zB | AB cA | B2) z2 | (d2 cB | 
+(G2 A^F | G2 zB | AB cA | B2) z2 | (d2 cB |
 c2 zB | AB GA | ^F2 +breath+D2) | (d2 cB | c2 zB |
 AG ^FG | D2) zz/2(D/2 | G>^F GA | B2 AB | cc BA |
 B2 +breath+A)(d | G>^F GA | B2 AB | cc BA | G4) |]
@@ -2769,8 +2769,8 @@ M:6/8
 L:1/8
 Q:3/8=80
 K:F
-(d^cd | A2A f2f | e3 def | d2e d2^c | !breath!d3) :| 
-(=ccc | f2c c2c | A2A d2c | B2A G3 | !breath!A3) |: 
+(d^cd | A2A f2f | e3 def | d2e d2^c | !breath!d3) :|
+(=ccc | f2c c2c | A2A d2c | B2A G3 | !breath!A3) |:
 (ABG | A3) (ABG | A2)(A d2f | e2d d2^c | !breath!d3) :|
 <end>
 <start>
@@ -2790,7 +2790,7 @@ L:1/8
 Q:1/4=96
 K:Bb
 (B2 | d2 de dc | B2 Bc de | f2 ed cB | d2 c2) (B2 | d2 de dc |
-B2 Bc de | f2 ed ce | d4) (f2 |d2 de dc | B2 F2 B2 | c2 cd Bc | 
+B2 Bc de | f2 ed ce | d4) (f2 |d2 de dc | B2 F2 B2 | c2 cd Bc |
 d2 !breath!c2) (f2 | d2 de dc | B2 Bc de | f2 ee dc | HB4) |]
 <end>
 <start>
@@ -2815,7 +2815,7 @@ ff =ef | e2c2 | G2A2 | B4- | BB/c/ dB | (c4 | F2) (e2 | (d4) | B)d de | fz G2 | 
 <end>
 <start>
 X:136
-T:One step n?1 
+T:One step n?1
 R:One step
 S:Carnet du tambourinaire Ginas (1924)
 O:France
@@ -2827,10 +2827,10 @@ Z:Pour toute observation mailto:galouvielle@free.fr
 M:2/4
 Q:1/4=160
 K:F
-S c | Ac de | dc zA | c2f2 | e2 zg | gffe | ed zd | e2d2 | c2 zc | =BAGe | dc2e | 
-f2g2 | e2ze | dc=BA | cG^FG | A2d2 | c2zc | c2G2 | c2zc | c2d>e | cz F>G || 
-A4- | A2G>A | B4- | B2 c>d | ee ff | ee dd | c4- | c2F>G | A4- | A2 c>A | 
-G4- | G2G>A | =BAGA | =Bfed | c4- | c2 F>G | A4-A2 G>A | B4- | B2 c>d | ee ff | 
+S c | Ac de | dc zA | c2f2 | e2 zg | gffe | ed zd | e2d2 | c2 zc | =BAGe | dc2e |
+f2g2 | e2ze | dc=BA | cG^FG | A2d2 | c2zc | c2G2 | c2zc | c2d>e | cz F>G ||
+A4- | A2G>A | B4- | B2 c>d | ee ff | ee dd | c4- | c2F>G | A4- | A2 c>A |
+G4- | G2G>A | =BAGA | =Bfed | c4- | c2 F>G | A4-A2 G>A | B4- | B2 c>d | ee ff |
 ee dd | c4- | c2 F>G | A4- | A2 B>c | d4 | d2 e>d | c2 g>f | e2 a>g | f4- | f2z S |]
 <end>
 <start>
@@ -2862,7 +2862,7 @@ dc/d/ e2- | ed/c/ BA | G^F/G/ A2- | AA/B/ cd | BG/A/ Bc | AB GA | dd/d/ dd | dd/
 Ad/d/ dd | dd/d/ dd | dd/d/ d(3d/e/d/ | c(3c/d/c/ B(3B/c/B/ | Ad zd | zd zd | A(3B/A/G/ A2 - | A(cde) | (3e/f/e/ d3- | d4 | {e}d c3- | cA {c}BG |
 (^F/G/) A3- | A4 | A(3B/A/G/ A2- | Ac de | (3e/f/e/ d3- | d4 | dc/=B/ c2- | c=Bcd | (3c/d/c/ B3- | B4 | AG/^F/ G2 | G^FGA |1 (3^F/G/F/d zd/d/ |
 g2- gd/d/ |(3d=Bd (3dBd | g2- g>g | d>d =B>B | G4 :|2 (3^F/G/F/ d3 | zd/d/ dd | dd/d/ d(3d/e/d/ | c(3c/d/c/ B(3B/c/B/ | Ad/d/ dd | dd/d/ dd |
-dd/d/ d(3d/e/d/ | c(3c/d/c/ B(3B/c/B/ | Ad/d/ dd/d/ | dd/d/ dd/d/ | d2z2 |: d2^FA | c2e2 | d4- | d4 | d2^FA | ce2f/e/ | d4- | d4 |1 ef2e | 
+dd/d/ d(3d/e/d/ | c(3c/d/c/ B(3B/c/B/ | Ad/d/ dd/d/ | dd/d/ dd/d/ | d2z2 |: d2^FA | c2e2 | d4- | d4 | d2^FA | ce2f/e/ | d4- | d4 |1 ef2e |
 dc ec | dd2d | ed cB | cc2d | BB2c | Az dz | g2z2 :|2 ef2e | dc ed | (3c/d/c/ B3- | B4 | BA cB | (3A/B/A/ G3 | G4 |
 AA/B/ c2- | cc/d/ e(3e/f/e/ | d4- | d4 | d^F/G/ A2 |AB/c/ BA | Gz ^Fz | Gz |]
 <end>
@@ -2907,10 +2907,10 @@ Fd Bd | FB/d/ f2 | edcB | A/G/A/B/ cB | Fd Bd | FB/d/f2 | ed c/B/A/c/ |1 Bd/f/B2
 K:F
 (3c/d/c/ | AcfA | cB BG/A/ | Bd dc/B/ | Aff(F{cdc}) | AcfA | cB BG/A/ | Bg gf/e/ | faf :| z |
 K:Bb
-F/G/A/B/ dd | d4 | A/B/c/d/ cc | c4 | (e/e/)(e/e/) ee | (d/d/)(d/d/) dd | cBAG | (G2F)f | 
+F/G/A/B/ dd | d4 | A/B/c/d/ cc | c4 | (e/e/)(e/e/) ee | (d/d/)(d/d/) dd | cBAG | (G2F)f |
 F/G/A/B/ dd | d4 | A/B/c/d/ cc | c4 | (e/e/)(e/e/) ee | (d/d/)(d/d/) dd | cc/B/ Ac | BdB S ||
 K:F
-A | (Ac)f>(g | f3)A | (Ac)e>(f | e3)G | (GB)d>(_e | d3)F | (FA)c>(d | c3)A | 
+A | (Ac)f>(g | f3)A | (Ac)e>(f | e3)G | (GB)d>(_e | d3)F | (FA)c>(d | c3)A |
 (Ac)f>(g | f3)A | (Ac)e>(f | e2)zb/b/ | ba ag/g/ | gf fe/e/ | ecde | fffz !D.C.! |]
 <end>
 <start>
@@ -2942,7 +2942,7 @@ L:1/8
 K:F
 ccA2 | ff c2 | c/d/e/f/ cA | c/B/A/G/ AF | ccA2 | ffc2 | c/d/e/f/ ce | fffz ::
 AA F/A/c/d/ | cFA2 | cFG2 | BG AF | AA F/A/c/d/ | cFA2 | cF G/B/A/G/ | FAFz :|
-c/c/c/c/ A2 | f/f/f/f/ c2 | c/d/e/f/ cA | c/B/A/G/ AF | c/c/c/c/ A2 | f/f/f/f/ c2 | c/d/e/f/ ce | ffHfz !fine! |: 
+c/c/c/c/ A2 | f/f/f/f/ c2 | c/d/e/f/ cA | c/B/A/G/ AF | c/c/c/c/ A2 | f/f/f/f/ c2 | c/d/e/f/ ce | ffHfz !fine! |:
 K:Bb
 FBB>B | dBcF | Fcc>c | ecdf | FBB>B | dBcF | Fcc>A | BdBz ::
 f/d/B/d/ FB | dffd | g/f/f/e/ dc | d/e/d/c/ BF | f/d/B/d/ fB | dffd | g/f/f/e/ d/e/c/d/ | BBBzS :|
@@ -2994,7 +2994,7 @@ Z:Pour toute observation mailto:galouvielle@free.fr
 M:2/4
 L:1/8
 K:Bb
-S b/f/d b/f/d | ecc2 | A/B/c A/B/c | f/g/f/e/ dB | b/f/d b/f/d | 
+S b/f/d b/f/d | ecc2 | A/B/c A/B/c | f/g/f/e/ dB | b/f/d b/f/d |
 ecc2 | F/G/A/B/ cd | BBBz !fine! :: [K:F] AB c/d/c/=B/ | cAf2 | efg2 |
 fga2 | AB c/d/c/=B/ | cAf2 | efge | fffz !trio! :: [K:Eb][P:Trio] eee>g |
 eee>g | ff fc/d/ | feB2 | eee>g | eee>g | ff e/d/c/d/ | eeez S :|
@@ -3051,7 +3051,7 @@ M:6/8
 L:1/8
 K:F
 T:1?re figure : Pantalon
-FA |cFA cFA | c3- ced | ced BAG | A3 FFA | cAc cAc | c3-ced | cdc BAG | F2zF2z || 
+FA |cFA cFA | c3- ced | ced BAG | A3 FFA | cAc cAc | c3-ced | cdc BAG | F2zF2z ||
 ecd ecd | egf edc | dfe dgf | e3 cAc | ecd ecd | egf edc | =BAG fed | c3- cAc | cFA cFA |
 c3- ced | cdc BcB | A3 FFA | cFA cFA | c3-ced | cdc BAG | F2zF2z || [K:Eb] d3f3 | e3- eAB | c3e3 | d3-ddd | d3f3 |
 g3 gce | d3c3 | B3- BFA !D.C.! |]
@@ -3063,14 +3063,14 @@ FdFd | B2d2 | cABc | d2B2 | FdFd | B2d2 | cBcG | FF/F/ FF | eecc | d2B2 | ccAA |
 T:3?me figure : Poule
 M:6/8
 K:F
-AB || c3- cfA | c3cBA | GAB cdc | A3 FAB | c3- cfA | c3- cBA | GAB cdc | F3 fef | d2d _edc | B3 BcB | ABc d_ec | d3 fef | d2d _edc | 
-B3 BcB | ABc dec | B3- BAB | c3- cfA | c3 cBA | GAB cdc | A3 FAB | c3-cfA | c3-cBA | GAB cde | [K:Bb] f2dd2f | f2dd2f | e2e edc | 
+AB || c3- cfA | c3cBA | GAB cdc | A3 FAB | c3- cfA | c3- cBA | GAB cdc | F3 fef | d2d _edc | B3 BcB | ABc d_ec | d3 fef | d2d _edc |
+B3 BcB | ABc dec | B3- BAB | c3- cfA | c3 cBA | GAB cdc | A3 FAB | c3-cfA | c3-cBA | GAB cde | [K:Bb] f2dd2f | f2dd2f | e2e edc |
 d3 B2f | f2dd2f | f2dd2f | e2e edc | B3-BAB !D.C.! |
 T:4?me figure : Pastourelle
 M:2/4
 K:Bb
 F/B/ | dd/d/ dd/c/ | BB/B/ Bc/B/ | AA/A/ AB/c/ | d2 BF/B/ | dd/d/ dd/c/ | BB/B/ Bc/B/ | AA/A/ AG/A/ | B>z z2 ||
-B4 | Fd F>B | d4 | BF B>d | c4 | AF A>c | e4 | dF G>A | B4 | Fd F>B | d4 | BF B>d | c4 | AF A>c | B4- | BF FF | 
+B4 | Fd F>B | d4 | BF B>d | c4 | AF A>c | e4 | dF G>A | B4 | Fd F>B | d4 | BF B>d | c4 | AF A>c | B4- | BF FF |
 c3A | FA G>F | d4 | Bd dd | c3d | =e3d | cB A>G | FF zF/B/ ||
 T:5?me figure : Finale
 M:2/4
@@ -3227,12 +3227,12 @@ L:1/8
 P:ABACA
 K:F
 P:A
-cd | c2A2 F2d_e | d2B2 G2ef | e2d^c d2=cd | c2Ac f2cd | c2A2 F2d_e | d2B2 G2ef | e2dc g2de | f2a2 f2 :: 
+cd | c2A2 F2d_e | d2B2 G2ef | e2d^c d2=cd | c2Ac f2cd | c2A2 F2d_e | d2B2 G2ef | e2dc g2de | f2a2 f2 ::
 P:B
-[K:Bb] F2 | B2d2 f3B | d6 zf | g3f d3B | B2A2 A2z2 | e2e2 e3A | c4- cBAG | F2Ac e2g2 | g2f=e f2F2 | 
+[K:Bb] F2 | B2d2 f3B | d6 zf | g3f d3B | B2A2 A2z2 | e2e2 e3A | c4- cBAG | F2Ac e2g2 | g2f=e f2F2 |
 B2d2 f3B | d6 zf | g3f d3B | G2e2 e2z2 | g2g2 g3e | c4- cBAG | F2Ac e2GA | B2b2 b2 ::
 P:C
-[K:Bb] F2 | d2d2 dedc | B6FB | d2Bd f2gd | f2=e2 _e2F2 | e2e2 edcB | A6 (3fgf | e2f2 g2f2 | dBdf b2F2 | 
+[K:Bb] F2 | d2d2 dedc | B6FB | d2Bd f2gd | f2=e2 _e2F2 | e2e2 edcB | A6 (3fgf | e2f2 g2f2 | dBdf b2F2 |
 d2d2 dcBA | B6FB | d2Bd f2gd | f2=e2 _e2F2 | e2e2 edcB | g6(3fgf | a4g2f2 | b2b2b2 !D.C.! :|
 <end>
 <start>
@@ -3309,7 +3309,7 @@ Q:1/4=120
 K:Fmaj
 P:A
 c/2c/2c/2 S || a/2f/2f/2f/2 g/2e/2e/2e/2 | fd z/2g/2g/2f/2 | f e z/2f/2f/2e/2 |
-dc zc/2=B/2c/2 | f/2c/2=B/2c/2 e/2c/2=B/2c/2 | d_B z/2c/2=B/2c/2 | e/2c/2=B/2c/2 d_B/2A/2B/2 | 
+dc zc/2=B/2c/2 | f/2c/2=B/2c/2 e/2c/2=B/2c/2 | d_B z/2c/2=B/2c/2 | e/2c/2=B/2c/2 d_B/2A/2B/2 |
 cA z/2c/2c/2c/2 | a/2f/2f/2f/2 g/2e/2e/2e/2 | fd z/2g/2g/2f/2 | fe z/2f/2f/2e/2 |
 dc zf/2f/2c/2 | c/2B/2B/2A/2 A/2G/2G/2F/2 | cB z/2d/2B/2G/2 | G/2F/2E/2F/2 AG | +fine+F z/2A/2 B/2A/2^G/2A/2|:
 P:B
@@ -3333,13 +3333,13 @@ K:Bb
 V:1
 z2 z/d/^c/d/ | ed z/d/^c/d/ | ed z/d/^c/d/ | e>d AB | G2 z/^F/G/^G/ | A2 c2 | B2- B/ G/A/B/ | cd ef |
 d2 z/d/^c/d/ | ed z/d/^c/d/ | ed z/d/^c/d/ | gf ce | d4 | F/G/A/B/ (G/c/)d/e/ | f/e/d/^c/ d2 | d/e/d/c/ BA | G2z2 ||
-zf ed |: d2c2- | cB GA | d4- | d B cd | g2 e2- | e c de | f4- | fd d=e | ^f>e d2- | d^c/d/ =e^f | 
+zf ed |: d2c2- | cB GA | d4- | d B cd | g2 e2- | e c de | f4- | fd d=e | ^f>e d2- | d^c/d/ =e^f |
 a2 g2 | zg fe | d/Bc/ de | c/AB/ cd |1 B4- | Bf ed :|2 [B4b4] |2 [B2b2] S |]
 V:2 clef=perc stafflines=0 staffscale=0.7
 K:none
-z2 z2 | B B B z | B B B z | B>B BB | B2 z2 | B>B BB | B2 z2 | B2 B2 | 
+z2 z2 | B B B z | B B B z | B>B BB | B2 z2 | B>B BB | B2 z2 | B2 B2 |
 B>B BB | BB Bz | BB Bz | B2 B2 | B>B BB | B2 B2 | B2 BB | B2 BB | B>B BB ||
-B2x2 |: B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | 
+B2x2 |: B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB | B>B BB |
 B>B BB | B2z2 | B>B BB | B>B BB | B>B BB | B2 z2 :| B>B BB | B2 |]
 <end>
 <start>
@@ -3391,8 +3391,8 @@ M:6/8
 L:1/8
 Q:3/8=180
 K:Db
-F | B2B c2d | c3-c2c | =A2A B2c | B3-B2B | e2ee2e | e3c2c | d2dd2d | d3B2F | 
-B2B c2d | c3c2c | =A2AB2c | B3-B2B | e2ed2c | d3 Bcd | c3 =A3 | B6- | B2z B2c || 
+F | B2B c2d | c3-c2c | =A2A B2c | B3-B2B | e2ee2e | e3c2c | d2dd2d | d3B2F |
+B2B c2d | c3c2c | =A2AB2c | B3-B2B | e2ed2c | d3 Bcd | c3 =A3 | B6- | B2z B2c ||
 K:Bb
 d2dd2d | ded c2B | (c6 | A3)A2B | c2cc2c | cdc B2A | B6- | B2z B2c | d2dd2d | ded c2B | (c6 | A3) A2B | c2c c2c |
 cdc B2A | B6- | B2z |]
@@ -3458,7 +3458,7 @@ Q:"Stringendo"
 {^c}.d2.d2.d2 | {^c}.d2.d2.d2 | g_agfed | (c=B)cdec | LdBGg^fg | LdBG^FGB |1 (A^G)AcBA | G6 :|2
 (AB)c^cd^f | g6 !D.C.! O || \
 L:1/8
-(de>d | A2A | cd>c | G2G) | 
+(de>d | A2A | cd>c | G2G) |
 (g2f | e2d | cd>e | d3) | (g2a | bag | fg>f | d2d) |
 (=e2^f | gag |^f=e>f | g3-) | g(=e^f | g3-) | g(=e^f | g3-) | g3- | gz2 |]
 V:2
@@ -3473,10 +3473,10 @@ L:1/8
 (B2c | d>cB | ABA | F2F) | (G2A | B>cB | AGA | B3) |:
 L:1/16
 {A}.B2.B2.B2 | {A}.B2.B2.B2 | {Bc}(BA)BcBA | (G^F).G2.G2 | {^G}.A2.A2.A2 | {^G}.A2.A2.A2 | {AB}(A^G)ABA=G | (^FG).F2GA |
-{A}.B2.B2.B2 | {A}.B2.B2.B2 | =BcBAGF | .E2EFGE | LBGGBAB | LBG.G2.G2 | ^F2FAGF | G6 :| 
-^FGAABA | B6 !D.C.! O || \ 
+{A}.B2.B2.B2 | {A}.B2.B2.B2 | =BcBAGF | .E2EFGE | LBGGBAB | LBG.G2.G2 | ^F2FAGF | G6 :|
+^FGAABA | B6 !D.C.! O || \
 L:1/8
-(Bc>B | ^F2F | AB>A | G2G) | 
+(Bc>B | ^F2F | AB>A | G2G) |
 (B2d | c2B | AB>c | B3) | (B2c | dcB | AB>A | F2F) |
 (G2A | BcB |AG>A | B3-) | B(GA | B3-) | B(GA | B3-) | B3- | Bz2 |]
 <end>
@@ -3493,14 +3493,14 @@ L:1/8
 Z:Transcrit et/ou corrig? par Michel BELLON - 2005-06-04
 Z:Pour toute observation mailto:galouvielle@free.fr
 M:3/4
-c2ABcd | c2 ABcd | c2a2f2 | c4B2 | B2GABc | B2GABc | B2g2f2 | c4A2 | 
+c2ABcd | c2 ABcd | c2a2f2 | c4B2 | B2GABc | B2GABc | B2g2f2 | c4A2 |
 c2ABcd | c2ABcd | c2a2f2 | e4d2 | G2ABcd | e2d2c2 | e2c2g2 |1 f6 :|2 f2fff2 |:
 [K:Bb] F6 | F2=EFGF | d6- |d2c2d2 | f6- |f2g2d2 | f4=e2 | e6 |
-c6- | c2c2B2 | A6- | A2A2G2 | A6- | A2A2G2 | F2G2A2 | B2c2e2 | 
+c6- | c2c2B2 | A6- | A2A2G2 | A6- | A2A2G2 | F2G2A2 | B2c2e2 |
 d6- | d2c2d2 | e6- | e2d2e2 | g6 | f6 | c6- | c2c2B2 | A6- | A2A2G2 | F2G2A2 | B2c2d2 | B6- | B6 ::
-[K:F] c2ABcd | c2ABcd | c2a2f2 | c4A2 | B2GABc | B2GABc | B2g2f2 | c4A2 | 
+[K:F] c2ABcd | c2ABcd | c2a2f2 | c4A2 | B2GABc | B2GABc | B2g2f2 | c4A2 |
 c2ABcd | c2ABcd | c2a2f2 | d4B2 | G2ABcd | e2d2c2 | e2c2g2 |1 f6 :|2 f2fff2 |:
-[K:Bb] f2=e2_e2 | d4c2 | B2ABcB | F6 | A2c2e2 | e4d2 | F2GABc | d4B2 | 
+[K:Bb] f2=e2_e2 | d4c2 | B2ABcB | F6 | A2c2e2 | e4d2 | F2GABc | d4B2 |
 f2=e2_e2 | d4c2 | B2ABcB | G6 | e2c2A2 | F2GABc |1 d2cdeA | B6 :|2 d2efga | b6 S |]
 <end>
 <start>
@@ -3518,9 +3518,9 @@ Q:1/4=180
 K:Bbmaj
 T:1er COUPLET
 V:1
-Z10 | fff | fff | gg>g | (f2f) | ddd | ddd | ee>e | d3 | ddd | 
-fcd | edc | d2B | ddd | fcd | edc | B3 | ccc | =ecd | =efg | (g2f) | 
-fdf | =ece | dBd | c3 | ccc |=ecd | =efg | (g2f) | fdf | =e2c | f3- | fzz || 
+Z10 | fff | fff | gg>g | (f2f) | ddd | ddd | ee>e | d3 | ddd |
+fcd | edc | d2B | ddd | fcd | edc | B3 | ccc | =ecd | =efg | (g2f) |
+fdf | =ece | dBd | c3 | ccc |=ecd | =efg | (g2f) | fdf | =e2c | f3- | fzz ||
 T:REFRAIN
 V:1
 B3 | {cd}cBc | (d3 | B3) | dcd | ede | (f3 | d2)z | fgf | bde | (c3 | f2)f | ccc | fff | c3- | czz |
@@ -3564,16 +3564,16 @@ L:1/4
 Q:1/2=160
 K:Bb
 P:1
-B3 | A3 | (FG>A | G3) | (dcB | d2f) | a3- | a3 | c3 | B3 | (GA>B | A3) | (cde | GB>A) | 
+B3 | A3 | (FG>A | G3) | (dcB | d2f) | a3- | a3 | c3 | B3 | (GA>B | A3) | (cde | GB>A) |
 d3- | d3 | B3 | A3 | (FG>A | G3) | (F=EF | _A2G) | (f3 | e3) | G3 | (A2B) | f3- | f/z/ fd | G3 | AGF | B3 bzz !fine! ||
 K:F
 P:2
-(AB>c | A3) | (GF>d | A3) | (cde | FGA | cd>)A | c2B | (Bc>d | B3) | 
-(AG>^F | B3) | (def | GAB | de>f) | (d2c) | (AB>c | A3) | (GF>d | A3) | (cde | fga | 
+(AB>c | A3) | (GF>d | A3) | (cde | FGA | cd>)A | c2B | (Bc>d | B3) |
+(AG>^F | B3) | (def | GAB | de>f) | (d2c) | (AB>c | A3) | (GF>d | A3) | (cde | fga |
 cd>A | f3) | (Bc>d | B3) | AG>F | _d3 | (cde | fga | c2)A | G_GF ||
 P:3
 K:Bb
-d3 | d3 | d3- | (dfb | ag>a) | (g3 | e3) | B3 | (G2B) | AGA | F3 | g3 | (f2d) | fed | cBc | d3 | d3 | d3- | dAB | 
+d3 | d3 | d3- | (dfb | ag>a) | (g3 | e3) | B3 | (G2B) | AGA | F3 | g3 | (f2d) | fed | cBc | d3 | d3 | d3- | dAB |
 (dfb | ag>a) | d3 | d3 | G3 | A2B | fdB | fed | f3 | c2d | B3- | Bzz !D.C.! ||
 <end>
 <start>
@@ -3603,7 +3603,7 @@ L:1/4
 Q:1/4=170
 K:Bbmaj
 "Gm"G2B | d3 | "Eb"e2g | "Gm"d3 | "F"ccB | A2c | "D"B2A | "Gm"G3 ::
-"Gm"G3 | B3 | "F"Afc | A3 | "Bb" d3-|d3 | "C"cBc | "D"d3 | 
+"Gm"G3 | B3 | "F"Afc | A3 | "Bb" d3-|d3 | "C"cBc | "D"d3 |
 "Gm"G2B | d3 | "Eb"e2g | "F"f3 | ccB | A2c | "Bb"B2"D"A | "Gm"G3 |
 "F"f/2c/2 A/2f/2 c/2A/2 | "Gm"GBd | "F" f/2c/2 A/2f/2 c/2A/2 | "Gm"G3 :|
 <end>
@@ -3710,7 +3710,7 @@ M:6/8
 K:Cmaj
 G |: c2e d2c | Bcd c2G | c2e d2c | Bcd d3 :| [M:2/4] |:
 d2 d>c | BA G2 | GA Bc |1 de fe :|2 dB c2 |]
-T:Autre version (UGMM) 
+T:Autre version (UGMM)
 M:6/8
 c2ed2c|Bcd c2 G|c2 ed2c|Bcd c3:|
 d3d2c|B2AG3|G2cB2c|d2ef2d|d3d2c|B2AG3|G2cB2B|c2dc3|]
@@ -3770,7 +3770,7 @@ GGGGLddG | GGGGLddG |]
 w:les mains sur la ge-nouil-la les mains sur la che-vil-la
 V:2
 x2  | x2  | x2  | x2 | x2 | x2  | x2 | x2 ||
-x5 | x6 |  x6 |  x6 |  
+x5 | x6 |  x6 |  x6 |
 x6 |  x7 |  x7 |]
 <end>
 <start>
@@ -3829,7 +3829,7 @@ C2CC | G,CG,2 | G,2G,C, | G,C,G,C, | C2CC | G,CG,2 | G,2G,C, | F,G,C,2 :|
 <end>
 <start>
 X: 9
-T:Calibeurdaine, La 
+T:Calibeurdaine, La
 R:Divers
 C:Trad.
 O:France
@@ -3925,7 +3925,7 @@ w:la la la la la la la  Tra-la la la
 df fd | ce ec | B2d2 | c2 ze :|
 w:la la la la Ah qu'il est dr?l' ce jeu l? Cou-
 V:2
-z4 | z2z2 |: e2 gg | e2 gg | aa/2g/2 fg/2f/2 | e2 ge | e2 ge | e2 ge | aa/2g/2 fg/2f/2 | e2z2 || 
+z4 | z2z2 |: e2 gg | e2 gg | aa/2g/2 fg/2f/2 | e2 ge | e2 ge | e2 ge | aa/2g/2 fg/2f/2 | e2z2 ||
 e3g | d3f | c3e | B/2A/2B/2c/2 d2 | e3g | d3f | c3e | B/2A/2B/2c/2 d/2c/2d/2e/2 | c2z2 :|
 <end>
 <start>
@@ -3947,7 +3947,7 @@ V:1
 V:2
 G | e2g2 | e3e | ce/2g/2 ee/2c/2 | g3a/2a/2 | ab ba/2a/2 | ac' c'a | ba gf | g2 eg |
 e2g2 | e3e | ce/2g/2 ee/2c/2 | g3a/2a/2 | ab ba/2a/2 | ac' c'a | ba gf | e2z2 |
-c'e cB/2c/2 | d/2e/2f/2g/2 fa | ce cB/2c/2 | e/2d/2c/2B/2 z2 | c'e cB/2c/2 | d/2e/2f/2g/2 fa | ae cB/2c/2 | c3 |] 
+c'e cB/2c/2 | d/2e/2f/2g/2 fa | ce cB/2c/2 | e/2d/2c/2B/2 z2 | c'e cB/2c/2 | d/2e/2f/2g/2 fa | ae cB/2c/2 | c3 |]
 <end>
 <start>
 X:17
@@ -3968,7 +3968,7 @@ V:1
 V:2
 D | B2d2 | B3B | GB/d/ BB/G/  |  d3e/e/ | ef fe/e/ | eg ge | fe dc | d2 Bd |
 B2d2 | B3B | GB/d/ BB/G/ | d3e/e/ | ef fe/e/ | eg ge | fe dc | B2z2 |
-gB GF/G/ | A/B/c/d/ ce | GB GF/G/ | B/A/G/F/ z2 | gB GF/G/ | A/B/c/d/ ce | eB GF/G/ | G3 |] 
+gB GF/G/ | A/B/c/d/ ce | GB GF/G/ | B/A/G/F/ z2 | gB GF/G/ | A/B/c/d/ ce | eB GF/G/ | G3 |]
 <end>
 <start>
 X:18
@@ -3983,13 +3983,13 @@ Q:1/4=104
 K:G
 V:1
 BBB | d3cBA | G3 [P:Intro]BBB|d2 G A3|!breath!G3 BBB| d3 cBA|G3 BBB|d2 G A3| G3 z2
-w:En fai-sant le tour du mou-lin j'a-per-?ois la meu-ni?-re En fai-sant le tour du mou-lin j'a-per-?ois la meu-ni?-re 
+w:En fai-sant le tour du mou-lin j'a-per-?ois la meu-ni?-re En fai-sant le tour du mou-lin j'a-per-?ois la meu-ni?-re
 B|d2 e d2 B| d2 e d2 B|d2 e d2 B|d2 e !breath!Hd2B | c2d e2 e|d2 c HB3|:
 w: Qui cul-ti-vait dans son jar-din Qui cul-ti-vait dans son jar-din Rose ? la bou-ton-ni?_re
 ddd e2 d|cBc A2A|c2d e2c|ddd G3 :|
 w:Je lui ai dit belle en_ pas-sant n'vou-drais tu pas cau-ser un ins-tant~!
-V:3 clef=perc stafflines=1  staffscale=0.6 
-B2B | B3 B2B | B3 B2B | B3 BBB | B3 B2B | B3 B2B | B3 B2B | B3 BBB | B3 
+V:3 clef=perc stafflines=1  staffscale=0.6
+B2B | B3 B2B | B3 B2B | B3 BBB | B3 B2B | B3 B2B | B3 B2B | B3 BBB | B3
 V:2
 x16
 x16
@@ -4015,7 +4015,7 @@ GBd|GBd gfe|(d2d) ece|dcB Adc|B2G GBd|GBd gfe|(d2d) gfg|(a2a) gfe|
 d3 ded|dcB Adc|B2G B2B|B2d dcB|A3 ded|dcB Adc|B2G gfe|edB dcA|
 G3 ||[K:Cmaj]gag|g2e gag|g2e eee|edc dcB|d2c gag|g2e gag|g2e eee|edc dcB|c3|]
 V:2
-B2B| B2A B2c| (B2B) c3| A2G f2e| d2+breath+B B2B| B2A B2c| (B2+breath+B) B3| c3 edc| 
+B2B| B2A B2c| (B2B) c3| A2G f2e| d2+breath+B B2B| B2A B2c| (B2+breath+B) B3| c3 edc|
 B2z .f2.f|.f2.d .f2.a|.g2+breath+.g .d2.d| .d2.B .A2.G| +breath+F3 .f2.f|.f2.d .f2.a|(g2+breath+g) e2a| .g2.g .f2.f|
 g2z ||[K:Cmaj] e2e|Le2 ((3c/2e/2g/2) e2e| (Le2c) g2g| (g2e) f2g| (f2e) e2e| Le2 ((3c/2e/2g/2) e2e| (Le2c) g2g| (g2e) f2g|e3|]
 <end>
@@ -4040,7 +4040,7 @@ P:B
 d/2c/2|"G"Bg/2f/2 "C"ee/2d/2|"Am"d/2c/2B/2c/2 "D7"Ad/2c/2|\
 "G"Bg/2f/2 "C"e/2d/2c/2B/2|
 "Am"cA "D7"Ad/2c/2|"G"Bg/2f/2 "C"ee/2d/2|"Am"d/2c/2B/2c/2 "D7"Ad/2c/2|\
-"G"B/2d/2c/2B/2 "D7"A/2c/2B/2A/2| "G"GG "D7"G || 
+"G"B/2d/2c/2B/2 "D7"A/2c/2B/2A/2| "G"GG "D7"G ||
 P:C
 B/2c/2|"G"dd/2d/2 dg|"G"dd/2d/2 dg|"G"dd "C"e/2d/2c/2B/2|\
 "Am"cA "D7"AB/2c/2|
@@ -4133,7 +4133,7 @@ V:1
 AB |: c2c cde | dBG GAB | cAA ABc | BEE EAB | c2c cde | dBG GAB | cBA BAG |1 A3- AAB :|2 A3- Aef |:
 g2g gfe | dBG G3 | a2a aba | gee eef | gce gfe | dBG GAB | cBA BAG |1 A3- Aef :|2 A3- A |]
 V:2
-x2 |: x6 | x6 | x6 | x6 | x6 | x6 | x6 | x6 | x6 |: 
+x2 |: x6 | x6 | x6 | x6 | x6 | x6 | x6 | x6 | x6 |:
 x6 | x6 | x6 | x6 | x6 | x6 | x6 | x6 | x6 |
 <end>
 <start>
@@ -4171,7 +4171,7 @@ w: De son pied il dan-se, De son pied il dan-*se
 AB"Am"c2 | "E7"B2"Am"A2|| AB "Am"c2 | "E7"d2 "A"He2 || e>f "E7"ed | cB "A"A2 |]
 w: De son pied, pied, pied, De son pied, pied, pied, Ain-si dan-se Jean Pe-tit.
 V:2
-Ac BA | E2 G2 | BG AG | E/E/F/G/  A2 | 
+Ac BA | E2 G2 | BG AG | E/E/F/G/  A2 |
 Ac BA | E2 G2 | BG AG | E/E/F/G/  A2 ||
 AG E2 | G2 A2 || ED E2 | F2 HE2 || c>c  BG | EG A2 |]
 <end>
@@ -4277,7 +4277,7 @@ GA B2G2AA|GA B2G2A2| GA B2G2A2 ||
 "aoubl? ou tripl?"B2BA Bc d2|B2BA Bc +breath+d2||[P:Intro]B2Bd cB A2|AB cB A2G2|B2Bd cB A2|AB cB A2G2|]
 V:2
 GD G2E2DD | GD G2E2D2 | GD G2E2D2 ||
-G2GD GAB2 | G2GD GAB2 || G2GB AG D2 | DE FG FD G2 | G2GB AG D2 | DE FG FD G2 |] 
+G2GD GAB2 | G2GD GAB2 || G2GB AG D2 | DE FG FD G2 | G2GB AG D2 | DE FG FD G2 |]
 Violon - Accord?on G/C - Galoubet en sol
 Intro : Violon
 1: V
@@ -4303,8 +4303,8 @@ P:B
 dd cB | c2 zB/c/ | dd cB | A2 zB/c/ |
 dd cB | cd ed | cB AG | A/G/F/E/ DD |]
 P:Sortie
-dB dB/c/ | dB dB/c/ | dd BB | A/B/c/A/ BB/c/ | 
-dB dB/c/ | dB dB/c/ | dd BB | A/B/c/A/ HG2 |] 
+dB dB/c/ | dB dB/c/ | dd BB | A/B/c/A/ BB/c/ |
+dB dB/c/ | dB dB/c/ | dd BB | A/B/c/A/ HG2 |]
 V:2
 x16
 x16
@@ -4331,8 +4331,8 @@ P:B
 gg fe | f2 ze/2f/2 | gg fe | d2 ze/2f/2 |
 gg fe | fg ag | fe dc | d/2c/2B/2A/2 GG |]
 P:Sortie
-ge ge/2f/2 | ge ge/2f/2 | gg ee | d/2e/2f/2d/2 ee/2f/2 | 
-ge ge/2f/2 | ge ge/2f/2 | gg ee | d/2e/2f/2d/2 Hc2 |] 
+ge ge/2f/2 | ge ge/2f/2 | gg ee | d/2e/2f/2d/2 ee/2f/2 |
+ge ge/2f/2 | ge ge/2f/2 | gg ee | d/2e/2f/2d/2 Hc2 |]
 <end>
 <start>
 X:35
@@ -4377,8 +4377,8 @@ w:vant Mets ta main droite der-ri?re se-
 "D7"ddd ddd | "D7"d3 z2B | "D7"D2A G2F | "G"G3 g3 :|
 w:coue cou cou cou cou cou cou  un tour et puis voi-l? Youp
 V:2
-z4 |: CDE  G2E | D3 z2z | 
-CDE G2E | F3 z2z |  CDE  G2E | 
+z4 |: CDE  G2E | D3 z2z |
+CDE G2E | F3 z2z |  CDE  G2E |
 D3 z2 D | B2A G2F | G3 z2D || B2B B2B |
 B3 z2D | D2D D2D | D3 z2B |
 BGB BGB | B3 z2 G | B2c B2A | G3 G3 :|
@@ -4448,7 +4448,7 @@ V:1
 P:Intro
 Z8 S || [P:A] GA BG | A2 AB | c2 c2 |
 w: J'ai du bonc ta-bac dans ma ta-ba-
-B2B2 | GA BG | A2AB | c2d2 | G2z2 || 
+B2B2 | GA BG | A2AB | c2d2 | G2z2 ||
 w:ti?-re j'ai du bon ta-bac tu n'en au-ras pas
 P:B
 d2dc | B2 AB | c2d2 | A4 | d2dc |
@@ -4458,9 +4458,9 @@ w:pas pour ton vi-lain nez J'ai du bon ta-bac dans ma
 cc BB | G/A/B/G/ AA/B/ | cd G2 :| z2 z2 S ||
 w:ta-ba-ti?-re j'ai du bon ta-bac tu n'en au-ras pas
 T:Double
-Z8 || GA BG | AG AB | cB cA | 
-Bc BA | GA BG | AG AB | cB cd | BA Bc | 
-de dc | BA Bc | Bd cB | ADFA | de dc | 
+Z8 || GA BG | AG AB | cB cA |
+Bc BA | GA BG | AG AB | cB cd | BA Bc |
+de dc | BA Bc | Bd cB | ADFA | de dc |
 BA Bc | Bd cB | A4 [P:C] |: G/A/B/G/ A/G/A/B/ |
 c/B/c/A/ B/c/B/A/ | G/A/B/G/ A/G/A/B/ | c/B/c/d/ G2 :| z2z2 ||
 <end>
@@ -4489,7 +4489,7 @@ V:2
 Z4 | z4 || z2z2 |zG cd |
 e2 ed | A2 cB | AG AB | cG dd |
 e2 ed | AB cd | !breath!c2 z2 || z4 |
-z2 CB, | A,G, A,B, | C2 z2 | z4 | 
+z2 CB, | A,G, A,B, | C2 z2 | z4 |
 zG, CB, | A,G, A,B, | !breath!C2 G2 | E2 z2 |]
 <end>
 <start>
@@ -4601,7 +4601,7 @@ Z:Pour toute observation mailto:galouvielle@free.fr
 M:2/4
 L:1/8
 K:Cmaj
-ABcd | e2az | efed | c2Az | ABcd | ed ef | ed cB | A2az | 
+ABcd | e2az | efed | c2Az | ABcd | ed ef | ed cB | A2az |
 cBce | d2c2 | cBce | d2gz | ABcd | edef | edcB | A2az |]
 
 <end>
@@ -4672,7 +4672,7 @@ w:tit pe-tit bran-le Ah~! Dan-sons en-core un pe-tit Ce pe-tit bran-le si jo-li.
 <start>
 X:53
 T:Nous n'irons plus au bois
-C:Paroles traditionnelles du 
+C:Paroles traditionnelles du
 <end>
 <start>
 XVIIIe si?cle sur l'air du Kyrie gr?gorien de la messe "De angelis"
@@ -4686,7 +4686,7 @@ z>F AB |: "F"c2f2 | c>d cB | "C7"A2G2 |1 "F"F> F AB :|2 F>z F>F || FG F2 |
 "C"C2 "F"F>F | FGF2 | "C"C2 "F"c2 | A2c2 | A2 "C7"G>A | BAGc | "F"Fz z2 |]
 T:Version CDPF
 K:Gmaj
-Z4 | z4 |: [P:A]zG Bc | d2g2 | 
+Z4 | z4 |: [P:A]zG Bc | d2g2 |
 d>e dc | B2A2 | GG Bc | d2g2 |
 d>e dc | B2A2 | G2z2 || [P:B] G>G GA |
 G2D2 | G>G GA | G2D2 | d2B2 |
@@ -4786,14 +4786,14 @@ V:1
 P:Intro
 D | G2A B2c | d3 e3 | d2c B2A | G3- G2 ||
 P:A
-D|:G2 AB2c | d3e3 | c2c e2e |1 d2z z2D :|2 d2z z2B || 
+D|:G2 AB2c | d3e3 | c2c e2e |1 d2z z2D :|2 d2z z2B ||
 P:B
 d2d dcB | c3A2A | c2c cBA | B3 G2D | \
 G2A B2c | d3 e3 | d2c B2A |  G2z z3 |]
 V:2
 K:C
 G:Flute
-z | Z3 | z3 z2 || D |: G2D G2A | B3c3 | A2A d2c |1 B2zz2D :|2 B2zz2G || 
+z | Z3 | z3 z2 || D |: G2D G2A | B3c3 | A2A d2c |1 B2zz2D :|2 B2zz2G ||
 B2B BAG | A2z ^F2E | D2D DE^F | G2E D2D | G2D G2A | B3c3 | A2Ad2c | B2zz3|]
 V:3
 z | Z3 | z3 z2 || D, |:G,2D,D,2D,| G,2G, D,2D, | D,2D, D,2D, |1 G,2G, G,2G, :|2 G,2G, G,2G, ||
@@ -4861,7 +4861,7 @@ M:2/4
 L:1/8
 Q:1/4=116
 K:G
-Z8 S |: [P:A] G2 AB | A2D2 | GA BG | A4 :| 
+Z8 S |: [P:A] G2 AB | A2D2 | GA BG | A4 :|
 w:U-ne ci-ga-le, le beau temps pas-s? le beau temps pas-s?
 [P:B] AA AA | dc BA | G2G2 | [P:Intro]AA AA dc BA | G4 S |]
 w: u-ne ci-ga-le, le beau temps pas-s? n'a rien gar-d?.
@@ -4877,7 +4877,7 @@ M:2/4
 L:1/8
 Q:1/4=116
 K:Cmaj
-Z8 S |: [P:A] c2 de | d2G2 | cd ec | d4 :| 
+Z8 S |: [P:A] c2 de | d2G2 | cd ec | d4 :|
 w:U-ne ci-ga-le, le beau temps pas-s? le beau temps pas-s?
 [P:B] dd dd | gf ed | c2c2 | [P:Intro]dd dd gf ed | c4 S |]
 w:u-ne ci-ga-le, le beau temps pas-s? n'a rien gar-d?.
@@ -5058,7 +5058,7 @@ C:
 <end>
 <start>
 XiM
-D:"989", 
+D:"989",
 <end>
 <start>
 XiM
@@ -6309,9 +6309,9 @@ cd/e/ fe|dc d2|de/f/ g>f|1ed ec:|2 ed c2|]
 <end>
 <start>
 X: 1
-T:Basse-dance appelle : Iouyssance vous donneray : 
+T:Basse-dance appelle : Iouyssance vous donneray :
 R:Basse-dance
-T:auec les mesures & battemens du tabourin. 
+T:auec les mesures & battemens du tabourin.
 C:Trad.
 S:Thoinot Arbeau
 N:0069.gif
@@ -6344,7 +6344,7 @@ g/2f/2e/2d/2c/2B/2 | cf/2e/2d/2c/2 | B/2A/2G/2 A/2A/2G/2 | A2A |
 P:Branle
 aaa | g/2f/2g/2a/2b2 | a/2g/2f/2e/2f/2d/2 | e2 e | \
 P:Devx simples
-e/2d/2e/2f/2g/2a/2 | ba/2g/2f/2e/2 | f/2e/2d/2e/2 f/2d/2 | e2 e | 
+e/2d/2e/2f/2g/2a/2 | ba/2g/2f/2e/2 | f/2e/2d/2e/2 f/2d/2 | e2 e |
 P:Dovble
 aaa | g/2f/2g/2a/2 b | a/2g/2f/2e/2f/2d/2 | e2 e | \
 P:Dovble
@@ -6439,7 +6439,7 @@ M:8/4
 L:1/4
 Q:1/4=195
 K:Fmaj
-f2ff f2f2 | g/2a/2bfg d2d2 :: b2gg a2ff | 
+f2ff f2f2 | g/2a/2bfg d2d2 :: b2gg a2ff |
 ggfg d3/2d/2ff | B2B2 | c/2d/2_ecd G2G2 :|
 <end>
 <start>
@@ -6527,7 +6527,7 @@ doubl? et encha?n? au suivant
 <end>
 <start>
 X: 10
-T:Air du second branle d'Escosse. 
+T:Air du second branle d'Escosse.
 R:Branle d'Ecosse
 C:Trad.
 S:Thoinot Arbeau
@@ -6603,7 +6603,7 @@ M:8/4
 L:1/4
 Q:1/4=200
 K:F
-BBBB BBAB cBAG GFG2 :: GGGG GGF2 | 
+BBBB BBAB cBAG GFG2 :: GGGG GGF2 |
 GGA2 F2 D2 | GGGG GG F2 | GGA2 F2 D2 ||
 <end>
 <start>
@@ -6677,13 +6677,13 @@ M:8/4
 L:1/4
 Q:1/4=220
 K:Gmaj
-deffgfegfedc B2A2 | deffgfegfdee d2 | 
+deffgfegfedc B2A2 | deffgfegfdee d2 |
 ag/2f/2ee/2f/2gf/2e/2dfedcd e2e2 | ag/2f/2ee/2f/2gf/2e/2dfeddc d2d2 ||
 =fe/2d/2 =fe/2d/2 cd e2 ABcdefed | =fe/2d/2 =fe/2d/2 cd e2 ABcdd^c d2 ||
 <end>
 <start>
 X:18
-T:Air & mouuements de la pauane d'Espagne 
+T:Air & mouuements de la pauane d'Espagne
 R:Pavane
 C:Trad.
 S:Thoinot Arbeau
@@ -6715,11 +6715,11 @@ V:2
 E>F G/2A/2B/2c/2 | dBc2 | cAB_A | G2G2 :: c2Be | ddBc | ccBe | dd=B2 |
 ccdB | ccdc | c2B_A |G2G2 |ccdB | ccdc | c2B_A |G2G2 :|
 V:3
-G2BB | AG_AG | F>E F/2G/2F/2E/2 | (D/2C/2)DC2 :: GGGB- | B/2A/4G/4 FGE | GGGB- | B/2A/4G/4 ^FG2 | 
+G2BB | AG_AG | F>E F/2G/2F/2E/2 | (D/2C/2)DC2 :: GGGB- | B/2A/4G/4 FGE | GGGB- | B/2A/4G/4 ^FG2 |
 G>A BG | (G/2F/2)G/2A/2 BE | F>E F/2G/2F/2E/2 | (D/2C/2)DC2 | G>A BG | (G/2F/2)G/2A/2 BE | F>E F/2G/2F/2E/2 | (D/2C/2)DC2 :|
 V:4
 C,C, G,,>G,, | D,G,,C,2 | F,,F,,B,,C, | G,,2 C,2 :: C,C, E,3/2D,/4C,/4 | (B,,/2C,/2)D,G,,C, | C,C, E,3/2D,/4C,/4 | (B,,/2C,/2) D,G,,2 |
-C,>B,, G,,G,, | C,>B,, G,,C, | F,,2B,,C, | G,,2C,2 | C,>B,, G,,G,, | C,>B,, G,,C, | F,,2B,,C, | G,,2C,2 :| 
+C,>B,, G,,G,, | C,>B,, G,,C, | F,,2B,,C, | G,,2C,2 | C,>B,, G,,G,, | C,>B,, G,,C, | F,,2B,,C, | G,,2C,2 :|
 <end>
 <start>
 X:20
@@ -6741,7 +6741,7 @@ V:3
 B4A2B2 | G2c2A2d2 | c2Bc d2B2 | e4A2d2 |
 BAG2 A4 | cedc B2A2 | A2A2 e2e2 | ABcd B4 :|
 V:4 K:G
-G4F2G2 | E2C2D4 | A4G4 | C4D4 | 
+G4F2G2 | E2C2D4 | A4G4 | C4D4 |
 E4D4 | C2B,A, B,C,D2 | A,2D,2 E2C2 | D4G,4 :|
 <end>
 <start>
@@ -6965,7 +6965,7 @@ A2AA|A2Ac|BAGG|A4:|
 X:29
 T:Branle de Bourgogne
 R:Branle double
-C:Jacques Moderne 
+C:Jacques Moderne
 O:France
 Z:Transcrit et/ou corrig? par Michel BELLON - 2006-11-29
 Z:Pour toute observation mailto:galouvielle@free.fr
@@ -7007,7 +7007,7 @@ M:8/4
 L:1/4
 Q:1/4=220
 K:F
-zGcc cdGG GABB GBA2    | zAcc cdGG GBAG AFG2 | 
+zGcc cdGG GABB GBA2    | zAcc cdGG GBAG AFG2 |
 ZGcB cde2 efed/c/ ddc2 | zcff fed2 ddcc BBA2 |
 AdcB cAG2 | AdcB cAG2 ||
 <end>
@@ -7051,7 +7051,7 @@ eg/2e/2fe/2d/2 dd/2c/2d z :: dd/2d/2 dg a/2g/2a/2f/2 e2 :: d/2e/2d/2c/2 dg/2a/2 
 <end>
 <start>
 X:34
-T:Branle de Malte. 
+T:Branle de Malte.
 R:Branle
 C:Trad.
 S:Thoinot Arbeau
@@ -7119,7 +7119,7 @@ M:8/4
 L:1/4
 K:G
 B A/B/ FGAFG2 : B A/B/ FGAF [|]1 G2 :|2 GG ||
-GdddccBB : BGAB c/B/A/G/ A2 |: 
+GdddccBB : BGAB c/B/A/G/ A2 |:
 B A/B/GF G/A/B/G/ AA : BA/B/FGAFG2 :|
 <end>
 <start>
@@ -7134,7 +7134,7 @@ M:8/4
 L:1/4
 K:Cmaj
 e d/2e/2 BcdBc2  e d/2e/2 BcdB [|] c2 :|2 cc ||
-cgggffee  ecde f/2e/2d/2c/2 d2 |: 
+cgggffee  ecde f/2e/2d/2c/2 d2 |:
 e d/2e/2cB c/2d/2e/2c/2 dd  ed/2e/2BcdBc2 :|
 <end>
 <start>
@@ -7166,7 +7166,7 @@ L:1/4
 K:Cmaj
 d^cdefgea  gae2 :|
 a(g/2f/2)egfedf  ed^c2 |:
-dd/2e/2fgefed  ^cded 
+dd/2e/2fgefed  ^cded
 dd/2e/2 fg ee ed  (^c/2d/2)e d2 :|
 <end>
 <start>
@@ -7229,7 +7229,7 @@ a2 ba ge f2  a2 ba ge f2 :|
 Z:Transcrit et/ou corrig? par Michel BELLON - 2007-08-14
 Z:Pour toute observation mailto:galouvielle@free.fr
 M:4/2
-|: f2 ed ^cd ef  ea fd  f2 ed ^cd ef  ea d2 :| 
+|: f2 ed ^cd ef  ea fd  f2 ed ^cd ef  ea d2 :|
 <end>
 <start>
 X:45
@@ -7373,11 +7373,11 @@ D | DDDE | (F>E)DD | (ED)C2 | =B,3D | DDDE |
 F>EDD | (ED)C2 | =B,4 |: D2DF | D3^F | GA=FG |
 (A>G)FF | G>F EE | (FC)DD | CDDD | D4 :|
 V:3
-G | BAGB | A2AF | E(G2^F) | G3G | BAGB | 
+G | BAGB | A2AF | E(G2^F) | G3G | BAGB |
 A2AF | E(G2^F) | G4 |: F2FA | G3d | dfdd |
 e2dd | ddcc | (cA) B(B/A/) | GBAA | G4 :|
 V:4
-G, | G,^F,G,G, | D,2D,D, | (C,B,,)A,,2 | G,,3G, | G,^F,G,G, | 
+G, | G,^F,G,G, | D,2D,D, | (C,B,,)A,,2 | G,,3G, | G,^F,G,G, |
 D,2D,D, | (C,B,,)A,,2 | G,,4 |: B,,2B,,F, | G,3D, | G,F,B,,B,, |
 A,,2D,D, | G,,G,,C,C, | F,2 B,,B,, | C,G,,D,D, | G,,4 :|
 <end>
@@ -7400,11 +7400,11 @@ A | AAAB | (c>B)AA | (BA)G2 | ^F3A | AAAB |
 c>BAA | (BA)G2 | ^F4 |: A2Ac | A3^c | de=cd |
 (e>d)cc | d>c BB | (cG)AA | GAAA | A4 :|
 V:3
-d | fedf | e2ec | B(d2^c) | d3d | fedf | 
+d | fedf | e2ec | B(d2^c) | d3d | fedf |
 e2ec | B(d2^c) | d4 |: c2ce | d3a | ac'aa |
 b2aa | aagg | (ge) f(f/2e/2) | dfee | d4 :|
 V:4
-D | D^CDD | A,2A,A, | (G,F,)E,2 | D,3D | D^CDD | 
+D | D^CDD | A,2A,A, | (G,F,)E,2 | D,3D | D^CDD |
 A,2A,A, | (G,F,)E,2 | D,4 |: F,2F,C | D3A, | DCF,F, |
 E,2A,A, | D,D,G,G, | C2 F,F, | G,D,A,A, | D,4 :|
 <end>
@@ -7450,9 +7450,9 @@ M:3/4
 L:1/8
 Q:1/4=100
 K:G
-GA | B2 dB AG | B{c}B dB AG | A2 {c}AB AG | A2 {c}AB AG | 
+GA | B2 dB AG | B{c}B dB AG | A2 {c}AB AG | A2 {c}AB AG |
 B{c}B dB AG | B2 dB A/B/A | G2 {A}GB A/B/A | G2 {A}G2 :|
-|: Bd | {ef}e2 de gd | e2 dB AG | A2 {c}AB AG | A2 {c}A2 Bd | 
+|: Bd | {ef}e2 de gd | e2 dB AG | A2 {c}AB AG | A2 {c}A2 Bd |
 e2 de gd | {ef}e2 dB A/B/A | G2 {A}GB A/B/A | G2 {A}G2 :|
 <end>
 <start>
@@ -7465,15 +7465,15 @@ Z:id:hn-air-3
 M:3/4
 L:1/8
 K:G
-D2 | E2G2G2 | G4D2 | E2G2G2 | G4D2 | E2G2G2 | G2A2B2 | 
-B2e2d2 | B4AG | A2A2ed | B2B2dB | A2ABAG | E4D2 | 
-E2G2G2 | G4D2 | E2G2G2 | G4 || D2 | E2G2G2 | G2A2B2 | 
-dedBAB | G4D2 | E2G2G2 | G2A2B2 | B2e2d2 | B4AG | 
-A2A2ed | B2B2dB | A3Bcd | e4dB | d2d2e2 | g4ed | 
-e2e2g2 | a4de | g2g2de | g2g2de | g2g2a2 | b6 || 
-b2b2b2 | b4ag | a2agab | a4gf | e2e2ge | d2d2ed | 
-B2B2dB | A4BA | G2GABd | =f4ed | e2e2g2 | e4dB | 
-d2d2ed | B2B2dB | A2AcBA | G4 || 
+D2 | E2G2G2 | G4D2 | E2G2G2 | G4D2 | E2G2G2 | G2A2B2 |
+B2e2d2 | B4AG | A2A2ed | B2B2dB | A2ABAG | E4D2 |
+E2G2G2 | G4D2 | E2G2G2 | G4 || D2 | E2G2G2 | G2A2B2 |
+dedBAB | G4D2 | E2G2G2 | G2A2B2 | B2e2d2 | B4AG |
+A2A2ed | B2B2dB | A3Bcd | e4dB | d2d2e2 | g4ed |
+e2e2g2 | a4de | g2g2de | g2g2de | g2g2a2 | b6 ||
+b2b2b2 | b4ag | a2agab | a4gf | e2e2ge | d2d2ed |
+B2B2dB | A4BA | G2GABd | =f4ed | e2e2g2 | e4dB |
+d2d2ed | B2B2dB | A2AcBA | G4 ||
 <end>
 <start>
 X:4
@@ -7515,7 +7515,7 @@ P:Carolan's Dream
 |: AB | c2 B>A A2 GA | c2 BA G2 cd | e2de dcBA | A4 A2 de |
 f2fg e2ef | dcde a3g | aged dcAG | A6 :|
 |: ef | gede g3a | gede g3e | agab ageg | a6 ag |
-f2fg e2ef | dcde a3g | aged dcAG | A6 :| 
+f2fg e2ef | dcde a3g | aged dcAG | A6 :|
 <end>
 <start>
 X:6
@@ -7532,7 +7532,7 @@ e2 ge dB | A2 B/c/d D2 | E2 GA/B/ AG | G4 :|
 DE/F/ | GA B2 AB/c/ | B2 cB AG | cB cd ef | g4 ef/g/ |
 a2 ba ge | d2 ed cB | c2 cd Bc | A4 AB |
 cB cd ef | g4 fe | d2 dB AG | E4 Bd |
-e2 ge dB | A2 B/c/d D2 | E2 GA/B/ A>G | G4 || 
+e2 ge dB | A2 B/c/d D2 | E2 GA/B/ A>G | G4 ||
 <end>
 <start>
 X:7
@@ -7545,14 +7545,14 @@ Z:id:hn-air-7
 M:C|
 L:1/8
 K:D
-FG | A2AB A2FG | AFAB A3B | AGFE DEFG | A2AB A2FA | 
-B2Bc B2FA | BABc B2dB | AGFE DEFA | B2Bc B2b2 | 
-bafb afeg | fedf e2de | fedc BAdF | A2AB A2dc | 
+FG | A2AB A2FG | AFAB A3B | AGFE DEFG | A2AB A2FA |
+B2Bc B2FA | BABc B2dB | AGFE DEFA | B2Bc B2b2 |
+bafb afeg | fedf e2de | fedc BAdF | A2AB A2dc |
 B2AB d2cd | e2de f2ed | BABc d2F2 | E4D2 :|
 |: fg | a2ab a2fg | agab a2fg | agfe defg | a2ab a2fa |
 b2bc' b2fa | bafa b2bg | agfe defa | b2ba b2fa |
 bafb afeg | fedf e2de | fedc BAdF | A2AB A2dc |
-B2AB d2cd | e2de f2ed | BABc d2F2 | E4D2 :| 
+B2AB d2cd | e2de f2ed | BABc d2F2 | E4D2 :|
 <end>
 <start>
 X:8
@@ -7565,8 +7565,8 @@ Z:id:hn-air-8
 M:4/4
 L:1/8
 K:Ador
-A2 dB A2 B/A/G/E/ | G3 A G2 A/G/E/D/ | B3 A B/d/e dB | GFGB A4 :| 
-|: g>f ga g2 a/g/e/d/ | ag g/a/b a2 b/a/g/e/ | g3 a g2 fg | a4 e2 g2 | 
+A2 dB A2 B/A/G/E/ | G3 A G2 A/G/E/D/ | B3 A B/d/e dB | GFGB A4 :|
+|: g>f ga g2 a/g/e/d/ | ag g/a/b a2 b/a/g/e/ | g3 a g2 fg | a4 e2 g2 |
 a3 g/a/ bagb | a2 g<e gedg | e2 dB d2 dB/A/ | G>FGB A4 :|
 <end>
 <start>
@@ -7595,7 +7595,7 @@ Q:3/8=60
 K:Amix
 A>BA A>GA | c>de f2a | g<ec d2B/A/ | G2E G2E/G/ |
 A>BA A>GA | c>de f2a/f/ | g<ec d2B//A//G/ | A3 A3 :|
-|: a>ba g>ag | f>ed c2d | ea/e/f/g/ f>ed | e>cA G2E/G/ | 
+|: a>ba g>ag | f>ed c2d | ea/e/f/g/ f>ed | e>cA G2E/G/ |
 A>BA A>GA | c>de f2a/f/ | g<ec d2B//A//G/ | A3 A3 :|
 <end>
 <start>
@@ -7699,7 +7699,7 @@ K:G
 GA | B2GE D2DE | G2AB c2Ac | BAGD E2E2 | E6 DE |
 G2G2 A2GA | B2GE D2DE | G2GF G4- | G6 ||
 Bd | e2e2 d3g | e2eg edcB | c2Ac BAGD | E6 DE |
-G2G2 A2GA | B2GE D2DE | G2GF G4- | G6 || 
+G2G2 A2GA | B2GE D2DE | G2GF G4- | G6 ||
 <end>
 <start>
 X:18
@@ -7898,7 +7898,7 @@ L:1/8
 K:G
 B2AB e2dB | d2cA E2FG | AGAB cAFA | GABG D2B,2 |
 B2AB e2dB | d2cA E2FG | AGAB cAFA |1 G2B2 G4 :|2 G2g2 g2gf ||
-|: e^def gfga | b2d2 d3B | cBAB cdef | g2B2 d2gf | 
+|: e^def gfga | b2d2 d3B | cBAB cdef | g2B2 d2gf |
 e^def gfga | b2d2 d3B | cBAB cAFA |1 G2g2 g2gf :|2 G2B2 G4 ||
 <end>
 <start>
@@ -8405,9 +8405,9 @@ Z:id:hn-carolan-25
 M:4/4
 L:1/8
 K:Ador
-|: AB e>d A2 B/A/G/E/ | G>A B>A G>A G/E/D | EA BA/B/ A2 B>e | d>B AA A4 :| 
-|: ee/d/ eg g2 ge/d/ | ee/d/ ea a2 b/a/g/e/ | ee/d/ eg g2 ge/d/ | e>a aa a2 g>a | 
-b>a g>b a2 ag/e/ | e>d e/f/g/f/ e2 ed/B/ | B>e ee e2 dB/A/ | GE/G/ AA A4 :| 
+|: AB e>d A2 B/A/G/E/ | G>A B>A G>A G/E/D | EA BA/B/ A2 B>e | d>B AA A4 :|
+|: ee/d/ eg g2 ge/d/ | ee/d/ ea a2 b/a/g/e/ | ee/d/ eg g2 ge/d/ | e>a aa a2 g>a |
+b>a g>b a2 ag/e/ | e>d e/f/g/f/ e2 ed/B/ | B>e ee e2 dB/A/ | GE/G/ AA A4 :|
 <end>
 <start>
 X:26
@@ -8508,7 +8508,7 @@ A2AB c2 c/B/A | B2 (3BAG a>g (3abc' | e2eg d2de | cB B/A/B/c/ A3 ||
 X:1
 T:Frank Roche's Favourite
 R:fling
-H:Originally a Scottish Strathspey, "Lady Ann Hope" or 
+H:Originally a Scottish Strathspey, "Lady Ann Hope" or
 H:"Miss Hope's Strathspey", composed by John Pringle
 D:Matt Molloy: Stony Steps
 Z:id:hn-hf-1
@@ -8783,12 +8783,12 @@ L:1/8
 K:G
 DGGB d2GB | d2GF GBAF | DGGB d2GB | dBcA FG (3AGF |
 DGGB d2GF | DGGF G3e | fgaf gbag |1 fdcA G2GF :|2 fdcA G3A ||
-|: B2BG cBcA | d2GF G2GA | B2BG cBcA | dADE F2GA | 
+|: B2BG cBcA | d2GF G2GA | B2BG cBcA | dADE F2GA |
 B2BG c2cA | d^cde f2 (3def | g2gf gbag |1 fdcA G2dc :|2 fdcA G3F ||
 P:variations
 DGGB dBGB | d2G2 GA (3GFE | DGGB dBGB | dBcA FG (3AGF |
 DGGB dBGF | D2GF G3e | fgaf gbag |1 fdcA G2GF :|2 fdcA G3A ||
-|: B2BG cBcA | d2GF G2GA | B2BG cBcA | dBcA =F2GA | 
+|: B2BG cBcA | d2GF G2GA | B2BG cBcA | dBcA =F2GA |
 B2BG c2cA | d^cde f2 (3def | g2gf gbag |1 fdcA G2dc :|2 fdcA G3F ||
 <end>
 <start>
@@ -8801,7 +8801,7 @@ M:C|
 L:1/8
 K:Ador
 eAef eAef | gfgd B<GGd | eAef eAef |1 gedB A2gf :|2 gedB A2AB ||
-|: cBAB ged2 | BGGD GBd2 |1 cBAB gedA | BGdB A2AB :|2 (3bc'b g2 (3aba fa | gbaf g2gf || 
+|: cBAB ged2 | BGGD GBd2 |1 cBAB gedA | BGdB A2AB :|2 (3bc'b g2 (3aba fa | gbaf g2gf ||
 <end>
 <start>
 X:24
@@ -9328,7 +9328,7 @@ A2AB A2Bd | efed B2d2 | (3efg fa gedB |1 BAAB AGEG :|2 BAAB A2AB ||
 cBcd c2AG | cdef gedg | eaag (3efg ed | BAAB A2AB :|
 |: cdcB ABAG | ABcd (3efg dc | BG~G2 dG~G2 | (3Bcd ec dBGB |
 cdcB ABAG | ABcd (3efg dg | eaag (3efg ed |1 BAAB A2AB :|2 BAAB A2 (3Bcd ||
-|: eaag a2ga | bgaf g2ed | eggf gaba | gabg aged | 
+|: eaag a2ga | bgaf g2ed | eggf gaba | gabg aged |
 eaag a2ga | bgaf g2ge | d2ef gedB |1 BAAB A2 (3Bcd :|2 BAAB A2ag ||
 |: e2 (3eee feed | e2~e2 fedB | d3e dBAB | defd edBd |
 e3e fedB | eaae fedB | ABdf efdB |1 BAAB A2ag :|2 BAAB A2 (3efg ||
@@ -9623,7 +9623,7 @@ AFDF AFDF | A2d2 d3e | fafd egec | d2dc d2 :|
 |: de | f2fe fagf | edcd egfe | f2fe fagf | edcB A2de |
 f2fd fagf | edcd egfe | fafd egec | d2dc d2 :|
 P:Variations:
-|: dB | AGFE DEFG | A2d2 d2dB | AGFE DEFD | G2E2 E2dB | 
+|: dB | AGFE DEFG | A2d2 d2dB | AGFE DEFD | G2E2 E2dB |
 AGFE DEFG | A2d2 d3e | fafd egec | d2dc d2 :|
 |: dA | defg a2gf | ecef g2fe | defg a2af | edcB A2Ac |
 defg a2gf | ecef g2fe | fafd egec | d2dc d2 :|
@@ -9673,16 +9673,16 @@ Z:id:hn-hornpipe-48
 M:C|
 L:1/8
 K:D
-FE | D2FA dAFD | CDEF GEFE | D2FA dcdf | (3efe (3dcB (3ABA (3GFE | 
-D2FA dAFD | CDEF G2FG | AdcB AGFE | (3DED CE D2 :| 
-|: de | fefg fedc | BABc B2cd | edef edcB | (3ABA ce a2 (3ABc | 
-dcde fdAF | GFGA BdcB | AdcB AGFE | (3DED CE D2 :| 
+FE | D2FA dAFD | CDEF GEFE | D2FA dcdf | (3efe (3dcB (3ABA (3GFE |
+D2FA dAFD | CDEF G2FG | AdcB AGFE | (3DED CE D2 :|
+|: de | fefg fedc | BABc B2cd | edef edcB | (3ABA ce a2 (3ABc |
+dcde fdAF | GFGA BdcB | AdcB AGFE | (3DED CE D2 :|
 P:variations:
-|: (3A,B,C | D2FA dAFD | CDEF G2FE | D2FA dcdf | edcB AGFE | 
-D2FA dAFD | CDEF GEFG | AdcB (3ABA (3GFE | (3DFA (3dAF D2 :| 
-de | ~f3g fedc | B^ABc B2cd | e^def edcB | (3Ace aec A2 (3ABc | 
-dcde fdAF | GFGA BdcB | AdcB (3ABA (3GFE | (3DFA (3dAF D2 
-de | ~f3g fedc | B^ABc B2cd | e^def edcB | (3ABA ^GB A2 (3ABc | 
+|: (3A,B,C | D2FA dAFD | CDEF G2FE | D2FA dcdf | edcB AGFE |
+D2FA dAFD | CDEF GEFG | AdcB (3ABA (3GFE | (3DFA (3dAF D2 :|
+de | ~f3g fedc | B^ABc B2cd | e^def edcB | (3Ace aec A2 (3ABc |
+dcde fdAF | GFGA BdcB | AdcB (3ABA (3GFE | (3DFA (3dAF D2
+de | ~f3g fedc | B^ABc B2cd | e^def edcB | (3ABA ^GB A2 (3ABc |
 dcde fdAF | GFGA BdcB | AdcB (3ABA (3GFE | (3DFA (3dAF D2 ||
 <end>
 <start>
@@ -10036,7 +10036,7 @@ P:variations
 cd |: (3efe ^de =decd | (3BcB AB GAF2 | EFGA Bcde | fe^de c2c=d |
 (3efe ^de =decd | (3BcB AB GAF2 | EFGA Bcde |1 (3gfe (3dcB A2 cd :|2 (3gfe (3dcB A2 ab ||
 |: c'2e2 c'2ef | e2b3eef | e2b3eef | e2a3eab |
-c'2e2 c'2ef | e2b4ef | gagf (3efe (3dcB |1 AcBG A2 ab :|2 AcBG A2 || 
+c'2e2 c'2ef | e2b4ef | gagf (3efe (3dcB |1 AcBG A2 ab :|2 AcBG A2 ||
 <end>
 <start>
 X:71
@@ -10334,7 +10334,7 @@ P:version with accidentals
 |: (3FG^G | A^GAB Adfd | Bdgf edcB | A^GAB AFDF | E^DEF E2 (3FG^G |
 A^GAB Adfd | Bdgf edcB | Adfa gece | d2dc d2 :|
 |: (3cd^d | e^def gece | dcde fdAf | (3gag (3fgf (3efe (3ded | (3cdc (3BcB A2 (3FG^G |
-A^GAB Adfd | Bdgf edcB | Adfd gece | d2dc d2 :| 
+A^GAB Adfd | Bdgf edcB | Adfd gece | d2dc d2 :|
 <end>
 <start>
 X:91
@@ -10580,14 +10580,14 @@ Z:id:hn-jig-6
 M:6/8
 K:D
 AG |: F2D DEF | G2E EFG | F2D DAF | GED DAG |
-F2D DEF | G2E EFG | ABA GEA |1 DED DAG :|2 DED D2B || 
+F2D DEF | G2E EFG | ABA GEA |1 DED DAG :|2 DED D2B ||
 |: c2A Bcd | ecA AGE | d2e fed | ecA A2B |
 c2A Bcd | ecA AGE | ~F3 GEA |1 DED D2B :|2 DED DFG ||
 |: ~A3 dAF | ~A3 dAF | ~G3 EFG | EFG EFG |
 ~A3 dAF | ~A3 dAG | ~F3 GEA |1 DED DFG :|2 DED D ||
 P:variations
 AG |: F2D DAF | G2E EDE | F2D DAF | GED DAG |
-F2D DAF | G2E EFG | ABA GEA |1 DED DAG :|2 DED D2B || 
+F2D DAF | G2E EFG | ABA GEA |1 DED DAG :|2 DED D2B ||
 |: c2A Bcd | ecA AGE | d2e fed | ecA A2B |
 c2A Bcd | ecA AGE | FAF GEA |1 DED D2B :|2 DED DFG ||
 ~A3 dAF | ~A3 dAF | ~G3 EGE | =cEE EFG |
@@ -10971,12 +10971,12 @@ Z:id:hn-jig-33
 M:6/8
 L:1/8
 K:A
-EAA cAA | eAA cee | faf ecA | BcB BAF | 
-EAA cAA | eAA cee | faf ecA |1BcB A2F :|2BcB A3 || 
-|: eaa c'aa | bab c'af | eaa c'aa | bc'b baf | 
-eaa c'aa | bab c'ae | faf ecA |1BcB A3 :|2BcB Acd || 
-|: efe ecA | ~f3 fga | efe ecA | dBB Bcd | 
-efe ecA | ~f3 fga | ecA BAB |1cAA Acd :|2cAA A2F || 
+EAA cAA | eAA cee | faf ecA | BcB BAF |
+EAA cAA | eAA cee | faf ecA |1BcB A2F :|2BcB A3 ||
+|: eaa c'aa | bab c'af | eaa c'aa | bc'b baf |
+eaa c'aa | bab c'ae | faf ecA |1BcB A3 :|2BcB Acd ||
+|: efe ecA | ~f3 fga | efe ecA | dBB Bcd |
+efe ecA | ~f3 fga | ecA BAB |1cAA Acd :|2cAA A2F ||
 <end>
 <start>
 X:34
@@ -11436,7 +11436,7 @@ K:D
 ~E3 FDD | FEE cde | dcA GEA, |1 CDE GAG | ~E3 FDD | FEE cde | dcA GEC |
 EDC D3 :|2 CDE GAB | cAG EFG | FDF ~G3 | AdB cAG | EDC D2g ||
 |: ~f3 fdA | dfa agf | ~e3 ecA | cde gag |1 ~f3 fdA | dfa afd |
-cde gab | aec d2g :|2 fga bag | fge dAF | GAB Ace | dgf ecA || 
+cde gab | aec d2g :|2 fga bag | fge dAF | GAB Ace | dgf ecA ||
 <end>
 <start>
 X:65
@@ -11493,7 +11493,7 @@ Z:id:hn-jig-68
 M:6/8
 K:D
 ~A3 AGF |[M:9/8] EDC D3 d2e |[M:6/8] fgf edc | d3 d2e |
-fgf edc | dAA BAG | FED EDC | DA,B, CDE | Ddd Aee | 
+fgf edc | dAA BAG | FED EDC | DA,B, CDE | Ddd Aee |
 Aff Agg | fed edc | d2d dcB :|
 |: A=f=f =fe=f | A=f=f =fe=f | A=f=f Agg | Aaa A_b_b |
 A=f=f =fe=f | A=f=f =f2g | =fed ed^c |1 d2d d=c_B :|2 d2d d2e ||
@@ -12238,12 +12238,12 @@ Z:id:hn-march-19
 M:6/8
 L:1/8
 K:D
-Fdd fee | fdB BAG | Fdd fee | fdB B2A :| 
-|: FEE FDD | FEd dBA | FEE FDD | FEd B2A :| 
-|: d2f e2f | ded dBA | d2f e2f | ded dBA :| 
-|: B2A B2F | B2A BEE | B2A B2F |1 B2A BEE :|2 B2A BAG || 
+Fdd fee | fdB BAG | Fdd fee | fdB B2A :|
+|: FEE FDD | FEd dBA | FEE FDD | FEd B2A :|
+|: d2f e2f | ded dBA | d2f e2f | ded dBA :|
+|: B2A B2F | B2A BEE | B2A B2F |1 B2A BEE :|2 B2A BAG ||
 P:variation of 1st part
-|: Fdd fee | fdd dBA | Fdd fee | fdB B2A :| 
+|: Fdd fee | fdd dBA | Fdd fee | fdB B2A :|
 <end>
 <start>
 X:20
@@ -12268,12 +12268,12 @@ Z:id:hn-march-21
 M:6/8
 L:1/8
 K:D
-|: ~d3 ~d3 | dcB ABc | dcB AGF | G2F E2D | 
-~e3 ede | fed eag | fef d2A | def e3 :| 
-|: fed eAA | fed eAA | gfe fBB | gfe fBB | 
-fed eAA | fed eag | fef d2A | def e3 :| 
-|: dfa dfa | dfa afd | egb egb | egb bge | 
-dfa dfa | dfa a2g | fef d2A | def e3 :| 
+|: ~d3 ~d3 | dcB ABc | dcB AGF | G2F E2D |
+~e3 ede | fed eag | fef d2A | def e3 :|
+|: fed eAA | fed eAA | gfe fBB | gfe fBB |
+fed eAA | fed eag | fef d2A | def e3 :|
+|: dfa dfa | dfa afd | egb egb | egb bge |
+dfa dfa | dfa a2g | fef d2A | def e3 :|
 <end>
 <start>
 X:22
@@ -12330,7 +12330,7 @@ K:Amix
 e3d c2A2 | e2A2 Bcd2 | e3d c2A2 | d2G2 Bcd2 |
 e3d c2A2 | e2A2 B3A | G2Bd gfge |1 d2G2 Bcdf :|2 d2G2 Bcde ||
 |: c2ce agfa | e2A2 Bcde | c2ce gfec | d2G2 Bcde |
-c2ce agfa | gfeg f2fe | d2ef gage |1 d2G2 Bcde :|2 d2G2 Bcdf || 
+c2ce agfa | gfeg f2fe | d2ef gage |1 d2G2 Bcde :|2 d2G2 Bcdf ||
 <end>
 <start>
 X:26
@@ -12378,7 +12378,7 @@ P:variations
 |: BAG AGF | G2g fdc | BAG AGF | Ggf d2c |
 BAG AGF | G2g fdc | BAB cBc | Ggf d2c :|
 |: Aff agg | agf dec | Aff agg | agf d2c |
-Aff agg | bag fde | f2d gfg | agf d2c :| 
+Aff agg | bag fde | f2d gfg | agf d2c :|
 <end>
 <start>
 X:29
@@ -12407,10 +12407,10 @@ d2c | BGD BGD | d3 d2c | BGD BGD | ded d2c |
 BcB GBd | edc BAG | ABA ded | ~A3 d2c |
 BGD BGD | ded d2B | c2B c2e | ~g3 gfe |
 d2B GAB | c2A F2G | ~A3 AGF | G3 :|
-|: g2f | e3 c2G | c2e gfe | ~d3 ded | B3 B2c | 
-d3 d^cd | ed=c BAG | ABA ded | A2d d2=c | 
-BGD BGD | ded dcB | c2B c2e | ~g3 gfe | 
-d2B GAB | c2A F2G | ABA AGF | G3 :| 
+|: g2f | e3 c2G | c2e gfe | ~d3 ded | B3 B2c |
+d3 d^cd | ed=c BAG | ABA ded | A2d d2=c |
+BGD BGD | ded dcB | c2B c2e | ~g3 gfe |
+d2B GAB | c2A F2G | ABA AGF | G3 :|
 <end>
 <start>
 X:31
@@ -12785,19 +12785,19 @@ E>F EC | EF A>B | ce Bc/B/ | AF dF |
 E>F EC | EF A>B | ce Bc/B/ |1 A2 AF :|2 A2 AB ||
 ce ec | df fe | ce Bc/B/ | AF dF | ce ec | df fg | af g/f/e | f2 fg |
 af g/f/e | f/g/f/e/ cB | ce Bc/B/ | AF dF | E>F EC | EF A>B | ce Bc/B/ | A2 AB ||
-|: ce ce | ce ec/e/ | fe ce | f/a/f/e/ cB | 
+|: ce ce | ce ec/e/ | fe ce | f/a/f/e/ cB |
 ce ce | ce ec/e/ | fe cB |1 c/B/A A>B :|2 c/B/A A2 ||
 |: Ac ed/e/ | fe d>e | ec AB | cB c/B/A |
-Ac ed/e/ | fe d>e | ec AF |1 FE E2 :|2 FE EC || 
+Ac ed/e/ | fe d>e | ec AF |1 FE E2 :|2 FE EC ||
 P:variations
 |: E>F EC | EF A>B | ce Bc/B/ | AF AF |
 E>F EC | EF A>B | ce/c/ Bc/B/ |1 A2 AF :|2 A2 AB ||
 ce ec | df fe | ce Bc/B/ | AF FE | ce ec | df fg | ag fe | f2 fg |
 ag fe | fe c>B | ce Bc/B/ | AF AF | E>F EC | EF A>B | ce Bc/B/ | A2 AB ||
-|: ce ce | ce ec/e/ | fe c>e | fe c>B | 
+|: ce ce | ce ec/e/ | fe c>e | fe c>B |
 ce ce | ce ec/e/ | fe ce/c/ |1 BA A>B :|2 BA A2 ||
 |: Ac ec/e/ | fe d>e | ec Ac | BA FE |
-Ac ec/e/ | fe d>e | ec AF |1 FE E2 :|2 FE AF || 
+Ac ec/e/ | fe d>e | ec AF |1 FE E2 :|2 FE AF ||
 <end>
 <start>
 X:6
@@ -15555,7 +15555,7 @@ A2FA DAFA|~f3d efde|fa~a2 bfaf|1 e2de fedB:|2 e2de fdde||
 P:variations
 |:A2FA DAFA|f2fd efdB|A2FA DAFA|BddB BAFB|
 A2FA DAFA|~f3d efd2|fa~a2 bfaf|efde fdd2:|
-|:fa~a2 bafe|dfaf efde|f2df efde|1 f2df efd2| 
+|:fa~a2 bafe|dfaf efde|f2df efde|1 f2df efd2|
 fa~a2 bafe|dfaf efde|f2df efdB|AFEA FDD2:|2 f2df efdB|
 A2FA DAFA|~f3d efde|fa~a2 bfaf|efde fdd2||
 <end>
@@ -15690,8 +15690,8 @@ X:94
 T:Congress Reel, The
 R:reel
 C:Joe Mills (Ballinasloe)
-H:composed by Joe Mills in 1932, the year of the Eucharistic Congress (the 
-H:World Eucharistic Congress, held in Dublin in June of 1932), presumably to 
+H:composed by Joe Mills in 1932, the year of the Eucharistic Congress (the
+H:World Eucharistic Congress, held in Dublin in June of 1932), presumably to
 H:commemorate that event.
 Z:id:hn-reel-94
 M:C|
@@ -17209,7 +17209,7 @@ M:9/8
 L:1/8
 K:G
 G2c BGB AFD | G2c BGB c2d | e/f/ge dcB AFD |1 E2c BcA G2D :|2 E2c BcA G2d ||
-|: gdB gdB AFD | gfe def g2d | e/f/ge dcB AFD |1 E2c BcA G2d :|2 E2c BcA G2D || 
+|: gdB gdB AFD | gfe def g2d | e/f/ge dcB AFD |1 E2c BcA G2d :|2 E2c BcA G2D ||
 <end>
 <start>
 X:80
@@ -17222,7 +17222,7 @@ L:1/8
 K:G
 G2g gag dBG | A2B c2d ecA | G2g gag dBG |1 e/f/ge f/g/af gdB :|2 A/B/cA BGE E2B ||
 |: e2f gfe fdB | e2f g2a bge |1 gbg faf e/f/ge |
-dBG A/B/cA BGE :|2 faf g2e dBG | A/B/cA BGE E2F || 
+dBG A/B/cA BGE :|2 faf g2e dBG | A/B/cA BGE E2F ||
 <end>
 <start>
 X:81
@@ -17260,7 +17260,7 @@ M:9/8
 L:1/8
 K:D
 FED FAA FAA | FED FAF E2D | FED FAA FAA | BAA dAF E2D :|
-|: ABd dfe edB | ABd dfe e2d | ABd dfe edA | BAA dAF E2D :| 
+|: ABd dfe edB | ABd dfe e2d | ABd dfe edA | BAA dAF E2D :|
 <end>
 <start>
 X:84
@@ -17276,7 +17276,7 @@ K:G
 |: Bee efe g2e | Bee efe dBA | Bee efe g2e | agf g2e dBA :|
 |: ~G3 BGB e2d | ~G3 BGB dBA | ~G3 BGB e2d | Bee ege dBA :|
 |: B2a ged e2d | B2a gfe dBA |1 B2a ged e2d | Bee ege dBA :|
-[2 ~B3 BAB g2e | agf g2e dBA || 
+[2 ~B3 BAB g2e | agf g2e dBA ||
 <end>
 <start>
 X:85
@@ -18398,7 +18398,7 @@ W:Let your sergeants and your commanders go.
 W:Let Englishmen fight English wars,
 W:It's nearly time they started oh!
 W:I saluted the sergeant a very good night,
-W:and there and then we parted oh! 
+W:and there and then we parted oh!
 <end>
 <start>
 X:75
@@ -18437,12 +18437,12 @@ K:Dmix
 d^cd AGE | F2G A2B | =cBc A2B | cBc AB^c |
 d^cd AGE | F2G A2g | fed ed^c |1 d2e =f2e :|2 d3 d2A ||
 d2e f2g | ~a3 afd | =c2d e2f | ~g3 gfe | d2e f2g | a3 afd | e^cA ABc | d3 d2A |
-d2e f2g | a3 afd | =c2d e2f | g3 gfg | agf gfe | fed ed^c | d^cA ABc | d2e =f2e || 
+d2e f2g | a3 afd | =c2d e2f | g3 gfg | agf gfe | fed ed^c | d^cA ABc | d2e =f2e ||
 P:variations
 |: d3 ABG | F2G A2B | =cBc A2B | cBc AB^c |
 d3 ABG | F2G A2e | fed ed^c |1 d2e =f2e :|2 d3 d2A||
 d2e f2g | ~a3 afd | =c2d e2f | gaf ge^c | d2e f2g | a3 afd | e^cA ABc | d3 d2A |
-d2e f2g | a3 afd | =c2d e2f | ~g3 gfg | agf gfe | fed ed^c | d^cA ABc | d2e =f2e || 
+d2e f2g | a3 afd | =c2d e2f | ~g3 gfg | agf gfe | fed ed^c | d^cA ABc | d2e =f2e ||
 <end>
 <start>
 X:78
@@ -18505,9 +18505,9 @@ Z:id:hn-slide-81
 M:6/8
 K:D
 DFA AFA | BGB AFA | DFA AFA | B2c dAF |
-D2A AFA | DBB AFA | dfd ecA | B2c d3 :| 
+D2A AFA | DBB AFA | dfd ecA | B2c d3 :|
 |: dfd ece | dcB AFA | dfd ecA | B2c d2A |
-[1 d3 ece | dcB AFA | ~D3 AFA | B2c d3 :| 
+[1 d3 ece | dcB AFA | ~D3 AFA | B2c d3 :|
 [2 afd ecA | dcB AFA | DFA AFA | B2c d3 ||
 <end>
 <start>
@@ -18522,7 +18522,7 @@ K:D
 d2e fed | e2A ABA | def ~a3 | g2g f2e|
 d2e fed | e2A ABA | ~a3 gfe |1 d3 d2A :|2 d3 d2e ||
 |: ~f3 fef | ~g3 gfe | ~f3 fed | efe ede |
-~f3 fef | ~g3 gfg | a2f gfe |1 d3 d2e :|2 d3 ABc|| 
+~f3 fef | ~g3 gfg | a2f gfe |1 d3 d2e :|2 d3 ABc||
 <end>
 <start>
 X:83
@@ -18596,7 +18596,7 @@ K:G
 B3 BAG | F2d d^cd | B2g gfg | eag fed |
 B3 BAG | F2d d^cd | ede fef | a3 g2d :|
 |: gfg b2d | gfg b2g | fag fed | fag fed |
-gfg b2d | gfg b2g | fag fef | aba g2d :| 
+gfg b2d | gfg b2g | fag fef | aba g2d :|
 <end>
 <start>
 X:88
@@ -18609,7 +18609,7 @@ K:Edor
 B2e e2f | e2d B2A | B2d dBA | B2d dBA |
 B2e e2f | e2d B2A | def a2f |1 e3 e2d :|2 e3 efa ||
 |: b3 b2a | b2a f2e | def a2f | def a3 |
-b3 b2a | b2a f2e | def a2f |1 e3 efa :|2 e3 e2d || 
+b3 b2a | b2a f2e | def a2f |1 e3 efa :|2 e3 e2d ||
 <end>
 <start>
 X:89

@@ -42,5 +42,32 @@ def flip_coin(probabilities, is_gpu):
 #     pdb.set_trace()
 #     return np.argmin(dist)
 
+'''
+This extracts the metadata and the music data and returns a list of tuples.
+'''
+def get_music_meta(data):
+    output_music = []
+    output_meta = []
+    split_data = data.split('<end>')
+    for sample in split_data:
+        found_music = False
+        music = []
+        meta = []
+        for line in sample.split('\n'):
+            if (line.endswith('|') or line.endswith('::') or \
+              line.endswith(':|') or line.endswith('|:')) or found_music or \
+              len(line) > 70:
+                music.append(line.rstrip())
+                found_music = True
+            elif len(line) > 0 and not found_music:
+                meta.append(line.rstrip())
+        music.append('<end>')
+        output_music.append('\n'.join(music))
+        # print(len(output_music))
+        output_meta.append('\n'.join(meta))
+    return output_music, output_meta
+
+
+
 def custom_softmax(output, T):
     return torch.exp(torch.div(output, T)) / torch.sum(torch.exp(torch.div(output, T)))

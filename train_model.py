@@ -47,11 +47,11 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
         total = 0
         correct = 0
         iterate = 0
-        while len(a) >30:
+        while len(a) > 30:
             model.bs = batch_size
-            idxs = random.sample(a,batch_size)
+            idxs = random.sample(a, batch_size)
             # get random slice, and the targets that correspond to that slice
-            rand_slice = [training_nums[idx : idx + seq_len] for idx in idxs]
+            rand_slice = [training_nums[idx: idx + seq_len] for idx in idxs]
             rand_slice = np.array(rand_slice).T
             targets = [training_nums[idx + 1:idx+(seq_len+1)] for idx in idxs]
             targets = np.array(targets).T

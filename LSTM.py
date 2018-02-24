@@ -32,16 +32,16 @@ class LSTM_Mod2(nn.Module):
     def init_hidden(self):
         # The axes semantics are (num_layers, minibatch_size, hidden_dim)
         if self.is_gpu:
-            self.hidden =  (Variable(torch.zeros(1, self.bs, self.hidden_dim).cuda()),
+            self.hidden = (Variable(torch.zeros(1, self.bs, self.hidden_dim).cuda()),
                     Variable(torch.zeros(1, self.bs, self.hidden_dim).cuda()))
         else:
-            self.hidden =  (Variable(torch.zeros(1, self.bs, self.hidden_dim)),
+            self.hidden = (Variable(torch.zeros(1, self.bs, self.hidden_dim)),
                     Variable(torch.zeros(1, self.bs, self.hidden_dim)))
 
     def forward(self, sentence):
         outputs=[]
         # input sentence is shape: sequence x batch x 1
-        output, self.hidden = self.lstm(sentence.float().view(-1,self.bs,1), self.hidden)
+        output, self.hidden = self.lstm(sentence.float().view(-1, self.bs, 1), self.hidden)
         outputs = self.linear(output)
         # for character in sentence:
         #     output, self.hidden = self.lstm(character.float().view(1,self.bs,-1), self.hidden)
