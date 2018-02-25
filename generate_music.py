@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import random
 import pdb
 import numpy as np
+<<<<<<< HEAD
 from LSTM.py import *
 from helper import *
 
@@ -24,3 +25,31 @@ def generate(model, data, primer, predict_len=100, T, cuda):
 
     for p in primer_input:
         _ = model(p)
+=======
+from LSTM import *
+from helper import *
+
+def generate(model, vocab, primer, predict_len, T, use_gpu):
+    vocab_size = len(vocab)
+
+    model.bs = 1
+
+    model.init_hidden()
+    primer_input = [vocab[char] for char in primer]
+
+    model.seq_len = len(primer_input)
+    # build hidden layer
+    _ = model(prepare_data(primer_input[:-1], use_gpu))
+
+    inp = prepare_data([primer_input[-1]], use_gpu)
+
+    model.seq_len = 1
+    predicted=list(primer_input)
+    for p in range(predict_len):
+        output = model(inp)
+        soft_out = custom_softmax(output.data.squeeze(), T)
+        predicted.append(flip_coin(soft_out, use_gpu))
+        inp = prepare_data([predicted[-1]], use_gpu)
+    strlist = [vocab.keys()[vocab.values().index(pred)] for pred in predicted]
+    return ''.join(strlist)
+>>>>>>> master

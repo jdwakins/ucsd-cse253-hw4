@@ -23,27 +23,25 @@ class LSTM_Mod2(nn.Module):
         # The linear layer maps from hidden state space to target space
         # target space = vocab size, or number of unique characters in daa
         self.linear = nn.Linear(hidden_dim, vocab_size)
-        self.softmax = nn.Softmax()
         self.bs = bs
         self.seq_len = seq_len
         self.is_gpu = is_gpu
         self.hidden = self.init_hidden()
-        self.cell = self.init_hidden()
 
 
     def init_hidden(self):
         # The axes semantics are (num_layers, minibatch_size, hidden_dim)
         if self.is_gpu:
-            return (Variable(torch.zeros(1, self.bs, self.hidden_dim).cuda()),
+            self.hidden =  (Variable(torch.zeros(1, self.bs, self.hidden_dim).cuda()),
                     Variable(torch.zeros(1, self.bs, self.hidden_dim).cuda()))
         else:
-            return (Variable(torch.zeros(1, self.bs, self.hidden_dim)),
+            self.hidden =  (Variable(torch.zeros(1, self.bs, self.hidden_dim)),
                     Variable(torch.zeros(1, self.bs, self.hidden_dim)))
 
     def forward(self, sentence):
         outputs=[]
         # input sentence is shape: sequence x batch x 1
-        output, self.hidden = self.lstm(sentence.float().view(self.seq_len,self.bs,-1), self.hidden)
+        output, self.hidden = self.lstm(sentence.float().view(-1,self.bs,1), self.hidden)
         outputs = self.linear(output)
         # for character in sentence:
         #     output, self.hidden = self.lstm(character.float().view(1,self.bs,-1), self.hidden)
