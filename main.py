@@ -18,14 +18,18 @@ from LSTM import *
 from generate_music import *
 
 # input data
-with open('input.txt', 'r') as f:
-    data = f.read()
+start_char = '$'
+end_char = '%'
+pad_char = '`'
+data = clean_up_data('input.txt', start_char, end_char)
 
 vocab = get_idx(data)
 # check for GPU
 use_gpu = torch.cuda.is_available()
 
 seq_len = 30
+# Increment sequence length by 10% each epoch.
+seq_incr_perc = 0.1
 batch_size = 10
 num_epochs = 1
 
@@ -33,7 +37,9 @@ predict_length = 100
 primer = '<start>'
 temperature = 1
 
-model = LSTM_Mod2(100, len(vocab), batch_size, seq_len, is_gpu=use_gpu)
-train_loss, val_loss = train_model(model, data, vocab, seq_len, batch_size, num_epochs, use_gpu)
+model = LSTM_Mod2(100, len(vocab), batch_size, seq_len, data, end_char,
+                  start_char, pad_char, is_gpu=use_gpu)
+train_loss, val_loss = model.train(vocab, seq_len, batch_size,
+                                   num_epochs, use_gpu, seq_incr_perc)
 words = generate(model, vocab, primer, predict_length, temperature, use_gpu)
 print(words)
