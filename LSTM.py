@@ -81,7 +81,8 @@ class LSTM_Mod2(nn.Module):
                                                  example_indices,
                                                  seq_len,
                                                  vocab_idx, center=False,
-                                                 possible_slice_starts=None):
+                                                 possible_slice_starts=None,
+                                                 possible_example_indices=None):
 
         # rand_starts = [possible_slice_starts[ex][np.random.randint(len(possible_slice_starts[ex]))] for i, ex in enumerate(example_indices)]
         # print(rand_starts)
@@ -92,9 +93,16 @@ class LSTM_Mod2(nn.Module):
                 rand_index = np.random.randint(len(possible_slice_starts[ex]))
                 rand_starts.append(possible_slice_starts[ex][rand_index])
                 possible_slice_starts[ex].remove(possible_slice_starts[ex][rand_index])
+                # If this example no longer has indices that haven't been checked.
+                # Remove this example from all possible examples.
+                if len(possible_slice_starts[ex]) == 0:
+                    print('Finished one example')
+                    possible_example_indices.remove(ex)
         # print(possible_slice_starts[example_indices[1]][np.random.randint(len(possible_slice_starts[example_indices[1]]))])
         # print(example_indices)
         # print(possible_slice_starts)
+        else:
+            rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
 
         # [possible_slice_starts.remove(i) for i in rand_starts]
         if center:
@@ -160,17 +168,24 @@ class LSTM_Mod2(nn.Module):
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
+                # print(len(possible_slice_starts[example_indices[0]]))
+                len_old = len(possible_example_indices)
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
-                                                                                    possible_slice_starts,
                                                                                     seq_len, vocab_idx,
-                                                                                    center=center_examples)
+                                                                                    center=False,
+                                                                                    possible_slice_starts=possible_slice_starts,
+                                                                                    possible_example_indices=possible_example_indices)
+                # print(len(possible_slice_starts[example_indices[0]]))
+                # if len_old != len(possible_example_indices):
+                #     print(len(possible_example_indices))
+                #     print('---')
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
                 targets = add_cuda_to_variable(targets, self.use_gpu)
 
                 # Do not visit these samples again with 50% probability.
-                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() > recycle_prob]
+                # [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() > recycle_prob]
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
