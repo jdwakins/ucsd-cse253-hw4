@@ -29,17 +29,17 @@ use_gpu = torch.cuda.is_available()
 
 seq_len = 30
 # Increment sequence length by 10% each epoch.
-seq_incr_perc = 0.1
+seq_incr_perc = None
 batch_size = 10
-num_epochs = 1
+num_epochs = 2
 
 predict_length = 100
-primer = '<start>'
+primer = start_char * 5
 temperature = 1
 
 model = LSTM_Mod2(100, len(vocab), batch_size, seq_len, data, end_char,
                   start_char, pad_char, is_gpu=use_gpu)
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, use_gpu, seq_incr_perc)
-words = generate(model, vocab, primer, predict_length, temperature, use_gpu)
+words = model.daydream(vocab, primer, predict_length, temperature, use_gpu)
 print(words)

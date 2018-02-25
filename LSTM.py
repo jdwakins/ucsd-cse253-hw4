@@ -50,7 +50,6 @@ class LSTM_Mod2(nn.Module):
         return int(old + old * incrementer)
 
     def __pad_sequence(self, examples, sequence_length):
-
         for i, example in enumerate(examples):
             if len(example) < sequence_length:
                 examples[i] = example + self.pad_char * (sequence_length - len(example))
@@ -72,12 +71,32 @@ class LSTM_Mod2(nn.Module):
         outputs = self.linear(output)
         return outputs
 
+    def __convert_examples_to_targets_and_slices(self, examples,
+                                                 example_indices, seq_len,
+                                                 vocab_idx):
+        rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
+
+        rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
+        targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
+        # val_nums = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
+        rand_slice = self.__pad_sequence(rand_slice, seq_len)
+        targets = self.__pad_sequence(targets, seq_len)
+
+        rand_slice = [[vocab_idx[c] for c in ex] for ex in rand_slice]
+        targets = [[vocab_idx[c] for c in ex] for ex in targets]
+
+        # get random slice, and the targets that correspond to that slice
+        rand_slice = np.array(rand_slice).T
+        targets = np.array(targets).T
+
+        return rand_slice, targets
+
     def train(self, vocab_idx, seq_len, batch_size, epochs,
-              use_gpu, seq_incr_perc):
+              use_gpu, seq_incr_perc=None, recycle_prob=0.5):
         vocab_size = len(vocab_idx)
 
         # slice data into trianing and testing (could do this much better)
-        val_split = 0.9
+        val_split = 0.8
         slice_ind = int((len(self.examples) * val_split))
         training_data = self.examples[:slice_ind]
         val_data = self.examples[slice_ind:]
@@ -94,50 +113,39 @@ class LSTM_Mod2(nn.Module):
         loss_function = nn.CrossEntropyLoss()
         optimizer = optim.SGD(self.parameters(), lr=0.01)
 
-        # train self
+        # For logging the data for plotting
         train_loss_vec = []
         val_loss_vec=[]
+
         for epoch in range(epochs):
             #get random slice
-            possible_example_indices = range(len(self.examples))
+            possible_example_indices = range(len(training_data))
+            possible_val_indices = range(len(val_data))
             # after going through all of a , will have gone through all possible 30
             # character slices
             total = 0
             correct = 0
             iterate = 0
 
-            while len(possible_example_indices) > 0:
+            '''
+            Visit each possible example once. Can maybe tweak this to be more
+            stochastic.
+            '''
+            while len(possible_example_indices) > self.batch_size:
+
                 self.batch_size = batch_size
 
-                example_indices = random.sample(possible_example_indices, batch_size)
-                print(example_indices)
-                rand_starts = [np.random.randint(len(self.examples[i])) for i in example_indices]
+                example_indices = random.sample(possible_example_indices, self.batch_size)
 
-                rand_slices = [self.examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
-                targets = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
-                self.__pad_sequence(rand_slices, seq_len)
-                print(rand_slices)
-
-                rand_slices = [[vocab_idx[c] for c in ex] for ex in rand_slices]
-                targets = [[vocab_idx[c] for c in ex] for ex in targets]
-                print(rand_slices)
-                # print(targets)
-
-
-
-
-                # get random slice, and the targets that correspond to that slice
-                rand_slice = [training_nums[idx : idx + seq_len] for idx in idxs]
-                rand_slice = np.array(rand_slice).T
-                targets = [training_nums[idx + 1:idx+(seq_len+1)] for idx in idxs]
-                targets = np.array(targets).T
-
-                # for idx in idxs:
-                [possible_example_indices.remove(idx) for idx in idxs]
-
+                # Get processed data.
+                rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data, example_indices, seq_len, vocab_idx)
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, use_gpu)
                 targets = add_cuda_to_variable(targets, use_gpu)
+
+                # Do not visit these samples again with 50% probability.
+                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() < recycle_prob]
+
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
 
@@ -152,23 +160,17 @@ class LSTM_Mod2(nn.Module):
                 outputs = self.__forward(rand_slice)
                 # Step 4. Compute the loss, gradients, and update the parameters by
                 #  calling optimizer.step()
-                loss=0
+                loss = 0
                 for bat in range(batch_size):
                     loss += loss_function(outputs[:,bat,:], targets[:,bat,:].squeeze(1))
                 loss.backward()
                 optimizer.step()
 
                 # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
-                if iterate % 2000:
+                if iterate % 2000 == 0:
                     print('Loss ' + str(loss.data[0]/batch_size))
-                    train_loss_vec.append(loss.data[0]/batch_size)
-
-                    idxs_val = random.sample(range(len(val_nums)-(seq_len+1)),batch_size)
-
-                    val_inputs = [val_nums[idx_v:idx_v + seq_len] for idx_v in idxs_val]
-                    val_inputs = np.array(val_inputs).T
-                    val_targets = [val_nums[idx_v+1: idx_v + seq_len+1] for idx_v in idxs_val]
-                    val_targets = np.array(val_targets).T
+                    val_indices = random.sample(possible_val_indices, batch_size)
+                    val_inputs, val_targets = self.__convert_examples_to_targets_and_slices(val_data, val_indices, seq_len, vocab_idx)
 
                     val_inputs = add_cuda_to_variable(val_inputs, use_gpu)
                     val_targets = add_cuda_to_variable(val_targets, use_gpu)
@@ -181,6 +183,9 @@ class LSTM_Mod2(nn.Module):
                     print('Validataion Loss ' + str(val_loss.data[0]/batch_size))
                 iterate += 1
             print('Completed Epoch ' + str(epoch))
+            if seq_incr_perc is not None:
+                seq_len = self.__get_new_sequence_length(seq_len, seq_incr_perc)
+                print('Updated sequence length to: {}'.format(seq_len))
         return train_loss_vec, val_loss_vec
 
     def daydream(self, vocab, primer, predict_len, T, use_gpu):
@@ -190,17 +195,18 @@ class LSTM_Mod2(nn.Module):
 
         self.__init_hidden()
         primer_input = [vocab[char] for char in primer]
+        print(primer_input)
 
         self.seq_len = len(primer_input)
         # build hidden layer
-        _ = self(add_cuda_to_variable(primer_input[:-1], use_gpu))
+        _ = self.__forward(add_cuda_to_variable(primer_input[:-1], use_gpu))
 
         inp = add_cuda_to_variable([primer_input[-1]], use_gpu)
 
         self.seq_len = 1
-        predicted=list(primer_input)
+        predicted = list(primer_input)
         for p in range(predict_len):
-            output = self(inp)
+            output = self.__forward(inp)
             soft_out = custom_softmax(output.data.squeeze(), T)
             predicted.append(flip_coin(soft_out, use_gpu))
             inp = add_cuda_to_variable([predicted[-1]], use_gpu)
