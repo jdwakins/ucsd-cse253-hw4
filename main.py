@@ -27,7 +27,7 @@ use_gpu = torch.cuda.is_available()
 
 seq_len = 30
 batch_size = 10
-num_epochs = 1
+num_epochs = 5
 
 predict_length = 100
 primer = '<start>'
@@ -35,5 +35,12 @@ temperature = 1
 
 model = LSTM_Mod2(100, len(vocab), batch_size, seq_len, is_gpu=use_gpu)
 train_loss, val_loss = train_model(model, data, vocab, seq_len, batch_size, num_epochs, use_gpu)
-words = generate(model, vocab, primer, predict_length, temperature, use_gpu)
-print(words)
+
+plt.figure()
+plt.plot(range(len(train_loss)),train_loss,label = 'Training Loss')
+plt.plot(range(len(val_loss)),val_loss,label = 'Validation Loss')
+plt.xticks(list(np.cumsum(np.repeat(round(len(train_loss)/num_epochs), num_epochs))),tuple([str(x) for x in range(num_epochs)]))
+plt.text(20,.15, 'Min Validation Loss = '+ str( min(val_loss)) )
+plt.show()
+# words = generate(model, vocab, primer, predict_length, temperature, use_gpu)
+# print(words)

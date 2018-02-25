@@ -83,7 +83,7 @@ def train_model(model, data, vocab_idx, seq_len, batch_size, epochs, use_gpu):
             optimizer.step()
 
             # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
-            if iterate % 2000:
+            if iterate % 200:
                 print('Loss ' + str(loss.data[0]/batch_size))
                 train_loss_vec.append(loss.data[0]/batch_size)
 
