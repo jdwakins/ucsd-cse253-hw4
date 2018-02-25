@@ -99,7 +99,9 @@ class LSTM_Mod2(nn.Module):
         return rand_slice, targets
 
     def train(self, vocab_idx, seq_len, batch_size, epochs,
-              use_gpu, seq_incr_perc=None, recycle_prob=0.5, center_examples=False):
+              use_gpu, seq_incr_perc=None, seq_incr_freq=None,
+              recycle_prob=0.5,
+              center_examples=False):
         vocab_size = len(vocab_idx)
 
         # slice data into trianing and testing (could do this much better)
@@ -193,9 +195,12 @@ class LSTM_Mod2(nn.Module):
                     print('Validataion Loss ' + str(val_loss.data[0]/batch_size))
                 iterate += 1
             print('Completed Epoch ' + str(epoch))
-            if seq_incr_perc is not None:
-                seq_len = self.__get_new_sequence_length(seq_len, seq_incr_perc)
-                print('Updated sequence length to: {}'.format(seq_len))
+
+
+            if seq_incr_perc is not None and seq_incr_freq is not None:
+                if epoch != 0 and epoch % seq_incr_freq == 0:
+                    seq_len = self.__get_new_sequence_length(seq_len, seq_incr_perc)
+                    print('Updated sequence length to: {}'.format(seq_len))
         return train_loss_vec, val_loss_vec
 
     def daydream(self, T, use_gpu, primer=None, predict_len=None):
