@@ -84,9 +84,8 @@ class LSTM_Mod2(nn.Module):
                                                  possible_slice_starts=None,
                                                  possible_example_indices=None):
 
-        # rand_starts = [possible_slice_starts[ex][np.random.randint(len(possible_slice_starts[ex]))] for i, ex in enumerate(example_indices)]
-        # print(rand_starts)
-        # For some reason this didn't work with list comprehension
+        # For each of the examples chosen, get a random slice from it and Remove
+        # that index from possible future indices.
         if possible_slice_starts is not None:
             rand_starts = []
             for ex in example_indices:
@@ -96,29 +95,18 @@ class LSTM_Mod2(nn.Module):
                 # If this example no longer has indices that haven't been checked.
                 # Remove this example from all possible examples.
                 if len(possible_slice_starts[ex]) == 0:
-                    print('Finished one example')
                     possible_example_indices.remove(ex)
-        # print(possible_slice_starts[example_indices[1]][np.random.randint(len(possible_slice_starts[example_indices[1]]))])
-        # print(example_indices)
-        # print(possible_slice_starts)
         else:
             rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
 
-        # [possible_slice_starts.remove(i) for i in rand_starts]
-        if center:
-            rand_slice = [examples[index][max((rand_starts[i] - seq_len / 2), 0): rand_starts[i] + seq_len / 2] for i, index in enumerate(example_indices)]
-            targets = [examples[index][max((rand_starts[i] - seq_len / 2), 0) + 1: rand_starts[i] + seq_len / 2 + 1]  for i, index in enumerate(example_indices)]
-        else:
-            rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
-            targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
-        # val_nums = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
+        rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
+        targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
         rand_slice = self.__pad_sequence(rand_slice, seq_len)
         targets = self.__pad_sequence(targets, seq_len)
 
         rand_slice = [[vocab_idx[c] for c in ex] for ex in rand_slice]
         targets = [[vocab_idx[c] for c in ex] for ex in targets]
 
-        # get random slice, and the targets that correspond to that slice
         rand_slice = np.array(rand_slice).T
         targets = np.array(targets).T
 
@@ -126,8 +114,7 @@ class LSTM_Mod2(nn.Module):
 
     def train(self, vocab_idx, seq_len, batch_size, epochs,
               seq_incr_perc=None, seq_incr_freq=None,
-              recycle_prob=0.5,
-              center_examples=False):
+              recycle_prob=0.5):
         vocab_size = len(vocab_idx)
         np.random.seed(1)
 
