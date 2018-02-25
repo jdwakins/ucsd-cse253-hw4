@@ -78,10 +78,25 @@ class LSTM_Mod2(nn.Module):
 
 
     def __convert_examples_to_targets_and_slices(self, examples,
-                                                 example_indices, seq_len,
-                                                 vocab_idx, center=False):
-        rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
+                                                 example_indices,
+                                                 seq_len,
+                                                 vocab_idx, center=False,
+                                                 possible_slice_starts=None):
 
+        # rand_starts = [possible_slice_starts[ex][np.random.randint(len(possible_slice_starts[ex]))] for i, ex in enumerate(example_indices)]
+        # print(rand_starts)
+        # For some reason this didn't work with list comprehension
+        if possible_slice_starts is not None:
+            rand_starts = []
+            for ex in example_indices:
+                rand_index = np.random.randint(len(possible_slice_starts[ex]))
+                rand_starts.append(possible_slice_starts[ex][rand_index])
+                possible_slice_starts[ex].remove(possible_slice_starts[ex][rand_index])
+        # print(possible_slice_starts[example_indices[1]][np.random.randint(len(possible_slice_starts[example_indices[1]]))])
+        # print(example_indices)
+        # print(possible_slice_starts)
+
+        # [possible_slice_starts.remove(i) for i in rand_starts]
         if center:
             rand_slice = [examples[index][max((rand_starts[i] - seq_len / 2), 0): rand_starts[i] + seq_len / 2] for i, index in enumerate(example_indices)]
             targets = [examples[index][max((rand_starts[i] - seq_len / 2), 0) + 1: rand_starts[i] + seq_len / 2 + 1]  for i, index in enumerate(example_indices)]
@@ -106,6 +121,8 @@ class LSTM_Mod2(nn.Module):
               recycle_prob=0.5,
               center_examples=False):
         vocab_size = len(vocab_idx)
+        np.random.seed(1)
+
         self.batch_size = batch_size
         # slice data into trianing and testing (could do this much better)
         val_split = 0.8
@@ -113,11 +130,6 @@ class LSTM_Mod2(nn.Module):
         training_data = self.examples[:slice_ind]
         val_data = self.examples[slice_ind:]
 
-        # turn training and validation data from characters to numbers
-        # training_nums = [vocab_idx[char] for char in training_data]
-        # val_nums = [vocab_idx[char] for char in val_data]
-
-        np.random.seed(1)
 
         if self.use_gpu:
             self.cuda()
@@ -132,6 +144,7 @@ class LSTM_Mod2(nn.Module):
         for epoch in range(epochs):
             #get random slice
             possible_example_indices = range(len(training_data))
+            possible_slice_starts = [range(len(ex)) for ex in training_data]
             possible_val_indices = range(len(val_data))
             # after going through all of a , will have gone through all possible 30
             # character slices
@@ -149,6 +162,7 @@ class LSTM_Mod2(nn.Module):
                 # Get processed data.
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
+                                                                                    possible_slice_starts,
                                                                                     seq_len, vocab_idx,
                                                                                     center=center_examples)
                 # prepare data and targets for self
