@@ -17,7 +17,7 @@ from helper import *
 # use_gpu = torch.cuda.is_available()
 class LSTM_Mod2(nn.Module):
 # class LSTM_Mod2():
-    def __init__(self, hidden_dim, vocab_size, bs,
+    def __init__(self, hidden_dim, vocab, bs,
                  seq_len, data, end_char, start_char, pad_char,
                  is_gpu=False):
         super(LSTM_Mod2, self).__init__()
@@ -25,7 +25,10 @@ class LSTM_Mod2(nn.Module):
         self.lstm = nn.LSTM(1, hidden_dim, 1)
         # The linear layer maps from hidden state space to target space
         # target space = vocab size, or number of unique characters in daa
-        self.linear = nn.Linear(hidden_dim, vocab_size)
+        self.linear = nn.Linear(hidden_dim, len(vocab))
+
+        # Non-torch inits.
+        self.vocab = vocab
         self.batch_size = bs
         self.seq_len = seq_len
         self.is_gpu = is_gpu
@@ -73,11 +76,15 @@ class LSTM_Mod2(nn.Module):
 
     def __convert_examples_to_targets_and_slices(self, examples,
                                                  example_indices, seq_len,
-                                                 vocab_idx):
+                                                 vocab_idx, center=False):
         rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
 
-        rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
-        targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
+        if center:
+            rand_slice = [examples[index][max((rand_starts[i] - seq_len / 2), 0): rand_starts[i] + seq_len / 2] for i, index in enumerate(example_indices)]
+            targets = [examples[index][max((rand_starts[i] - seq_len / 2), 0) + 1: rand_starts[i] + seq_len / 2 + 1]  for i, index in enumerate(example_indices)]
+        else:
+            rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
+            targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
         # val_nums = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
         rand_slice = self.__pad_sequence(rand_slice, seq_len)
         targets = self.__pad_sequence(targets, seq_len)
@@ -92,7 +99,7 @@ class LSTM_Mod2(nn.Module):
         return rand_slice, targets
 
     def train(self, vocab_idx, seq_len, batch_size, epochs,
-              use_gpu, seq_incr_perc=None, recycle_prob=0.5):
+              use_gpu, seq_incr_perc=None, recycle_prob=0.5, center_examples=False):
         vocab_size = len(vocab_idx)
 
         # slice data into trianing and testing (could do this much better)
@@ -138,7 +145,10 @@ class LSTM_Mod2(nn.Module):
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
-                rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data, example_indices, seq_len, vocab_idx)
+                rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
+                                                                                    example_indices,
+                                                                                    seq_len, vocab_idx,
+                                                                                    center=center_examples)
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, use_gpu)
                 targets = add_cuda_to_variable(targets, use_gpu)
@@ -188,14 +198,14 @@ class LSTM_Mod2(nn.Module):
                 print('Updated sequence length to: {}'.format(seq_len))
         return train_loss_vec, val_loss_vec
 
-    def daydream(self, vocab, primer, predict_len, T, use_gpu):
-        vocab_size = len(vocab)
-
+    def daydream(self, T, use_gpu, primer=None, predict_len=None):
+        vocab_size = len(self.vocab)
+        # Have we detected an end character?
+        end_found = False
         self.batch_size = 1
 
         self.__init_hidden()
-        primer_input = [vocab[char] for char in primer]
-        print(primer_input)
+        primer_input = [self.vocab[char] for char in primer]
 
         self.seq_len = len(primer_input)
         # build hidden layer
@@ -205,10 +215,22 @@ class LSTM_Mod2(nn.Module):
 
         self.seq_len = 1
         predicted = list(primer_input)
-        for p in range(predict_len):
-            output = self.__forward(inp)
-            soft_out = custom_softmax(output.data.squeeze(), T)
-            predicted.append(flip_coin(soft_out, use_gpu))
-            inp = add_cuda_to_variable([predicted[-1]], use_gpu)
-        strlist = [vocab.keys()[vocab.values().index(pred)] for pred in predicted]
+        if predict_len is not None:
+            for p in range(predict_len):
+                output = self.__forward(inp)
+                soft_out = custom_softmax(output.data.squeeze(), T)
+                predicted.append(flip_coin(soft_out, use_gpu))
+                inp = add_cuda_to_variable([predicted[-1]], use_gpu)
+
+        else:
+            while end_found == False:
+                output = self.__forward(inp)
+                soft_out = custom_softmax(output.data.squeeze(), T)
+                found_char = flip_coin(soft_out, use_gpu)
+                predicted.append(found_char)
+                if found_char == self.end_char:
+                    end_found = True
+                inp = add_cuda_to_variable([predicted[-1]], use_gpu)
+
+        strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
         return ''.join(strlist)

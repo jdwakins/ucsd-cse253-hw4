@@ -37,9 +37,9 @@ predict_length = 100
 primer = start_char * 5
 temperature = 1
 
-model = LSTM_Mod2(100, len(vocab), batch_size, seq_len, data, end_char,
+model = LSTM_Mod2(100, vocab, batch_size, seq_len, data, end_char,
                   start_char, pad_char, is_gpu=use_gpu)
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
-                                   num_epochs, use_gpu, seq_incr_perc)
-words = model.daydream(vocab, primer, predict_length, temperature, use_gpu)
+                                   num_epochs, use_gpu, seq_incr_perc, center_examples=True)
+words = model.daydream(temperature, use_gpu, primer)
 print(words)
