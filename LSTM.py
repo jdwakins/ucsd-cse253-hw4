@@ -17,7 +17,7 @@ from helper import *
 # use_gpu = torch.cuda.is_available()
 class LSTM_Mod2(nn.Module):
 # class LSTM_Mod2():
-    def __init__(self, hidden_dim, vocab_size, bs,
+    def __init__(self, hidden_dim, vocab, bs,
                  seq_len, data, end_char, start_char, pad_char,
                  is_gpu=False):
         super(LSTM_Mod2, self).__init__()
@@ -25,10 +25,14 @@ class LSTM_Mod2(nn.Module):
         self.lstm = nn.LSTM(1, hidden_dim, 1)
         # The linear layer maps from hidden state space to target space
         # target space = vocab size, or number of unique characters in daa
-        self.linear = nn.Linear(hidden_dim, vocab_size)
+        self.linear0 = nn.Linear(hidden_dim, hidden_dim)
+        self.linear1 = nn.Linear(hidden_dim, len(vocab))
+
+        # Non-torch inits.
+        self.vocab = vocab
         self.batch_size = bs
         self.seq_len = seq_len
-        self.is_gpu = is_gpu
+        self.use_gpu = use_gpu
         self.hidden = self.__init_hidden()
 
 
@@ -37,6 +41,13 @@ class LSTM_Mod2(nn.Module):
         self.start_char = start_char
         self.pad_char = pad_char
         self.__generate_discrete_examples()
+
+    def __forward(self, sentence):
+        # input sentence is shape: sequence x batch x 1
+        output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
+        output = self.linear0(output)
+        output = self.linear1(output)
+        return output
 
     # Rather than having the data as one long string it is an array of strings.
     def __generate_discrete_examples(self):
@@ -57,27 +68,26 @@ class LSTM_Mod2(nn.Module):
 
     def __init_hidden(self):
         # The axes semantics are (num_layers, minibatch_size, hidden_dim)
-        if self.is_gpu:
+        if self.use_gpu:
             self.hidden = (Variable(torch.zeros(1, self.batch_size, self.hidden_dim).cuda()),
                     Variable(torch.zeros(1, self.batch_size, self.hidden_dim).cuda()))
         else:
             self.hidden =  (Variable(torch.zeros(1, self.batch_size, self.hidden_dim)),
                     Variable(torch.zeros(1, self.batch_size, self.hidden_dim)))
 
-    def __forward(self, sentence):
-        outputs=[]
-        # input sentence is shape: sequence x batch x 1
-        output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
-        outputs = self.linear(output)
-        return outputs
+
 
     def __convert_examples_to_targets_and_slices(self, examples,
                                                  example_indices, seq_len,
-                                                 vocab_idx):
+                                                 vocab_idx, center=False):
         rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
 
-        rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
-        targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
+        if center:
+            rand_slice = [examples[index][max((rand_starts[i] - seq_len / 2), 0): rand_starts[i] + seq_len / 2] for i, index in enumerate(example_indices)]
+            targets = [examples[index][max((rand_starts[i] - seq_len / 2), 0) + 1: rand_starts[i] + seq_len / 2 + 1]  for i, index in enumerate(example_indices)]
+        else:
+            rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
+            targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
         # val_nums = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
         rand_slice = self.__pad_sequence(rand_slice, seq_len)
         targets = self.__pad_sequence(targets, seq_len)
@@ -92,9 +102,11 @@ class LSTM_Mod2(nn.Module):
         return rand_slice, targets
 
     def train(self, vocab_idx, seq_len, batch_size, epochs,
-              use_gpu, seq_incr_perc=None, recycle_prob=0.5):
+              seq_incr_perc=None, seq_incr_freq=None,
+              recycle_prob=0.5,
+              center_examples=False):
         vocab_size = len(vocab_idx)
-
+        self.batch_size = batch_size
         # slice data into trianing and testing (could do this much better)
         val_split = 0.8
         slice_ind = int((len(self.examples) * val_split))
@@ -107,7 +119,7 @@ class LSTM_Mod2(nn.Module):
 
         np.random.seed(1)
 
-        if use_gpu:
+        if self.use_gpu:
             self.cuda()
 
         loss_function = nn.CrossEntropyLoss()
@@ -132,19 +144,19 @@ class LSTM_Mod2(nn.Module):
             stochastic.
             '''
             while len(possible_example_indices) > self.batch_size:
-
-                self.batch_size = batch_size
-
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
-                rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data, example_indices, seq_len, vocab_idx)
+                rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
+                                                                                    example_indices,
+                                                                                    seq_len, vocab_idx,
+                                                                                    center=center_examples)
                 # prepare data and targets for self
-                rand_slice = add_cuda_to_variable(rand_slice, use_gpu)
-                targets = add_cuda_to_variable(targets, use_gpu)
+                rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
+                targets = add_cuda_to_variable(targets, self.use_gpu)
 
                 # Do not visit these samples again with 50% probability.
-                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() < recycle_prob]
+                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() > recycle_prob]
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
@@ -168,47 +180,63 @@ class LSTM_Mod2(nn.Module):
 
                 # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
                 if iterate % 2000 == 0:
-                    print('Loss ' + str(loss.data[0]/batch_size))
-                    val_indices = random.sample(possible_val_indices, batch_size)
+                    print('Loss ' + str(loss.data[0] / self.batch_size))
+                    val_indices = random.sample(possible_val_indices, self.batch_size)
                     val_inputs, val_targets = self.__convert_examples_to_targets_and_slices(val_data, val_indices, seq_len, vocab_idx)
 
-                    val_inputs = add_cuda_to_variable(val_inputs, use_gpu)
-                    val_targets = add_cuda_to_variable(val_targets, use_gpu)
+                    val_inputs = add_cuda_to_variable(val_inputs, self.use_gpu)
+                    val_targets = add_cuda_to_variable(val_targets, self.use_gpu)
                     self.__init_hidden()
                     outputs_val = self.__forward(val_inputs)
                     val_loss = 0
-                    for bat in range(batch_size):
+                    for bat in range(self.batch_size):
                         val_loss += loss_function(outputs_val[:,1,:], val_targets[:,1,:].squeeze(1))
-                    val_loss_vec.append(val_loss.data[0]/batch_size)
+                    val_loss_vec.append(val_loss.data[0] / self.batch_size)
+                    train_loss_vec.append(loss.data[0] / self.batch_size)
                     print('Validataion Loss ' + str(val_loss.data[0]/batch_size))
                 iterate += 1
             print('Completed Epoch ' + str(epoch))
-            if seq_incr_perc is not None:
-                seq_len = self.__get_new_sequence_length(seq_len, seq_incr_perc)
-                print('Updated sequence length to: {}'.format(seq_len))
+
+            if seq_incr_perc is not None and seq_incr_freq is not None:
+                if epoch != 0 and epoch % seq_incr_freq == 0:
+                    seq_len = self.__get_new_sequence_length(seq_len, seq_incr_perc)
+                    print('Updated sequence length to: {}'.format(seq_len))
         return train_loss_vec, val_loss_vec
 
-    def daydream(self, vocab, primer, predict_len, T, use_gpu):
-        vocab_size = len(vocab)
-
+    def daydream(self, primer, T, predict_len=None):
+        vocab_size = len(self.vocab)
+        # Have we detected an end character?
+        end_found = False
         self.batch_size = 1
 
         self.__init_hidden()
-        primer_input = [vocab[char] for char in primer]
-        print(primer_input)
+        primer_input = [self.vocab[char] for char in primer]
 
         self.seq_len = len(primer_input)
         # build hidden layer
-        _ = self.__forward(add_cuda_to_variable(primer_input[:-1], use_gpu))
+        _ = self.__forward(add_cuda_to_variable(primer_input[:-1], self.use_gpu))
 
-        inp = add_cuda_to_variable([primer_input[-1]], use_gpu)
+        inp = add_cuda_to_variable([primer_input[-1]], self.use_gpu)
 
         self.seq_len = 1
         predicted = list(primer_input)
-        for p in range(predict_len):
-            output = self.__forward(inp)
-            soft_out = custom_softmax(output.data.squeeze(), T)
-            predicted.append(flip_coin(soft_out, use_gpu))
-            inp = add_cuda_to_variable([predicted[-1]], use_gpu)
-        strlist = [vocab.keys()[vocab.values().index(pred)] for pred in predicted]
-        return ''.join(strlist)
+        if predict_len is not None:
+            for p in range(predict_len):
+                output = self.__forward(inp)
+                soft_out = custom_softmax(output.data.squeeze(), T)
+                predicted.append(flip_coin(soft_out, self.use_gpu))
+                inp = add_cuda_to_variable([predicted[-1]], self.use_gpu)
+
+        else:
+            while end_found == False:
+                output = self.__forward(inp)
+                soft_out = custom_softmax(output.data.squeeze(), T)
+                found_char = flip_coin(soft_out, self.use_gpu)
+                predicted.append(found_char)
+                # print(found_char)
+                if found_char == self.vocab[self.end_char]:
+                    end_found = True
+                inp = add_cuda_to_variable([predicted[-1]], self.use_gpu)
+
+        strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
+        return ''.join(strlist).replace(self.pad_char, '').replace(self.start_char, '').replace(self.end_char, '')
