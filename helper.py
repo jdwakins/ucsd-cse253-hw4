@@ -4,6 +4,23 @@ from torch.autograd import Variable
 import torch
 import pdb
 
+def clean_up_data(location, start_char, end_char):
+    return_list = []
+    with open(location, 'r') as f:
+        data = f.read()
+    d_split = data.split('<end>')
+    for d in d_split:
+        if len(d) > 10:
+            return_list.append(d)
+    to_return = '<end>'.join(return_list)
+    # Replace these with special characters.
+    to_return = to_return.replace('<start>', start_char)
+    to_return = to_return.replace('<end>', end_char)
+    return to_return
+
+
+
+
 # function maps each word to an index
 def get_idx(char_data):
     word_to_ix = {}
@@ -13,7 +30,7 @@ def get_idx(char_data):
     return word_to_ix
 
 
-def prepare_data(data_nums, is_gpu):
+def add_cuda_to_variable(data_nums, is_gpu):
     tensor = torch.LongTensor(data_nums)
     if isinstance(data_nums, list):
         tensor = tensor.unsqueeze_(0)
