@@ -41,13 +41,13 @@ primer = start_char * 5
 temperature = 1
 
 model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
-                  start_char, pad_char, is_gpu=use_gpu)
+                  start_char, pad_char, use_gpu=use_gpu)
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
-                                   num_epochs, use_gpu, seq_incr_perc,
+                                   num_epochs, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq,
                                    center_examples=True)
 plt.plot(range(len(val_loss)), val_loss)
 plt.plot(range(len(train_loss)), train_loss)
 plt.show()
-words = model.daydream(temperature, use_gpu, primer, predict_len=200)
+words = model.daydream(primer, temperature, predict_len=200)
 print(words)
