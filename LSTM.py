@@ -114,8 +114,16 @@ class LSTM_Mod2(nn.Module):
                 rand_starts = [np.random.randint(len(self.examples[i])) for i in example_indices]
 
                 rand_slices = [self.examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
-                targets =
+                targets = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
                 self.__pad_sequence(rand_slices, seq_len)
+                print(rand_slices)
+
+                rand_slices = [[vocab_idx[c] for c in ex] for ex in rand_slices]
+                targets = [[vocab_idx[c] for c in ex] for ex in targets]
+                print(rand_slices)
+                # print(targets)
+
+
 
 
                 # get random slice, and the targets that correspond to that slice

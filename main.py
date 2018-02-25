@@ -23,7 +23,7 @@ end_char = '%'
 pad_char = '`'
 data = clean_up_data('input.txt', start_char, end_char)
 
-vocab = get_idx(data)
+vocab = get_idx(data + start_char + end_char + pad_char)
 # check for GPU
 use_gpu = torch.cuda.is_available()
 
