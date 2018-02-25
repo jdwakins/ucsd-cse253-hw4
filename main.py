@@ -26,7 +26,6 @@ data = clean_up_data('input.txt', start_char, end_char)
 vocab = get_idx(data + start_char + end_char + pad_char)
 # check for GPU
 use_gpu = torch.cuda.is_available()
-
 seq_len = 30
 # Increment sequence length by 10% each epoch.
 hidden_layer_size = 100
@@ -41,7 +40,7 @@ primer = start_char * 5
 temperature = 1
 
 model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
-                  start_char, pad_char, use_gpu=use_gpu)
+                  start_char, pad_char, is_gpu=use_gpu)
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq,

@@ -32,7 +32,7 @@ class LSTM_Mod2(nn.Module):
         self.vocab = vocab
         self.batch_size = bs
         self.seq_len = seq_len
-        self.use_gpu = use_gpu
+        self.use_gpu = is_gpu
         self.hidden = self.__init_hidden()
 
 
