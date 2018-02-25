@@ -25,7 +25,8 @@ class LSTM_Mod2(nn.Module):
         self.lstm = nn.LSTM(1, hidden_dim, 1)
         # The linear layer maps from hidden state space to target space
         # target space = vocab size, or number of unique characters in daa
-        self.linear = nn.Linear(hidden_dim, len(vocab))
+        self.linear0 = nn.Linear(hidden_dim, hidden_dim)
+        self.linear1 = nn.Linear(hidden_dim, len(vocab))
 
         # Non-torch inits.
         self.vocab = vocab
@@ -40,6 +41,13 @@ class LSTM_Mod2(nn.Module):
         self.start_char = start_char
         self.pad_char = pad_char
         self.__generate_discrete_examples()
+
+    def __forward(self, sentence):
+        # input sentence is shape: sequence x batch x 1
+        output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
+        output = self.linear0(output)
+        output = self.linear1(output)
+        return output
 
     # Rather than having the data as one long string it is an array of strings.
     def __generate_discrete_examples(self):
@@ -67,12 +75,7 @@ class LSTM_Mod2(nn.Module):
             self.hidden =  (Variable(torch.zeros(1, self.batch_size, self.hidden_dim)),
                     Variable(torch.zeros(1, self.batch_size, self.hidden_dim)))
 
-    def __forward(self, sentence):
-        outputs=[]
-        # input sentence is shape: sequence x batch x 1
-        output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
-        outputs = self.linear(output)
-        return outputs
+
 
     def __convert_examples_to_targets_and_slices(self, examples,
                                                  example_indices, seq_len,
@@ -103,7 +106,7 @@ class LSTM_Mod2(nn.Module):
               recycle_prob=0.5,
               center_examples=False):
         vocab_size = len(vocab_idx)
-
+        self.batch_size = batch_size
         # slice data into trianing and testing (could do this much better)
         val_split = 0.8
         slice_ind = int((len(self.examples) * val_split))
@@ -141,9 +144,6 @@ class LSTM_Mod2(nn.Module):
             stochastic.
             '''
             while len(possible_example_indices) > self.batch_size:
-
-                self.batch_size = batch_size
-
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
@@ -156,7 +156,7 @@ class LSTM_Mod2(nn.Module):
                 targets = add_cuda_to_variable(targets, use_gpu)
 
                 # Do not visit these samples again with 50% probability.
-                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() < recycle_prob]
+                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() > recycle_prob]
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
@@ -180,8 +180,8 @@ class LSTM_Mod2(nn.Module):
 
                 # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
                 if iterate % 2000 == 0:
-                    print('Loss ' + str(loss.data[0]/batch_size))
-                    val_indices = random.sample(possible_val_indices, batch_size)
+                    print('Loss ' + str(loss.data[0] / self.batch_size))
+                    val_indices = random.sample(possible_val_indices, self.batch_size)
                     val_inputs, val_targets = self.__convert_examples_to_targets_and_slices(val_data, val_indices, seq_len, vocab_idx)
 
                     val_inputs = add_cuda_to_variable(val_inputs, use_gpu)
@@ -189,13 +189,13 @@ class LSTM_Mod2(nn.Module):
                     self.__init_hidden()
                     outputs_val = self.__forward(val_inputs)
                     val_loss = 0
-                    for bat in range(batch_size):
+                    for bat in range(self.batch_size):
                         val_loss += loss_function(outputs_val[:,1,:], val_targets[:,1,:].squeeze(1))
-                    val_loss_vec.append(val_loss.data[0]/batch_size)
+                    val_loss_vec.append(val_loss.data[0] / self.batch_size)
+                    train_loss_vec.append(loss.data[0] / self.batch_size)
                     print('Validataion Loss ' + str(val_loss.data[0]/batch_size))
                 iterate += 1
             print('Completed Epoch ' + str(epoch))
-
 
             if seq_incr_perc is not None and seq_incr_freq is not None:
                 if epoch != 0 and epoch % seq_incr_freq == 0:
@@ -233,9 +233,10 @@ class LSTM_Mod2(nn.Module):
                 soft_out = custom_softmax(output.data.squeeze(), T)
                 found_char = flip_coin(soft_out, use_gpu)
                 predicted.append(found_char)
-                if found_char == self.end_char:
+                # print(found_char)
+                if found_char == self.vocab[self.end_char]:
                     end_found = True
                 inp = add_cuda_to_variable([predicted[-1]], use_gpu)
 
         strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
-        return ''.join(strlist)
+        return ''.join(strlist).replace(self.pad_char, '').replace(self.start_char, '').replace(self.end_char, '')
