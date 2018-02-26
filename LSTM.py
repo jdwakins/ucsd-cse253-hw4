@@ -112,7 +112,7 @@ class LSTM_Mod2(nn.Module):
 
         return rand_slice, targets
 
-    def train(self, vocab_idx, seq_len, batch_size, epochs,
+    def train(self, vocab_idx, seq_len, batch_size, epochs, lr,
               seq_incr_perc=None, seq_incr_freq=None,
               recycle_prob=0.5):
         vocab_size = len(vocab_idx)
@@ -130,7 +130,7 @@ class LSTM_Mod2(nn.Module):
             self.cuda()
 
         loss_function = nn.CrossEntropyLoss()
-        optimizer = optim.SGD(self.parameters(), lr=0.01)
+        optimizer = optim.SGD(self.parameters(), lr=lr)
 
         # For logging the data for plotting
         train_loss_vec = []
