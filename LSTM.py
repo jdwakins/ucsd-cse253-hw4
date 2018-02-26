@@ -130,7 +130,10 @@ class LSTM_Mod2(nn.Module):
             self.cuda()
 
         loss_function = nn.CrossEntropyLoss()
-        optimizer = optim.SGD(self.parameters(), lr=lr)
+        #optimizer = optim.SGD(self.parameters(), lr=lr)
+        # optimizer = optim.RMSprop(self.parameters(), lr = lr, weight_decay=0.95)
+        # optimizer = optim.Adam(self.parameters(), lr=lr)
+        optmizer = optim.Adagrad(self.parameters(), lr=lr, weight_decay=0.95)
 
         # For logging the data for plotting
         train_loss_vec = []

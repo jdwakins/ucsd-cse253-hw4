@@ -29,7 +29,7 @@ vocab = get_idx(data + start_char + end_char + pad_char)
 use_gpu = torch.cuda.is_available()
 seq_len = 30
 # Increment sequence length by 10% each epoch.
-hidden_layer_size = 100
+hidden_layer_size = 240
 seq_incr_perc = 0.15
 seq_incr_freq = 1
 lr = 0.001
