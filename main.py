@@ -2,6 +2,7 @@ from __future__ import print_function
 import torch.autograd as autograd
 from torch.autograd import Variable
 import torch
+import csv
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
@@ -45,8 +46,13 @@ model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, lr, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq)
+
 torch.save(model.state_dict(), 'model.pt')
 
+with open('log.csv', 'w+') as csvfile:
+    writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(train_loss)
+    writer.writerow(val_loss)
 # plt.plot(range(len(val_loss)), val_loss)
 # plt.plot(range(len(train_loss)), train_loss)
 #
