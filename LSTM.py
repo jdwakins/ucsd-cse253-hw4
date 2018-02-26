@@ -113,8 +113,8 @@ class LSTM_Mod2(nn.Module):
         return rand_slice, targets
 
     def train(self, vocab_idx, seq_len, batch_size, epochs, lr,
-              seq_incr_perc=None, seq_incr_freq=None,
-              recycle_prob=0.5):
+              seq_incr_perc=None,
+              seq_incr_freq=None):
         vocab_size = len(vocab_idx)
         np.random.seed(1)
 
@@ -168,9 +168,6 @@ class LSTM_Mod2(nn.Module):
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
                 targets = add_cuda_to_variable(targets, self.use_gpu)
-
-                # Do not visit these samples again with 50% probability.
-                # [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() > recycle_prob]
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
