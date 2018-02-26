@@ -134,7 +134,7 @@ class LSTM_Mod2(nn.Module):
 
         # For logging the data for plotting
         train_loss_vec = []
-        val_loss_vec=[]
+        val_loss_vec = []
 
         for epoch in range(epochs):
             #get random slice
@@ -230,7 +230,6 @@ class LSTM_Mod2(nn.Module):
         _ = self.__forward(add_cuda_to_variable(primer_input[:-1], self.use_gpu))
 
         inp = add_cuda_to_variable([primer_input[-1]], self.use_gpu)
-
         self.seq_len = 1
         predicted = list(primer_input)
         if predict_len is not None:
@@ -252,4 +251,4 @@ class LSTM_Mod2(nn.Module):
                 inp = add_cuda_to_variable([predicted[-1]], self.use_gpu)
 
         strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
-        return ''.join(strlist).replace(self.pad_char, '').replace(self.start_char, '').replace(self.end_char, '')
+        return (primer + ''.join(strlist).replace(self.pad_char, '')).replace(self.start_char, '').replace(self.end_char, '')
