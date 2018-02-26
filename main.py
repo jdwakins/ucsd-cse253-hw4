@@ -30,7 +30,7 @@ use_gpu = torch.cuda.is_available()
 seq_len = 30
 # Increment sequence length by 10% each epoch.
 hidden_layer_size = 240
-seq_incr_perc = 0.15
+seq_incr_perc = 0.2
 seq_incr_freq = 1
 lr = 0.001
 
@@ -40,16 +40,16 @@ num_epochs = 10
 predict_length = 100
 primer = start_char + '\nX:'
 temperature = 1
-
+name = 'adagrad_240'
 model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
                   start_char, pad_char, is_gpu=use_gpu)
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, lr, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq)
 
-torch.save(model.state_dict(), 'model.pt')
+torch.save(model.state_dict(), name + '.pt')
 
-with open('log.csv', 'w+') as csvfile:
+with open(name + '_log.csv', 'w+') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
     writer.writerow(train_loss)
     writer.writerow(val_loss)
