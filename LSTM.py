@@ -45,7 +45,7 @@ class LSTM_Mod2(nn.Module):
     def __forward(self, sentence):
         # input sentence is shape: sequence x batch x 1
         output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
-        output = self.linear0(output)
+        # output = self.linear0(output)
         output = self.linear1(output)
         return output
 
@@ -248,4 +248,4 @@ class LSTM_Mod2(nn.Module):
                 inp = add_cuda_to_variable([predicted[-1]], self.use_gpu)
 
         strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
-        return (primer + ''.join(strlist).replace(self.pad_char, '')).replace(self.start_char, '').replace(self.end_char, '')
+        return (''.join(strlist).replace(self.pad_char, '')).replace(self.start_char, '').replace(self.end_char, '')
