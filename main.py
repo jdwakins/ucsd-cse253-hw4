@@ -33,8 +33,8 @@ seq_incr_perc = 0.15
 seq_incr_freq = 1
 lr = 0.001
 
-batch_size = 5
-num_epochs = 10
+batch_size = 30
+num_epochs = 15
 
 predict_length = 100
 primer = start_char + '\nX:'
@@ -45,11 +45,11 @@ model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, lr, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq)
-torch.save(model.state_dict(), 'model.pt')
+torch.save(model.state_dict(), 'model'.pt')
 
-plt.plot(range(len(val_loss)), val_loss)
-plt.plot(range(len(train_loss)), train_loss)
-
-plt.show()
-words = model.daydream(primer, temperature, predict_len=1000)
-print(words)
+# plt.plot(range(len(val_loss)), val_loss)
+# plt.plot(range(len(train_loss)), train_loss)
+#
+# plt.show()
+# words = model.daydream(primer, temperature, predict_len=1000)
+# print(words)
