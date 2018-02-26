@@ -10,6 +10,7 @@ import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import random
 import pdb
+import csv
 import numpy as np
 
 from helper import *
@@ -46,7 +47,10 @@ train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, lr, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq)
 torch.save(model.state_dict(), 'model.pt')
-
+with open('log.csv', 'w+') as csvfile:
+    writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(train_loss)
+    writer.writerow(val_loss)
 # plt.plot(range(len(val_loss)), val_loss)
 # plt.plot(range(len(train_loss)), train_loss)
 #
