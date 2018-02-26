@@ -133,7 +133,7 @@ class LSTM_Mod2(nn.Module):
         #optimizer = optim.SGD(self.parameters(), lr=lr)
         # optimizer = optim.RMSprop(self.parameters(), lr = lr, weight_decay=0.95)
         # optimizer = optim.Adam(self.parameters(), lr=lr)
-        optimizer = optim.Adagrad(self.parameters(), lr=lr, weight_decay=0.95)
+        optimizer = optim.Adagrad(self.parameters(), lr=lr)
 
         # For logging the data for plotting
         train_loss_vec = []
