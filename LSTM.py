@@ -143,6 +143,7 @@ class LSTM_Mod2(nn.Module):
             possible_val_indices = range(len(val_data))
             # after going through all of a , will have gone through all possible 30
             # character slices
+            iterate = 0
 
             '''
             Visit each possible example once. Can maybe tweak this to be more
