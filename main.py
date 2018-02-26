@@ -36,7 +36,7 @@ batch_size = 10
 num_epochs = 10
 
 predict_length = 100
-primer = start_char * 5
+primer = start_char + '\nX:'
 temperature = 1
 
 model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
