@@ -143,9 +143,6 @@ class LSTM_Mod2(nn.Module):
             possible_val_indices = range(len(val_data))
             # after going through all of a , will have gone through all possible 30
             # character slices
-            total = 0
-            correct = 0
-            iterate = 0
 
             '''
             Visit each possible example once. Can maybe tweak this to be more
@@ -194,7 +191,6 @@ class LSTM_Mod2(nn.Module):
                 loss.backward()
                 optimizer.step()
 
-                # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
                 if iterate % 2000 == 0:
                     print('Loss ' + str(loss.data[0] / self.batch_size))
                     val_indices = random.sample(possible_val_indices, self.batch_size)
