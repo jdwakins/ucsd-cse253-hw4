@@ -56,7 +56,6 @@ class LSTM_Mod2(nn.Module):
 
         #inputs = self.linear0(sentence.float().view(-1, self.batch_size, 1))
         #output, self.hidden = self.lstm(inputs, self.hidden)
-        # output = self.linear0(output)
         #output = self.linear1(output)
         return output
 
