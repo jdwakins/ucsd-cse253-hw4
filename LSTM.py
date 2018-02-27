@@ -23,10 +23,11 @@ class LSTM_Mod2(nn.Module):
         super(LSTM_Mod2, self).__init__()
         self.hidden_dim = hidden_dim
         self.lstm = nn.LSTM(1, hidden_dim, 1)
+        self.lstm1 = nn.LSTM(1, hidden_dim, 1)
         # The linear layer maps from hidden state space to target space
         # target space = vocab size, or number of unique characters in daa
         self.linear0 = nn.Linear(hidden_dim, hidden_dim)
-        self.linear1 = nn.Linear(hidden_dim, len(vocab))
+        self.linear1 = nn.Linear(hidden_dim * seq_len * bs, len(vocab))
 
         # Non-torch inits.
         self.vocab = vocab
@@ -44,9 +45,14 @@ class LSTM_Mod2(nn.Module):
 
     def __forward(self, sentence):
         # input sentence is shape: sequence x batch x 1
+        print(sentence.shape)
         output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
+        print(output.shape)
+        output, self.hidden = self.lstm1(output.float().view(-1, self.batch_size, 1), self.hidden)
+        print(output.shape)
         # output = self.linear0(output)
         output = self.linear1(output)
+        print(output.shape)
         return output
 
     # Rather than having the data as one long string it is an array of strings.
