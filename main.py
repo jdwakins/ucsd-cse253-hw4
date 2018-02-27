@@ -37,7 +37,7 @@ lr = 0.001
 batch_size = 30
 num_epochs = 10
 
-predict_length = 100
+predict_length = 100    
 primer = start_char + '\nX:'
 temperature = 1
 name = 'adagrad_240'
