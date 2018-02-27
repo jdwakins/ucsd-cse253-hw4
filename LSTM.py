@@ -22,11 +22,15 @@ class LSTM_Mod2(nn.Module):
                  is_gpu=False):
         super(LSTM_Mod2, self).__init__()
         self.hidden_dim = hidden_dim
-        self.lstm = nn.LSTM(1, hidden_dim, 1)
-        # The linear layer maps from hidden state space to target space
-        # target space = vocab size, or number of unique characters in daa
-        self.linear0 = nn.Linear(hidden_dim, hidden_dim)
-        self.linear1 = nn.Linear(hidden_dim, len(vocab))
+
+        self.lstm = nn.LSTM(1, hidden_dim, 1, dropout=0.3)
+        self.lstm2 = nn.LSTM(hidden_dim, 100, 1, dropout=0.3)
+        self.linear0 = nn.Linear(100, 256)
+        self.linear1 = nn.Linear(256, len(vocab))
+
+        #self.linear0 = nn.Linear(1, hidden_dim)
+        #self.lstm = nn.LSTM(hidden_dim, hidden_dim, 1, dropout=0.2)
+        #self.linear1 = nn.Linear(hidden_dim, len(vocab))
 
         # Non-torch inits.
         self.vocab = vocab
@@ -45,8 +49,15 @@ class LSTM_Mod2(nn.Module):
     def __forward(self, sentence):
         # input sentence is shape: sequence x batch x 1
         output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
+        #print (output.size(1))
+        output, self.hidden  = self.lstm2(output,self.hidden)
         output = self.linear0(output)
         output = self.linear1(output)
+
+        #inputs = self.linear0(sentence.float().view(-1, self.batch_size, 1))
+        #output, self.hidden = self.lstm(inputs, self.hidden)
+        # output = self.linear0(output)
+        #output = self.linear1(output)
         return output
 
     # Rather than having the data as one long string it is an array of strings.
@@ -78,34 +89,46 @@ class LSTM_Mod2(nn.Module):
 
 
     def __convert_examples_to_targets_and_slices(self, examples,
-                                                 example_indices, seq_len,
-                                                 vocab_idx, center=False):
-        rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
+                                                 example_indices,
+                                                 seq_len,
+                                                 vocab_idx, center=False,
+                                                 possible_slice_starts=None,
+                                                 possible_example_indices=None):
 
-        if center:
-            rand_slice = [examples[index][max((rand_starts[i] - seq_len / 2), 0): rand_starts[i] + seq_len / 2] for i, index in enumerate(example_indices)]
-            targets = [examples[index][max((rand_starts[i] - seq_len / 2), 0) + 1: rand_starts[i] + seq_len / 2 + 1]  for i, index in enumerate(example_indices)]
+        # For each of the examples chosen, get a random slice from it and Remove
+        # that index from possible future indices.
+        if possible_slice_starts is not None:
+            rand_starts = []
+            for ex in example_indices:
+                rand_index = np.random.randint(len(possible_slice_starts[ex]))
+                rand_starts.append(possible_slice_starts[ex][rand_index])
+                possible_slice_starts[ex].remove(possible_slice_starts[ex][rand_index])
+                # If this example no longer has indices that haven't been checked.
+                # Remove this example from all possible examples.
+                if len(possible_slice_starts[ex]) == 0:
+                    possible_example_indices.remove(ex)
         else:
-            rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
-            targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
-        # val_nums = [self.examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
+            rand_starts = [np.random.randint(len(examples[i])) for i in example_indices]
+
+        rand_slice = [examples[index][rand_starts[i]: rand_starts[i] + seq_len] for i, index in enumerate(example_indices)]
+        targets = [examples[index][rand_starts[i] + 1: rand_starts[i] + seq_len + 1] for i, index in enumerate(example_indices)]
         rand_slice = self.__pad_sequence(rand_slice, seq_len)
         targets = self.__pad_sequence(targets, seq_len)
 
         rand_slice = [[vocab_idx[c] for c in ex] for ex in rand_slice]
         targets = [[vocab_idx[c] for c in ex] for ex in targets]
 
-        # get random slice, and the targets that correspond to that slice
         rand_slice = np.array(rand_slice).T
         targets = np.array(targets).T
 
         return rand_slice, targets
 
-    def train(self, vocab_idx, seq_len, batch_size, epochs,
-              seq_incr_perc=None, seq_incr_freq=None,
-              recycle_prob=0.5,
-              center_examples=False):
+    def train(self, vocab_idx, seq_len, batch_size, epochs, lr,
+              seq_incr_perc=None,
+              seq_incr_freq=None):
         vocab_size = len(vocab_idx)
+        np.random.seed(1)
+
         self.batch_size = batch_size
         # slice data into trianing and testing (could do this much better)
         val_split = 0.8
@@ -113,30 +136,27 @@ class LSTM_Mod2(nn.Module):
         training_data = self.examples[:slice_ind]
         val_data = self.examples[slice_ind:]
 
-        # turn training and validation data from characters to numbers
-        # training_nums = [vocab_idx[char] for char in training_data]
-        # val_nums = [vocab_idx[char] for char in val_data]
-
-        np.random.seed(1)
 
         if self.use_gpu:
             self.cuda()
 
         loss_function = nn.CrossEntropyLoss()
-        optimizer = optim.SGD(self.parameters(), lr=0.01)
+        #optimizer = optim.SGD(self.parameters(), lr=lr)
+        #optimizer = optim.RMSprop(self.parameters(), lr = lr)
+        #optimizer = optim.Adam(self.parameters(), lr=lr)
+        optimizer = optim.Adagrad(self.parameters(), lr=lr)
 
         # For logging the data for plotting
         train_loss_vec = []
-        val_loss_vec=[]
+        val_loss_vec = []
 
         for epoch in range(epochs):
             #get random slice
             possible_example_indices = range(len(training_data))
+            possible_slice_starts = [range(len(ex)) for ex in training_data]
             possible_val_indices = range(len(val_data))
             # after going through all of a , will have gone through all possible 30
             # character slices
-            total = 0
-            correct = 0
             iterate = 0
 
             '''
@@ -147,16 +167,21 @@ class LSTM_Mod2(nn.Module):
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
+                # print(len(possible_slice_starts[example_indices[0]]))
+                len_old = len(possible_example_indices)
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
                                                                                     seq_len, vocab_idx,
-                                                                                    center=center_examples)
+                                                                                    center=False,
+                                                                                    possible_slice_starts=possible_slice_starts,
+                                                                                    possible_example_indices=possible_example_indices)
+                # print(len(possible_slice_starts[example_indices[0]]))
+                # if len_old != len(possible_example_indices):
+                #     print(len(possible_example_indices))
+                #     print('---')
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
                 targets = add_cuda_to_variable(targets, self.use_gpu)
-
-                # Do not visit these samples again with 50% probability.
-                [possible_example_indices.remove(ex) for ex in example_indices if np.random.rand() > recycle_prob]
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
@@ -178,7 +203,6 @@ class LSTM_Mod2(nn.Module):
                 loss.backward()
                 optimizer.step()
 
-                # correct, total, running_accuracy = get_accuracy(outputs.squeeze(1), targets, correct, total)
                 if iterate % 2000 == 0:
                     print('Loss ' + str(loss.data[0] / self.batch_size))
                     val_indices = random.sample(possible_val_indices, self.batch_size)
@@ -217,7 +241,6 @@ class LSTM_Mod2(nn.Module):
         _ = self.__forward(add_cuda_to_variable(primer_input[:-1], self.use_gpu))
 
         inp = add_cuda_to_variable([primer_input[-1]], self.use_gpu)
-
         self.seq_len = 1
         predicted = list(primer_input)
         if predict_len is not None:
@@ -239,4 +262,4 @@ class LSTM_Mod2(nn.Module):
                 inp = add_cuda_to_variable([predicted[-1]], self.use_gpu)
 
         strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
-        return ''.join(strlist).replace(self.pad_char, '').replace(self.start_char, '').replace(self.end_char, '')
+        return (''.join(strlist).replace(self.pad_char, '')).replace(self.start_char, '').replace(self.end_char, '')
