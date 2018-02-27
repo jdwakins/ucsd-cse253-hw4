@@ -29,7 +29,7 @@ vocab = get_idx(data + start_char + end_char + pad_char)
 use_gpu = torch.cuda.is_available()
 seq_len = 30
 # Increment sequence length by 10% each epoch.
-hidden_layer_size = 240
+hidden_layer_size = 60
 seq_incr_perc = 0.2
 seq_incr_freq = 1
 lr = 0.001
@@ -37,10 +37,10 @@ lr = 0.001
 batch_size = 30
 num_epochs = 10
 
-predict_length = 100    
+predict_length = 100
 primer = start_char + '\nX:'
 temperature = 1
-name = 'adagrad_240'
+name = 'RMS_60_1_layer'
 model = LSTM_Mod2(hidden_layer_size, vocab, batch_size, seq_len, data, end_char,
                   start_char, pad_char, is_gpu=use_gpu)
 train_loss, val_loss = model.train(vocab, seq_len, batch_size,
@@ -56,6 +56,6 @@ with open(name + '_log.csv', 'w+') as csvfile:
 # plt.plot(range(len(val_loss)), val_loss)
 # plt.plot(range(len(train_loss)), train_loss)
 #
-# plt.show()
-# words = model.daydream(primer, temperature, predict_len=1000)
-# print(words)
+plt.show()
+words = model.daydream(primer, temperature, predict_len=1000)
+print(words)
