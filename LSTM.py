@@ -56,7 +56,6 @@ class LSTM_Mod2(nn.Module):
         for ex in split:
             self.examples.append(ex + self.end_char)
 
-
     def __get_new_sequence_length(self, old, incrementer):
         return int(old + old * incrementer)
 
@@ -125,11 +124,11 @@ class LSTM_Mod2(nn.Module):
         training_data = self.examples[:slice_ind]
         val_data = self.examples[slice_ind:]
 
-
         if self.use_gpu:
             self.cuda()
 
         loss_function = nn.CrossEntropyLoss()
+        # Try Adagrad & RMSProp
         optimizer = optim.SGD(self.parameters(), lr=lr)
 
         # For logging the data for plotting
@@ -138,9 +137,9 @@ class LSTM_Mod2(nn.Module):
 
         for epoch in range(epochs):
             #get random slice
-            possible_example_indices = range(len(training_data))
-            possible_slice_starts = [range(len(ex)) for ex in training_data]
-            possible_val_indices = range(len(val_data))
+            possible_example_indices = range(len(training_data))             #Idx of training examples
+            possible_slice_starts = [range(len(ex)) for ex in training_data] #len of each example
+            possible_val_indices = range(len(val_data))                      #Idx of val examples
             # after going through all of a , will have gone through all possible 30
             # character slices
             iterate = 0
@@ -150,17 +149,22 @@ class LSTM_Mod2(nn.Module):
             stochastic.
             '''
             while len(possible_example_indices) > self.batch_size:
+                #Get #(batch_size) random training examples to take samples from
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
                 # print(len(possible_slice_starts[example_indices[0]]))
                 len_old = len(possible_example_indices)
+                import IPython; IPython.embed()
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
                                                                                     seq_len, vocab_idx,
                                                                                     center=False,
                                                                                     possible_slice_starts=possible_slice_starts,
                                                                                     possible_example_indices=possible_example_indices)
+
+                import IPython; IPython.embed()
+
                 # print(len(possible_slice_starts[example_indices[0]]))
                 # if len_old != len(possible_example_indices):
                 #     print(len(possible_example_indices))

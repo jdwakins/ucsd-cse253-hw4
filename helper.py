@@ -18,9 +18,6 @@ def clean_up_data(location, start_char, end_char):
     to_return = to_return.replace('<end>', end_char)
     return to_return
 
-
-
-
 # function maps each word to an index
 def get_idx(char_data):
     word_to_ix = {}
@@ -29,6 +26,10 @@ def get_idx(char_data):
             word_to_ix[word] = len(word_to_ix)
     return word_to_ix
 
+def avg_len_music_file(data, ch):
+    start_idxs = [i for i, ltr in enumerate(data) if ltr == ch]
+    avg_len = [ (start_idxs[i+1]) - start_idxs[i] for i in xrange( 0,len(start_idxs)-1 )]
+    return int(np.mean(avg_len))
 
 def add_cuda_to_variable(data_nums, is_gpu):
     tensor = torch.LongTensor(data_nums)
