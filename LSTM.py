@@ -44,6 +44,7 @@ class LSTM_Mod2(nn.Module):
 
     def __forward(self, sentence):
         # input sentence is shape: sequence x batch x 1
+        # import IPython; IPython.embed()
         output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
         # output = self.linear0(output)
         output = self.linear1(output)
@@ -55,7 +56,6 @@ class LSTM_Mod2(nn.Module):
         split = self.data.split(self.end_char)
         for ex in split:
             self.examples.append(ex + self.end_char)
-
 
     def __get_new_sequence_length(self, old, incrementer):
         return int(old + old * incrementer)
@@ -75,7 +75,8 @@ class LSTM_Mod2(nn.Module):
             self.hidden =  (Variable(torch.zeros(1, self.batch_size, self.hidden_dim)),
                     Variable(torch.zeros(1, self.batch_size, self.hidden_dim)))
 
-
+    def init_hidden():
+        self.__init_hidden()
 
     def __convert_examples_to_targets_and_slices(self, examples,
                                                  example_indices,
@@ -86,6 +87,7 @@ class LSTM_Mod2(nn.Module):
 
         # For each of the examples chosen, get a random slice from it and Remove
         # that index from possible future indices.
+
         if possible_slice_starts is not None:
             rand_starts = []
             for ex in example_indices:
@@ -125,11 +127,11 @@ class LSTM_Mod2(nn.Module):
         training_data = self.examples[:slice_ind]
         val_data = self.examples[slice_ind:]
 
-
         if self.use_gpu:
             self.cuda()
 
         loss_function = nn.CrossEntropyLoss()
+        # Try Adagrad & RMSProp
         optimizer = optim.SGD(self.parameters(), lr=lr)
 
         # For logging the data for plotting
@@ -138,9 +140,9 @@ class LSTM_Mod2(nn.Module):
 
         for epoch in range(epochs):
             #get random slice
-            possible_example_indices = range(len(training_data))
-            possible_slice_starts = [range(len(ex)) for ex in training_data]
-            possible_val_indices = range(len(val_data))
+            possible_example_indices = range(len(training_data))             #Idx of training examples
+            possible_slice_starts = [range(len(ex)) for ex in training_data] #len of each example
+            possible_val_indices = range(len(val_data))                      #Idx of val examples
             # after going through all of a , will have gone through all possible 30
             # character slices
             iterate = 0
@@ -150,17 +152,21 @@ class LSTM_Mod2(nn.Module):
             stochastic.
             '''
             while len(possible_example_indices) > self.batch_size:
+                #Get #(batch_size) random training examples to take samples from
                 example_indices = random.sample(possible_example_indices, self.batch_size)
 
                 # Get processed data.
                 # print(len(possible_slice_starts[example_indices[0]]))
                 len_old = len(possible_example_indices)
+
+                #Are we removing stuff from (possible_slice_starts)? Not a global var
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
                                                                                     seq_len, vocab_idx,
                                                                                     center=False,
                                                                                     possible_slice_starts=possible_slice_starts,
                                                                                     possible_example_indices=possible_example_indices)
+
                 # print(len(possible_slice_starts[example_indices[0]]))
                 # if len_old != len(possible_example_indices):
                 #     print(len(possible_example_indices))
@@ -168,6 +174,8 @@ class LSTM_Mod2(nn.Module):
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
                 targets = add_cuda_to_variable(targets, self.use_gpu)
+
+                #!!!! TARGETS[0] = rand_slice[1]. Is this right???
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
@@ -180,6 +188,7 @@ class LSTM_Mod2(nn.Module):
                 # could feed whole sequence, and then would kill hidden state
 
                 # Run our __forward pass.
+
                 outputs = self.__forward(rand_slice)
                 # Step 4. Compute the loss, gradients, and update the parameters by
                 #  calling optimizer.step()
@@ -249,3 +258,23 @@ class LSTM_Mod2(nn.Module):
 
         strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
         return (''.join(strlist).replace(self.pad_char, '')).replace(self.start_char, '').replace(self.end_char, '')
+
+    # Visualization of target unit activation in the hidden layer.
+    # It inputs model in case a different model wants to be loaded.
+    def feature_visualization(self, model, words, target_unit):
+        words_encoded = [model.vocab[c] for c in words]
+        words_encoded = np.array(words_encoded).T
+
+        words_encoded = torch.LongTensor(words_encoded)
+        words_encoded = words_encoded.unsqueeze_(1)
+        words_encoded = words_encoded.unsqueeze_(1)
+        words_encoded = Variable(words_encoded)
+
+        init_hidden(model) #Restart
+        model.batch_size = 1
+
+        output, (h_n,c_n) = model.lstm(words_encoded.float().view(-1, model.batch_size, 1), model.hidden)
+        output = output.data.numpy() #Convert torch tensor to numpy
+
+        h_u = output[:,0,target_unit] #Choose unit
+        feat_vis(h_u, words) #Visualize features
