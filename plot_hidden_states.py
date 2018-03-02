@@ -66,6 +66,8 @@ model.load_state_dict(torch.load('model3.pt', map_location=lambda storage, loc: 
 words = model.daydream(primer, temperature, predict_len=1000)
 print(words)
 
+
+
 #Forward pass
 
 words_encoded = [vocab[c] for c in words]
@@ -104,30 +106,3 @@ def weights_to_2d(weights):
     zero_pad = dim1*dim1 - len(weights) #Add zeros at end of vector if necesary to make len squared
     weights = np.pad(weights, (0,zero_pad), 'constant')
     return np.reshape(weights, (dim1, dim1))
-
-data = np.array([[0.000000,0.000000],[-0.231049,0.000000],[-0.231049,0.000000]])
-label =  np.array([['A','g'],['C','D'],['E','F']])
-fig, ax = plt.subplots()
-ax = sns.heatmap(data, annot = label, fmt = '')
-
-
-
-
-
-
-
-
-#tensor containing the output features (h_t) from the last layer of the RNN, for each t. If a torch.nn.utils.rnn.PackedSequence has been given as the input, the output will also be a packed sequence.
-output (seq_len, batch, hidden_size * num_directions)
-#tensor containing the hidden state for t=seq_len
-h_n (num_layers * num_directions, batch, hidden_size)
-#tensor containing the cell state for t=seq_len
-c_n (num_layers * num_directions, batch, hidden_size)
-
-sentence = words
-batch_size = 1
-
-output, model.hidden = model.lstm(words.float().view(-1, batch_size, 1), model.hidden)
-# output = self.linear0(output)
-output = self.linear1(output)
-return output

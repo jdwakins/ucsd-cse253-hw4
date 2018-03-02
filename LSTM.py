@@ -258,3 +258,23 @@ class LSTM_Mod2(nn.Module):
 
         strlist = [self.vocab.keys()[self.vocab.values().index(pred)] for pred in predicted]
         return (''.join(strlist).replace(self.pad_char, '')).replace(self.start_char, '').replace(self.end_char, '')
+
+    # Visualization of target unit activation in the hidden layer.
+    # It inputs model in case a different model wants to be loaded.
+    def feature_visualization(self, model, words, target_unit):
+        words_encoded = [model.vocab[c] for c in words]
+        words_encoded = np.array(words_encoded).T
+
+        words_encoded = torch.LongTensor(words_encoded)
+        words_encoded = words_encoded.unsqueeze_(1)
+        words_encoded = words_encoded.unsqueeze_(1)
+        words_encoded = Variable(words_encoded)
+
+        init_hidden(model) #Restart
+        model.batch_size = 1
+
+        output, (h_n,c_n) = model.lstm(words_encoded.float().view(-1, model.batch_size, 1), model.hidden)
+        output = output.data.numpy() #Convert torch tensor to numpy
+
+        h_u = output[:,0,target_unit] #Choose unit
+        feat_vis(h_u, words) #Visualize features
