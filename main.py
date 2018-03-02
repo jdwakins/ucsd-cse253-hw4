@@ -23,12 +23,12 @@ from generate_music import *
 start_char = '$'  # Every music sample <start> will be marked with $
 end_char = '%'    # Every music sample <end> will be marked with %
 pad_char = '`'
-data = clean_up_data('input.txt', start_char, end_char) #Last <end> does not get replaced by %
+data = clean_up_data('input.txt', start_char, end_char) 
 len_ABC_file = avg_len_music_file(data, start_char) #Avg length of music file in ABC format
 
 # import IPython; IPython.embed()
 
-vocab = get_idx(data + start_char + end_char + pad_char) #!!! WHY + $,%,'??
+vocab = get_idx(data + start_char + end_char + pad_char)
 # check for GPU
 use_gpu = torch.cuda.is_available()
 seq_len = 30

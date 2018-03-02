@@ -159,7 +159,6 @@ class LSTM_Mod2(nn.Module):
                 # print(len(possible_slice_starts[example_indices[0]]))
                 len_old = len(possible_example_indices)
 
-                #Are we removing stuff from (possible_slice_starts)? Not a global var
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
                                                                                     seq_len, vocab_idx,
@@ -174,8 +173,6 @@ class LSTM_Mod2(nn.Module):
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
                 targets = add_cuda_to_variable(targets, self.use_gpu)
-
-                #!!!! TARGETS[0] = rand_slice[1]. Is this right???
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
