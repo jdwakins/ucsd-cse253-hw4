@@ -1,3 +1,6 @@
+
+#Plot hidden states
+
 from __future__ import print_function
 import torch.autograd as autograd
 from torch.autograd import Variable
@@ -52,17 +55,44 @@ train_loss, val_loss = model.train(vocab, seq_len, batch_size,
                                    num_epochs, lr, seq_incr_perc,
                                    seq_incr_freq=seq_incr_freq)
 
-model.load_state_dict(torch.load('model.pt'))
 
-torch.save(model.state_dict(), 'model.pt')
+# Load model trained on GPU into CPU
+model.load_state_dict(torch.load('model3.pt', map_location=lambda storage, loc: storage))
 
-with open('log.csv', 'w+') as csvfile:
-    writer = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(train_loss)
-    writer.writerow(val_loss)
-# plt.plot(range(len(val_loss)), val_loss)
-# plt.plot(range(len(train_loss)), train_loss)
-#
-# plt.show()
-words = model.daydream(primer, temperature, predict_len=len_ABC_file+400)
+####
+
+words = model.daydream(primer, temperature, predict_len=1000)
 print(words)
+
+#Forward pass
+
+words_encoded = [vocab[c] for c in words]
+words_encoded = np.array(words_encoded).T
+
+words_encoded = torch.LongTensor(words_encoded)
+words_encoded = words_encoded.unsqueeze_(1)
+words_encoded = words_encoded.unsqueeze_(1)
+words_encoded = Variable(words_encoded)
+
+init_hidden(model) #Restart
+model.batch_size = 1
+# out, hidden = lstm(i.view(1, 1, -1), hidden)
+
+# output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
+output, model.hidden = model.lstm(words_encoded.float().view(-1, model.batch_size, 1), model.hidden)
+
+
+#tensor containing the output features (h_t) from the last layer of the RNN, for each t. If a torch.nn.utils.rnn.PackedSequence has been given as the input, the output will also be a packed sequence.
+output (seq_len, batch, hidden_size * num_directions)
+#tensor containing the hidden state for t=seq_len
+h_n (num_layers * num_directions, batch, hidden_size)
+#tensor containing the cell state for t=seq_len
+c_n (num_layers * num_directions, batch, hidden_size)
+
+sentence = words
+batch_size = 1
+
+output, model.hidden = model.lstm(words.float().view(-1, batch_size, 1), model.hidden)
+# output = self.linear0(output)
+output = self.linear1(output)
+return output

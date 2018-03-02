@@ -44,6 +44,7 @@ class LSTM_Mod2(nn.Module):
 
     def __forward(self, sentence):
         # input sentence is shape: sequence x batch x 1
+        # import IPython; IPython.embed()
         output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
         # output = self.linear0(output)
         output = self.linear1(output)
@@ -74,7 +75,8 @@ class LSTM_Mod2(nn.Module):
             self.hidden =  (Variable(torch.zeros(1, self.batch_size, self.hidden_dim)),
                     Variable(torch.zeros(1, self.batch_size, self.hidden_dim)))
 
-
+    def init_hidden():
+        self.__init_hidden()
 
     def __convert_examples_to_targets_and_slices(self, examples,
                                                  example_indices,
@@ -85,6 +87,7 @@ class LSTM_Mod2(nn.Module):
 
         # For each of the examples chosen, get a random slice from it and Remove
         # that index from possible future indices.
+
         if possible_slice_starts is not None:
             rand_starts = []
             for ex in example_indices:
@@ -155,15 +158,14 @@ class LSTM_Mod2(nn.Module):
                 # Get processed data.
                 # print(len(possible_slice_starts[example_indices[0]]))
                 len_old = len(possible_example_indices)
-                import IPython; IPython.embed()
+
+                #Are we removing stuff from (possible_slice_starts)? Not a global var
                 rand_slice, targets = self.__convert_examples_to_targets_and_slices(training_data,
                                                                                     example_indices,
                                                                                     seq_len, vocab_idx,
                                                                                     center=False,
                                                                                     possible_slice_starts=possible_slice_starts,
                                                                                     possible_example_indices=possible_example_indices)
-
-                import IPython; IPython.embed()
 
                 # print(len(possible_slice_starts[example_indices[0]]))
                 # if len_old != len(possible_example_indices):
@@ -172,6 +174,8 @@ class LSTM_Mod2(nn.Module):
                 # prepare data and targets for self
                 rand_slice = add_cuda_to_variable(rand_slice, self.use_gpu)
                 targets = add_cuda_to_variable(targets, self.use_gpu)
+
+                #!!!! TARGETS[0] = rand_slice[1]. Is this right???
 
                 # Pytorch accumulates gradients. We need to clear them out before each instance
                 self.zero_grad()
@@ -184,6 +188,7 @@ class LSTM_Mod2(nn.Module):
                 # could feed whole sequence, and then would kill hidden state
 
                 # Run our __forward pass.
+
                 outputs = self.__forward(rand_slice)
                 # Step 4. Compute the loss, gradients, and update the parameters by
                 #  calling optimizer.step()

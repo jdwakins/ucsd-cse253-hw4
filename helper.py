@@ -51,6 +51,17 @@ def flip_coin(probabilities, is_gpu):
         sp = stacked_probs.numpy()
     dist = abs(sp - rand_int)
     return np.argmin(dist)
+
+def init_hidden(model):
+    # The axes semantics are (num_layers, minibatch_size, hidden_dim)
+    if model.use_gpu:
+        model.hidden = (Variable(torch.zeros(1, model.batch_size, model.hidden_dim).cuda()),
+                Variable(torch.zeros(1, model.batch_size, model.hidden_dim).cuda()))
+    else:
+        model.hidden =  (Variable(torch.zeros(1, model.batch_size, model.hidden_dim)),
+                Variable(torch.zeros(1, model.batch_size, model.hidden_dim)))
+
+
 # def flip_coin(probabilities):
 #     stacked_probs = np.cumsum(probabilities)
 #     # stacked_probs = stacked_probs - min(stacked_probs)
