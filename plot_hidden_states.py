@@ -21,6 +21,8 @@ from train_model import *
 from LSTM import *
 from generate_music import *
 
+import seaborn as sns
+
 
 # input data
 start_char = '$'  # Every music sample <start> will be marked with $
@@ -78,8 +80,41 @@ init_hidden(model) #Restart
 model.batch_size = 1
 # out, hidden = lstm(i.view(1, 1, -1), hidden)
 
-# output, self.hidden = self.lstm(sentence.float().view(-1, self.batch_size, 1), self.hidden)
-output, model.hidden = model.lstm(words_encoded.float().view(-1, model.batch_size, 1), model.hidden)
+# Outputs: output, (h_n, c_n)
+# output (seq_len, batch, hidden_size * num_directions): tensor containing the output features (h_t) from the last layer of the RNN, for each t.
+# If a torch.nn.utils.rnn.PackedSequence has been given as the input, the output will also be a packed sequence.
+# h_n (num_layers * num_directions, batch, hidden_size): tensor containing the hidden state for t=seq_len
+# c_n (num_layers * num_directions, batch, hidden_size): tensor containing the cell state for t=seq_len
+output, (h_n,c_n) = model.lstm(words_encoded.float().view(-1, model.batch_size, 1), model.hidden)
+output = output.data.numpy() #Convert torch tensor to numpy
+
+# output.shape() = [time, 1, units]
+hidden = output[:,0,7]
+labels = weights_to_2d(np.array(list(words)))
+pixmap = weights_to_2d(hidden).astype(float)
+
+plt.figure()
+# fig, ax = plt.subplots()
+sns.heatmap(pixmap, annot=labels, fmt = '', cmap="coolwarm", xticklabels =False, yticklabels=False)
+plt.show(block=False)
+
+
+def weights_to_2d(weights):
+    dim1 = int(np.ceil(np.sqrt(len(weights))))
+    zero_pad = dim1*dim1 - len(weights) #Add zeros at end of vector if necesary to make len squared
+    weights = np.pad(weights, (0,zero_pad), 'constant')
+    return np.reshape(weights, (dim1, dim1))
+
+data = np.array([[0.000000,0.000000],[-0.231049,0.000000],[-0.231049,0.000000]])
+label =  np.array([['A','g'],['C','D'],['E','F']])
+fig, ax = plt.subplots()
+ax = sns.heatmap(data, annot = label, fmt = '')
+
+
+
+
+
+
 
 
 #tensor containing the output features (h_t) from the last layer of the RNN, for each t. If a torch.nn.utils.rnn.PackedSequence has been given as the input, the output will also be a packed sequence.
